@@ -1,16 +1,29 @@
-import React from 'react'
+import React,{useRef, useEffect, useState} from 'react'
 import {NavLink} from "react-router-dom";
 
 import {ReactComponent as Logo} from '../logo.svg';
 
-class Header extends React.Component {
-    render() {
-        //05 : 05
-        //07:16
-        //07:54
-        //08:18
+
+const  Header = ()=>{
+    const NavBarOnScrollColor = '#d6fcff';
+    const [navBackground, setNavBackground] = useState(false)
+    const navRef = useRef()
+    navRef.current = navBackground
+    useEffect(() => {
+        const handleScroll = () => {
+            const show = window.scrollY > 10
+            if (navRef.current !== show) {
+                setNavBackground(show)
+            }
+        }
+        document.addEventListener('scroll', handleScroll)
+        return () => {
+            document.removeEventListener('scroll', handleScroll)
+        }
+    }, [])
         return (
-            <nav className="navbar navbar-expand-sm navbar-light">
+            <nav className="py-0 sticky-top navbar navbar-expand-sm navbar-light navbar-scroll"
+                 style={{backgroundColor: navBackground ?  NavBarOnScrollColor: 'transparent'}}>
                 <div className="navbar-brand">
                     <Logo className={'logo d-inline-block align-top'}/>
                     <a className="navbar-brand mr-1 d-none d-md-inline-block" href="/">Depression</a>
@@ -68,7 +81,6 @@ class Header extends React.Component {
                 </div>
             </nav>
         );
-    }
 }
 
 export default Header;

@@ -1,8 +1,9 @@
 import React from 'react';
-import Layout from './components/Layout'
+import AppRouter from './routers/AppRouter'
+
 function App() {
   return (
-    <Layout/>
+    <AppRouter/>
   );
 }
 

@@ -1,13 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,600;1,800&display=swap');
+@import "./components/logo";
+@import "./components/header";
+@import "./components/slideShow";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 *{
   padding:0 0;
   margin: 0 0;
+  font-family:'Open Sans Condensed', sans-serif;
 }
-.jumbotron{
-  background: transparent;
+*{
+  box-sizing: border-box;
+
 }
-.layout{
-  font-family:'Montserrat', sans-serif;
-  font-size: 1em;
-  font-weight: 700;
+
+.btn:active ,.btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+input[type=number]:focus,
+[type=text].form-control:focus,
+[type=password].form-control:focus,
+[type=email].form-control:focus,
+[type=tel].form-control:focus,
+[contenteditable].form-control:focus {
+  outline: none;
 }

@@ -11,16 +11,16 @@ class Cards extends React.Component{
         return (
             <div className={'container my-5 card_section'}>
                 <div className={'row'}>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-3">
                         <CardN1/>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-3">
                         <CardN2/>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-3">
                         <CardN3/>
                     </div>
-                    <div className="col-sm-12 col-md-6 col-lg-6 col-xl-3">
+                    <div className="col-sm-6 col-md-6 col-lg-6 col-xl-3">
                         <CardN4/>
                     </div>
                 </div>

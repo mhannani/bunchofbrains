@@ -10,8 +10,8 @@ import slide_image_2 from './slideShowImages/2.jpg'
 class SlideShow extends React.Component{
     render(){
         return(
-            <div className={'container row mx-auto mt-5 h-5'}>
-                <div id="carouselExampleIndicators" className="carousel slide carousel-fade data-interval='1' col-lg-10 col-sm-12 mx-auto " data-ride="carousel">
+            <div className={'container-xl row mx-auto mt-5 h-5'}>
+                <div id="carouselExampleIndicators" className="carousel slide carousel-fade data-interval='1' col-xl-12 col-lg-10 col-md-12 col-sm-12 mx-auto " data-ride="carousel">
                     <ol className="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"/>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"/>

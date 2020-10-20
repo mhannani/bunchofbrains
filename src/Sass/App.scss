@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+@import "./variables";
 @import "./components/logo";
 @import "./components/header";
 @import "./components/slideShow";
 @import "./pages/darkTheme";
 @import "./pages/lightTheme";
 @import "./components/cards/cards";
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 
 *{
   padding:0 0;
   margin: 0 0;
   font-family:'Open Sans Condensed', sans-serif;
 }
+
 *{
   box-sizing: border-box;
 

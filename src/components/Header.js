@@ -68,8 +68,8 @@ const  Header = ()=>{
                             </label>
                         </div>
                         <div className={'row-cols-sm-1'}>
-                            <button className={'align-top btn btn-transparent mx-md-2'}>log in</button>
-                            <button className={"align-top btn btn-success mx-1 text-white font-weight-bold"}
+                            <button className={'align-top btn btn-transparent mx-md-2 '}>Log in</button>
+                            <button className={"align-top btn btn-success mx-1 text-white font-weight-bold getStarted"}
                                     onMouseDown={e => e.preventDefault()}>Get started
                             </button>
                         </div>

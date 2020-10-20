@@ -8,10 +8,10 @@ nav {
   button{
     border-radius: 0 !important;
   }
-  .custom-control-label::after{
-    background: coral;
-    color:red;
-  }
+  //.custom-control-label::after{
+  //  background: coral;
+  //  color:red;
+  //}
 
   /*Simple css to style it like a toggle switch*/
 
@@ -27,7 +27,7 @@ nav {
   }
 
   .slider {
-    background-color: #ccc;
+    background-color: $gray;
     bottom: 0.6px;
     cursor: pointer;
     left: 0;
@@ -71,5 +71,14 @@ nav {
 
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .getStarted.btn {
+    transition: none!important;
+
+  }
+  .getStarted.btn:hover {
+    background-color: $white !important;
+    color: $primary !important;
   }
 }

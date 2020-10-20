@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
 @import "./variables";
 @import "./components/logo";
 @import "./components/header";
@@ -6,11 +6,12 @@
 @import "./pages/darkTheme";
 @import "./pages/lightTheme";
 @import "./components/cards/cards";
+@import "./components/footer";
 
 *{
   padding:0 0;
   margin: 0 0;
-  font-family:'Open Sans Condensed', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 *{
@@ -38,3 +39,20 @@ input[type=number]:focus,
   outline: none;
 }
 
+// Adding customized link instead of a tags
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.link-button:hover,
+.link-button:focus {
+  text-decoration: none;
+}
+
+// ------------------------

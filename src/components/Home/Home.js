@@ -1,7 +1,7 @@
 import React from 'react'
 import SlideShow from "./SlideShow";
-
 import Cards from "./cards";
+import News from "../Footer/news";
 
 class Home extends React.Component{
     render(){
@@ -9,6 +9,7 @@ class Home extends React.Component{
             <div>
                 <SlideShow/>
                 <Cards/>
+                <News/>
             </div>
 
         )

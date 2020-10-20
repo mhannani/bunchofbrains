@@ -4,7 +4,7 @@ class CardN3 extends React.Component{
     render() {
         return (
             <div className="card d-flex justify-content-between mx-sm-12 py-5 px-4">
-                <h2 className={'text-center'}>Panic disorder</h2>
+                <h2 className={'text-center text-nowrap text-break'}>Panic disorder</h2>
                 <div className={'row'}>
                     <div className="card-body description">
                         It is a long established fact that a reader will be distracted
@@ -15,7 +15,7 @@ class CardN3 extends React.Component{
 
                 </div>
                 <div className="ml-auto mr-auto row">
-                    <button className="btn btn-success px-5 col-12 font-weight-bold text-dark"
+                    <button className="btn px-5 col-12 font-weight-bold text-dark"
                             onMouseDown={e => e.preventDefault()}
                     >
                         something

@@ -15,7 +15,7 @@ class CardN2 extends React.Component{
 
                 </div>
                 <div className="ml-auto mr-auto row">
-                    <button className="btn btn-success px-5 col-12 font-weight-bold text-dark"
+                    <button className="btn px-5 col-12 font-weight-bold text-dark"
                             onMouseDown={e => e.preventDefault()}
                     >
                         something

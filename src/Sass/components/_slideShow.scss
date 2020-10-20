@@ -1,6 +1,6 @@
 .slide_image{
   display:block;
-  max-height:400px;
+  max-height:500px;
 }
 .item img {
   width: 100%;
@@ -14,4 +14,8 @@
 }
 .carousel-item{
   transition: transform 0.8s ease, opacity .05s ease-out
+}
+.slideshow{
+  padding-top: 50px;
+  //background-color: #5cb85c;
 }

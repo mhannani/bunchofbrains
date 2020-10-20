@@ -3,7 +3,7 @@ import React from 'react'
 class CardN3 extends React.Component {
     render() {
         return (
-            <div className="card d-flex justify-content-between mx-sm-5 mx-xl-0 mx-md-0 py-sm-5 py-5 px-4">
+            <div className="card d-flex justify-content-between mx-sm-12 py-5 px-4">
                 <h2 className={'text-center'}>Self esteem</h2>
                 <div className={'row'}>
                     <div className="card-body description">

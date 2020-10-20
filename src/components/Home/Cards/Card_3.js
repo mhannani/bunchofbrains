@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Card_N3 extends React.Component{
+class CardN3 extends React.Component{
     render() {
         return (
             <div className="card d-flex justify-content-between mx-sm-5 mx-xl-0 mx-md-0 py-sm-5 py-5 px-4">
@@ -25,4 +25,4 @@ class Card_N3 extends React.Component{
         )
     }
 }
-export default Card_N3
+export default CardN3

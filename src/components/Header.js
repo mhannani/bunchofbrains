@@ -20,12 +20,12 @@ const  Header = ()=>{
                             />
                             <div className="slider round d-flex justify-content-center align-items-center">
                                 <div className={'logoNightMode'}>
-                                    <span>
+                                    <span role={'img'} aria-label={'moon'}>
                                         🌜
                                     </span>
                                 </div>
                                 <div className={'logoLightMode'}>
-                                    <span>
+                                    <span role={'img'} aria-label={'sun'}>
                                         🌞
                                     </span>
                                 </div>

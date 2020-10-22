@@ -18,7 +18,18 @@ const  Header = ()=>{
                         <label className="theme-switch" htmlFor="checkbox">
                             <input type="checkbox" id="checkbox"
                             />
-                            <div className="slider round"/>
+                            <div className="slider round d-flex justify-content-center align-items-center">
+                                <div className={'logoNightMode'}>
+                                    <span>
+                                        🌜
+                                    </span>
+                                </div>
+                                <div className={'logoLightMode'}>
+                                    <span>
+                                        🌞
+                                    </span>
+                                </div>
+                            </div>
                         </label>
                     </div>
                     <button className="navbar-toggler col" type="button" data-toggle="collapse"

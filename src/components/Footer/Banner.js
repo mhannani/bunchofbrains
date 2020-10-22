@@ -3,14 +3,21 @@ import React from 'react';
 class Banner extends React.Component{
     render(){
         return(
-            <div className="row d-flex align-items-center">
+            <div className="row d-flex align-items-center banner">
                 <div className="col-md-7 col-lg-8">
                     <ul className="list-unstyled list-inline terms">
                         <li className="list-inline-item">
                             <button
                                 type="button"
                                 className="link-button btn-floating btn-sm rgba-white-slight mx-1"
-                            > Terms & ConditionsPrivacy
+                            > Terms & Conditions
+                            </button>
+                        </li>
+                        <li className="list-inline-item">
+                            <button
+                                type="button"
+                                className="link-button btn-floating btn-sm rgba-white-slight mx-1"
+                            > Privacy
                             </button>
                         </li>
                         <li className="list-inline-item">

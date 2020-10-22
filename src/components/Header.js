@@ -16,7 +16,7 @@ const  Header = ()=>{
                 <div className={'row d-flex'}>
                     <div className="theme-switch-wrapper mt-3 mx-3">
                         <label className="theme-switch" htmlFor="checkbox">
-                            <input type="checkbox" id="checkbox"
+                            <input type="checkbox" id="checkbox" onChange={()=>console.log('checked')}
                             />
                             <div className="slider round d-flex justify-content-center align-items-center">
                                 <div className={'logoNightMode'}>

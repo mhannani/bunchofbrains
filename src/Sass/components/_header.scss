@@ -1,10 +1,12 @@
 nav {
-  transition: 0.2s ease-in-out;
+  transition: 0.3s ease-in-out;
   ul {
     li {
       font-weight: 700;
+      padding: 0 0 !important;
     }
   }
+
   button{
     border-radius: 0 !important;
   }
@@ -51,7 +53,7 @@ nav {
     border: 20px solid yellow;
   }
   input:checked + .slider {
-    background-color: #66bb6a;
+    background-color: #32382f;
   }
 
 
@@ -79,11 +81,8 @@ nav {
 
   .getStarted.btn {
     transition: none!important;
+    font-weight: 500;
 
-  }
-  .getStarted.btn:hover {
-    background-color: $white !important;
-    color: $primary !important;
   }
 
   .navbar-toggler , .navbar-toggler:focus{

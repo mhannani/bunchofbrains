@@ -1,9 +1,11 @@
 import React from 'react'
+import Card from "../../chunks/Card";
+import Button from "../../chunks/Button";
 
 class CardN3 extends React.Component{
     render() {
         return (
-            <div className="card d-flex justify-content-between mx-sm-12 py-5 px-4">
+            <Card className="card d-flex justify-content-between mx-sm-12 py-5 px-4">
                 <h2 className={'text-center text-nowrap text-break'}>Panic disorder</h2>
                 <div className={'row'}>
                     <div className="card-body description">
@@ -15,13 +17,13 @@ class CardN3 extends React.Component{
 
                 </div>
                 <div className="ml-auto mr-auto row">
-                    <button className="btn px-5 col-12 font-weight-bold text-dark"
+                    <Button cardButton className="btn cardButton px-5 col-12 font-weight-bold"
                             onMouseDown={e => e.preventDefault()}
                     >
                         something
-                    </button>
+                    </Button>
                 </div>
-            </div>
+            </Card>
         )
     }
 }

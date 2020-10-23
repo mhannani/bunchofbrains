@@ -1,7 +1,7 @@
 // utilities
 // =========
 import React from 'react'
-import Header from '../components/Header';
+import Header from '../components/Header/Header';
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 // Components
@@ -12,22 +12,34 @@ import Faq from "../components/FAQ/Faq"
 import About from "../components/About/About"
 import Contact from "../components/Contact/contact";
 import NoMatch from "../components/NoMatch";
+import {UseDarkMode} from "../components/Themer/UseDarkMode";
+import {darkTheme, lightTheme} from "../components/Themer/Themes";
+import {ThemeProvider} from "styled-components";
+import {GlobalStyles} from "../components/Themer/GlobalStyle";
 
-class AppRouter extends React.Component{
-    render(){
+const AppRouter = ()=>{
+        const [theme, themeToggler,componentMounted] = UseDarkMode();
+        const themeMode = theme === 'light' ? lightTheme : darkTheme;
+        if (!componentMounted) {
+            return <div />
+        }
+
         return(
-            <BrowserRouter>
-                <Header/>
-                <Switch>
-                    <Route path='/' component={Home} exact={true}/>
-                    <Route path='/advice' component={Advice} exact={true}/>
-                    <Route path='/faq' component={Faq} exact={true}/>
-                    <Route path='/about' component={About} exact={true}/>
-                    <Route path='/contact' component={Contact} exact={true}/>
-                    <Route component={NoMatch} />
-                </Switch>
-            </BrowserRouter>
+            <ThemeProvider theme={themeMode}>
+                <GlobalStyles/>
+                <BrowserRouter>
+                    <Header themeToggler={themeToggler} theme={theme}/>
+                    <Switch>
+                        <Route path='/' component={Home} exact={true}/>
+                        <Route path='/advice' component={Advice} exact={true}/>
+                        <Route path='/faq' component={Faq} exact={true}/>
+                        <Route path='/about' component={About} exact={true}/>
+                        <Route path='/contact' component={Contact} exact={true}/>
+                        <Route component={NoMatch} />
+                    </Switch>
+                </BrowserRouter>
+            </ThemeProvider>
+
         )
-    }
 }
 export default AppRouter

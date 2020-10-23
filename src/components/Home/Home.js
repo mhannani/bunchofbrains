@@ -10,6 +10,8 @@ class Home extends React.Component{
                 <SlideShow/>
                 <Cards/>
                 <Footer/>
+            {/* FooterWrapper to be extracted and moved up on
+            the component tree to render it anywhere on the App  */}
             </div>
 
         )

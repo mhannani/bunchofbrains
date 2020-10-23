@@ -1,7 +1,8 @@
 // utils
 // =====
 import React from 'react';
-
+import CaptionMessage from "../chunks/CaptionMessage";
+import CaptionTitle from "../chunks/CaptionTitle";
 // Slideshow images
 // ================
 import slide_image_1 from './slideShowImages/1.jpg'
@@ -21,15 +22,15 @@ class SlideShow extends React.Component{
                             <img className="d-block w-100 slide_image" id={'carouselExampleIndicators_1'}
                                  src={slide_image_1} alt="First slide"/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5 className={'text-dark'}>caption title</h5>
-                                <p className={'text-dark'}>caption message</p>
+                                <CaptionTitle className={'text-dark'}>caption title</CaptionTitle>
+                                <CaptionMessage className={'text-dark'}>caption message</CaptionMessage>
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img className="d-block w-100 slide_image" src={slide_image_2} alt="Second slide"/>
                             <div className="carousel-caption d-none d-md-block">
-                                <h5 className={'text-dark'}>caption title</h5>
-                                <p className={'text-dark'}>caption message</p>
+                                <CaptionTitle className={'text-dark'}>caption title</CaptionTitle>
+                                <CaptionMessage className={'text-dark'}>caption message</CaptionMessage>
                             </div>
                         </div>
 

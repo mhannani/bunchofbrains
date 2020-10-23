@@ -18,7 +18,7 @@ const Header = (props) => {
                     </a>
                 </div>
                 <div className={'row d-flex'}>
-                    <Toggler theme={props.themeMode} toggleTheme={props.themeToggler} checked={props.theme !== 'light'}/>
+                    <Toggler theme={props.theme} toggleTheme={props.themeToggler} checked={props.theme !== 'light'}/>
                     <button className="navbar-toggler col" type="button" data-toggle="collapse"
                             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                             aria-label="Toggle navigation">

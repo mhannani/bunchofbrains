@@ -10,6 +10,9 @@
   outline: none;
   box-shadow: none;
 }
+body{
+  transition: background-color 0.2s ease-in-out;
+}
 
 textarea:focus,
 .form-control:focus,

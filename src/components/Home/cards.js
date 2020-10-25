@@ -4,7 +4,7 @@ import CardN1 from "./Cards/Card_1";
 import CardN2 from "./Cards/Card_2";
 import CardN3 from "./Cards/Card_3";
 import CardN4 from "./Cards/Card_4";
-
+import Button from "../chunks/Button";
 class Cards extends React.Component{
 
     render(){
@@ -22,6 +22,13 @@ class Cards extends React.Component{
                     </div>
                     <div className="col-sm-6 col-md-6 col-lg-6 col-xl-3 mb-2">
                         <CardN4/>
+                    </div>
+                </div>
+                <div className={'container row mt-5'}>
+                    <div className={'col-sm-12 col-md-10 col-xl-8 mx-auto'}>
+                        <Button className={'startFeeling btn mx-1 px-5 py-4 btn-block btn-lg'}>
+                            START FEELING GREAT
+                        </Button>
                     </div>
                 </div>
             </div>

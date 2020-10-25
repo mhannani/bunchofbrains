@@ -2,14 +2,19 @@
   button{
     border-radius: 0 !important;
   }
+  .startFeeling{
+    font-weight: bolder;
+    border:0 !important;
+    border-radius: 50%;
+  }
 
   .card {
     border-radius: 8px;
     box-shadow: 6px 6px 20px 4px rgba(black, .2);
-    transition: background-color 0.2s ease-in-out;
+    transition: all  0.2s ease-in-out;
 
     &:hover {
-      transform: scale(1.012);
+      transform: translateY(2px);
       box-shadow: 3px 3px 10px 4px rgba(black, .1);
     }
     .row{

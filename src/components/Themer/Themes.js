@@ -7,7 +7,8 @@ export const lightTheme = {
     card_bg:'#F9F9F9',
     button_bg: '#f9f9f9',
     get_started_bg:'#5cb85c',
-    footer_bg: '#1a3c34',
+    get_started_text: '#ffffff',
+    footer_bg: '#24574a',
 }
 
 export const darkTheme = {
@@ -20,7 +21,8 @@ export const darkTheme = {
     Header_link_color: '#FFFFFF',
     card_bg:'#766f64',
     button_bg: '#3c3836',
-    get_started_bg:'#000000',
+    get_started_text: '#000000',
+    get_started_bg:'#ffffff',
     footer_bg: '#282828',
 
 }

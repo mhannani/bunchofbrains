@@ -60,7 +60,7 @@ const Header = (props) => {
 
 
                         <li className="nav-item mx-sm-1 mx-md-0 mx-lg-4">
-                            <NavLink to={'contact'}
+                            <NavLink to={'/contact'}
                                      className={'nav-link'}
                             ><HeaderLink>Contact</HeaderLink>
                             </NavLink>
@@ -69,10 +69,15 @@ const Header = (props) => {
                     </ul>
                     <form className="align-bottom d-flex align-baseline align-items-md-end form-inline float-right">
                         <button className={'align-center btn btn-transparent mx-md-2 '}>
-                            <HeaderLink>Log in</HeaderLink>
+                            <NavLink to={'/login'}>
+                                <HeaderLink>Log in</HeaderLink>
+                            </NavLink>
                         </button>
                         <Button className={"align-center getStarted btn mx-1 "}
-                                onMouseDown={e => e.preventDefault()}>Get started
+                                onMouseDown={e => e.preventDefault()}>
+                            <NavLink to={'/signup'}>
+                                <HeaderLink>Get started</HeaderLink>
+                            </NavLink>
                         </Button>
                     </form>
                 </div>

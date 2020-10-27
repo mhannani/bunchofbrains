@@ -4,9 +4,10 @@ import {ReactComponent as Logo} from '../../logo.svg';
 import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
 import HeaderLink from "../chunks/HeaderLink";
-import Button from '../chunks/Button'
-const Header = (props) => {
+import Button from '../chunks/Button';
+import I from '../chunks/I';
 
+const Header = (props) => {
     return (
 
             <Nav className="{py-0 navbar navbar-expand-md navbar-light navbar-scroll fixed-top">
@@ -22,9 +23,9 @@ const Header = (props) => {
                     <button className="navbar-toggler col" type="button" data-toggle="collapse"
                             data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                             aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon">
-
-                    </span>
+                    <span>
+                        <I className="fa fa-reorder" />
+</span>
                     </button>
 
                 </div>
@@ -76,7 +77,7 @@ const Header = (props) => {
                         <Button className={"align-center getStarted btn mx-1 "}
                                 onMouseDown={e => e.preventDefault()}>
                             <NavLink to={'/signup'}>
-                                <HeaderLink>Get started</HeaderLink>
+                                <HeaderLink className={'excluded'}>Get started</HeaderLink>
                             </NavLink>
                         </Button>
                     </form>

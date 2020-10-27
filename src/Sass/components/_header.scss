@@ -61,15 +61,15 @@ nav {
     transform: translateX(20px);
   }
 
-  .logoNightMode , .logoLightMode{
-    font-size: 14px;
-    user-select: none;
-    opacity: 1;
-    transition: opacity 0.1s ease-in;
-  }
-  input:checked .logoLightMode{
-    opacity: 0;
-  }
+  //.logoNightMode , .logoLightMode{
+  //  font-size: 14px;
+  //  user-select: none;
+  //  opacity: 1;
+  //  transition: opacity 0.1s ease-in;
+  //}
+  //input:checked .logoLightMode{
+  //  opacity: 0;
+  //}
 
   .slider.round {
     border-radius: 34px;
@@ -79,11 +79,11 @@ nav {
     border-radius: 50%;
   }
 
-  .getStarted.btn {
-    transition: background-color 0.2s ease-in-out;
-    font-weight: 500;
-
-  }
+  //.getStarted.btn {
+  //  transition: background-color 0.2s ease-in-out;
+  //  font-weight: 500;
+  //
+  //}
 
   .navbar-toggler , .navbar-toggler:focus{
     border:none;

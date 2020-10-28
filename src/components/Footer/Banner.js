@@ -3,8 +3,8 @@ import React from 'react';
 class Banner extends React.Component{
     render(){
         return(
-            <div className="row d-flex align-items-center banner">
-                <div className="col-md-7 col-lg-8">
+            <div className="row align-items-center banner">
+                <div className="col-md-12 col-lg-8">
                     <ul className="list-unstyled list-inline terms">
                         <li className="list-inline-item">
                             <button
@@ -35,14 +35,15 @@ class Banner extends React.Component{
                             </button>
                         </li>
                     </ul>
-                    <p className="text-center text-md-left">© 2020 Depression, LLC. All Rights Reserved.
+                    <p className="text-center text-md-left">© 2020 Bunchofbrains, LLC. All Rights Reserved.
                         <a href="https://depression.com/">
-                            <strong> Depression.com</strong>
+                            <strong>Bunchofbrains.com</strong>
                         </a>
                     </p>
                 </div>
-                <div className="col-md-5 col-lg-4 ml-lg-0">
-                    <div className="text-center text-md-right">
+
+                <div className="col-md-12 col-lg-4 mx-lg-0">
+                    <div className="text-center ">
                         <ul className="list-unstyled list-inline">
                             <li className="list-inline-item">
                                 <button

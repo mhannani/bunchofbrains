@@ -2,7 +2,6 @@ import React from 'react';
 import { func, string } from 'prop-types';
 
 const Toggler = ({toggleTheme, checked})=>{
-    console.log(toggleTheme)
         return(
             <div className="theme-switch-wrapper mt-3 mx-3">
                 <label className="theme-switch" htmlFor="checkbox">

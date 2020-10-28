@@ -4,8 +4,8 @@ class News extends React.Component {
     render() {
         return (
             <div className="row text-md-left mt-3 pb-5 News">
-                <div className="col-md-4  d-md-inline-block d-none">
-                    <h6 className="text-uppercase mb-4 font-weight-bold h2 ">Depression</h6>
+                <div className="col-md-4  d-lg-inline-block d-none">
+                    <h6 className="text-uppercase mb-4 font-weight-bold h2 ">Bunchofbrains</h6>
                     <ul className="list-unstyled list-inline row ">
                         <li className="list-inline-item col-lg-3 col-md-4">
                             <button
@@ -51,7 +51,7 @@ class News extends React.Component {
                         </li>
                     </ul>
                 </div>
-                <div className={'col-md-4'}>
+                <div className={'col-md-4 d-lg-inline-block d-none'}>
                     <p>
                         <i className="fa fa-home mr-3"/>
                         XXXXX, XX XXXX, XX
@@ -71,8 +71,8 @@ class News extends React.Component {
                     </p>
                 </div>
 
-                <div className="col-md-4 col-sm-12 row ml-auto mx-auto mr-md-0">
-                    <div className={'col-md-12'}><p>Get the freshest Depression news</p></div>
+                <div className="col-sm-12 col-md-8 col-lg-4 row  mx-auto">
+                    <div className={'col-md-12 text-center'}><p>Get the freshest Bunchofbrains news</p></div>
                     <div className={'col-md-12 float-right'}>
                         <form className="form-inline row-cols-sm-3">
 

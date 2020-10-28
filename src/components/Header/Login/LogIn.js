@@ -3,18 +3,6 @@ import React from 'react';
 const LogIn = ()=>{
     return(
         <div className={'container row'}>
-            {/*<div className="col-5 welcomeMessage d-flex align-items-center" >*/}
-            {/*    <div className={'text-center'}>*/}
-            {/*        <h2 className={'text-white'}>*/}
-            {/*            Welcome Back To Bunchofbrains*/}
-            {/*        </h2>*/}
-            {/*    </div>*/}
-            {/*    <div className={'text-center'}>*/}
-            {/*        <h2 className={'text-white'}>*/}
-            {/*            Welcome Back To Bunchofbrains*/}
-            {/*        </h2>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <div className="welcomeMessage d-flex align-items-center">
                 <div>
                     <h2 className={' text-white text-center flex-wrap col-6'}>

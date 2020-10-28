@@ -1,4 +1,39 @@
 .logIn{
   margin-top: 200px;
   text-align: center;
+
+}
+.loginForm{
+  button{
+    border: 1px solid black;
+    height: 40px;
+    width: 330px;
+    span{
+      font-weight: bold;
+      font-family: "GT Walsheim Pro", Arial, sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      left: 80px;
+    }
+  }
+  button:hover{
+    background-color: rgb(236, 236, 236) !important;
+    //border: 1px solid black;
+  }
+
+
+  .form-separator {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    span{
+      background:#fff;
+      padding:0 10px;
+    }
+  }
+
 }

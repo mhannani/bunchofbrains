@@ -26,7 +26,7 @@ class About extends React.Component {
                         originate from varying backgrounds and have differing encounters.
                     </p></div>
                 <h2 className={'text-center mt-5'}>How does it work?</h2>
-                <div className={'text-center mt-5'}>
+                <div className={'text-center my-5'}>
                     <p>
                         The process is straight forward, you choose a user to have a conversation
                         with over audio or video in complete anonymity.

@@ -10,6 +10,8 @@ export const lightTheme = {
     // Header_link_color: '#050505',
     get_started_text: '#ffffff',
     footer_bg: '#24574a',
+    reset_button_bg: '#1660ac',
+    resetButton_text:'#ffffff'
 }
 
 export const darkTheme = {
@@ -25,5 +27,7 @@ export const darkTheme = {
     get_started_text: '#000000',
     get_started_bg:'#ffffff',
     footer_bg: '#282828',
+    reset_button_bg: '#ffffff',
+    resetButton_text:'#000000'
 
 }

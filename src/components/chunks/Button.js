@@ -20,6 +20,10 @@ const Button = styled.button`
         background: ${({ theme }) => theme.get_started_bg};
         color:${({ theme }) => theme.get_started_text}
     }
+    &.resetButton{
+        background: ${({ theme }) => theme.reset_button_bg};
+        color:${({ theme }) => theme.resetButton_text}
+    }
   
 `;
 

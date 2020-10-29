@@ -8,11 +8,11 @@ const LogIn = ()=>{
         <div className={'container row'}>
             <div className="welcomeMessage d-flex align-items-center">
                 <div>
-                    <h2 className={' text-white text-center flex-wrap col-6'}>
+                    <h2 className={' text-white flex-wrap col-8'}>
                     Welcome Back To Bunchofbrains
                     </h2>
                     <div className={'ml-3 mt-4 borderSeparator'}/>
-                    <h6 className={'text-white mt-4 flex-wrap col-6'}>
+                    <h6 className={'text-white mt-4 flex-wrap col-8'}>
                         Sign in to continue to your account.
                     </h6>
                 </div>
@@ -54,11 +54,11 @@ const LogIn = ()=>{
                         <div className="forgot-password mt-2 text-center ">
                             <a className="forgot-pass-text  font-weight-bold text-decoration-none"
                                target="_blank" href="/reset-password">
-                                Forgot password?
+                                Forgot password ?
                             </a>
                             <div className="sign-up text-center mt-2">
-                                <span>Not a member yet?</span>
-                                <button className="link text-decoration-none">Sign Up.</button>
+                                <span>Not a member yet ?</span>
+                                <button className="link text-decoration-none">Sign Up</button>
                             </div>
                         </div>
 

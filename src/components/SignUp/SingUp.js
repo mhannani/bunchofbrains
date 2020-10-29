@@ -3,8 +3,11 @@ import {ReactComponent as GoogleIcon} from "../LogIn/GoogleIcon.svg";
 import {ReactComponent as FacebookIcon} from "../LogIn/FacebookIcon.svg";
 import {ReactComponent as AppleIcon} from "../LogIn/AppleIcon.svg";
 import Form from './Form'
-const SignUp = ()=>{
+const SignUp = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
+    const signUpInToggler = ()=>{
+        props.changeIsLogIn(!props.isLogIn)
+    }
     return(
         <div className={'sign-up'}>
             <div className={'container row'}>
@@ -52,7 +55,7 @@ const SignUp = ()=>{
                         <div className="forgot-password  mt-2 text-center ">
                             <div className="sign-up text-center mt-1">
                                 <span>Already a member ?</span>
-                                <button className="link text-decoration-none">Sign In</button>
+                                <button className="link text-decoration-none" onClick={()=>signUpInToggler()}>Sign In</button>
                                 <div className="mx-auto col-9 form-separator"/>
                             </div>
                             <div className="col-12 text-center confidentiality">

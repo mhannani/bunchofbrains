@@ -12,6 +12,7 @@ const selected = {
     fontWeight: "bold",
     color: "black"
 }
+
 const Header = (props) => {
     const [isVisible, toggleVisibility] =  useState(false)
     const [isLogIn, changeIsLogIn] =  useState(true)
@@ -23,7 +24,6 @@ const Header = (props) => {
     const signUpHandler = ()=>{
         toggleVisibility(!isVisible);
         changeIsLogIn(isLogIn => false)
-        console.log('isLogIn', isLogIn)
     }
     const closeModal = ()=>{
         toggleVisibility(!isVisible);
@@ -92,7 +92,11 @@ const Header = (props) => {
                         </Button>
                     </form>
                 </div>
-                <PopUpModal closeModal={closeModal} isLogIn = {isLogIn} isVisible = {isVisible}/>
+                <PopUpModal closeModal={closeModal}
+                            changeIsLogIn={changeIsLogIn}
+                            isLogIn = {isLogIn}
+                            isVisible = {isVisible}
+                />
             </Nav>
     );
 }

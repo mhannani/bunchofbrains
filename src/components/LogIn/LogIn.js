@@ -3,7 +3,11 @@ import {ReactComponent as FacebookIcon} from './FacebookIcon.svg';
 import {ReactComponent as GoogleIcon} from './GoogleIcon.svg';
 import {ReactComponent as AppleIcon} from './AppleIcon.svg';
 
-const LogIn = ()=>{
+const LogIn = (props)=>{
+    const signInUpToggler = ()=>{
+        props.changeIsLogIn(!props.isLogIn)
+        console.log(props.isLogIn)
+    }
     return(
         <div className={'container row'}>
             <div className="welcomeMessage d-flex align-items-center">
@@ -49,7 +53,7 @@ const LogIn = ()=>{
                                         Keep me signed in until I sign out
                                     </label>
                             </div>
-                            <button type="submit" className="col-12 btn">Sign In</button>
+                            <button type="submit"  className="col-12 btn">Sign In</button>
                         </form>
                         <div className="forgot-password mt-2 text-center ">
                             <a className="forgot-pass-text  font-weight-bold text-decoration-none"
@@ -58,7 +62,7 @@ const LogIn = ()=>{
                             </a>
                             <div className="sign-up text-center mt-2">
                                 <span>Not a member yet ?</span>
-                                <button className="link text-decoration-none">Sign Up</button>
+                                <button className="link text-decoration-none" onClick={()=>signInUpToggler()}>Sign Up</button>
                             </div>
                         </div>
 

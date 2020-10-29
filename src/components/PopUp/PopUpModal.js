@@ -18,7 +18,9 @@ const PopUpModal = (props) => {
             <button className={'close'} onClick={props.closeModal}>
                 <CloseButton className={'closeLogo'}/>
             </button>
-            {props.isLogIn ? <LogIn/> : <SignUp/>}
+            {props.isLogIn ?
+                <LogIn isLogIn={props.isLogIn} changeIsLogIn={props.changeIsLogIn}/> :
+                <SignUp isLogIn={props.isLogIn} changeIsLogIn={props.changeIsLogIn}/>}
         </Modal>
     )
 }

@@ -1,4 +1,24 @@
-.signUp{
-  margin-top: 200px;
-  text-align: center;
+.sign-up{
+  //margin-top: 200px;
+  //text-align: center;
+  .requirement {
+    font-family: "GT Walsheim Pro", Arial, sans-serif;
+    line-height: 12px;
+    color: rgb(57, 70, 73);
+    font-size: 12px;
+    padding-top: 0;
+}
+  .using-email{
+    font-weight: bold;
+  }
+  .sign-up-using-email-form{
+    transition: all 10s ease-in-out;
+  }
+
+  .confidentiality{
+    font-size: 12px;
+  }
+}
+.margin-bottom{
+  margin-bottom:-8px;
 }

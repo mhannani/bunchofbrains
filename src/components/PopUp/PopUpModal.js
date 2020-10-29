@@ -1,12 +1,12 @@
 import React from 'react';
 import Modal from 'react-modal';
-import LogIn from "../Header/Login/LogIn";
-import SignUp from "../Header/SignUp/SingUp";
+import LogIn from "../LogIn/LogIn";
+import SignUp from "../SignUp/SingUp";
 import {ReactComponent as CloseButton} from './logo.svg';
-Modal.setAppElement('#root');
+// Modal.setAppElement('#root');
 const PopUpModal = (props) => {
     return (
-        <Modal isOpen={true }
+        <Modal isOpen={props.isVisible }
                contentLabel={'Selected Option'}
                ariaHideApp={false}
                closeTimeoutMS={100}

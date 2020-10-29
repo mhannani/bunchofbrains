@@ -16,13 +16,14 @@ const Header = (props) => {
     const [isVisible, toggleVisibility] =  useState(false)
     const [isLogIn, changeIsLogIn] =  useState(true)
     const logInHandler = ()=>{
+        changeIsLogIn(isLogIn => true)
         toggleVisibility(!isVisible) // To change it to be initialised with true
         // Logic of log in ...
     }
     const signUpHandler = ()=>{
         toggleVisibility(!isVisible);
         changeIsLogIn(isLogIn => false)
-        console.log(isLogIn)
+        console.log('isLogIn', isLogIn)
     }
     const closeModal = ()=>{
         toggleVisibility(!isVisible);

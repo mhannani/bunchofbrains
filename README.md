@@ -1,6 +1,4 @@
 # **<u>Hook_depression</u>**
->The automatic deployment goes here : <a href ='https://hook-depression.netlify.app/' target='_blank'>hook-depression.netlify.app</a>
->
 ### `1. Make sure node and npm are installed`
 If not just install them from here https://nodejs.org/en/
 (npm come preinstalled with it)

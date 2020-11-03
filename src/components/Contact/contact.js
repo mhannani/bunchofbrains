@@ -27,7 +27,9 @@ class Contact extends React.Component{
                         </div>
 
                         <div className="form-group col-xl-7 col-lg-8">
-                            <Button type="submit" className="resetButton col-xl-12 btn font-weight-bold">Sign in</Button>
+                            <Button type="submit" className="rounded-  resetButton col-xl-12 btn font-weight-bold" placeholder="Message">
+                                Sign in
+                            </Button>
                         </div>
                     </div>
 

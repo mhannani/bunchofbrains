@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {NavLink} from "react-router-dom";
-import {ReactComponent as Logo} from '../../logo.svg';
+import {ReactComponent as Logo} from './brain.svg';
 import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
 import HeaderLink from "../chunks/HeaderLink";
@@ -33,8 +33,8 @@ const Header = (props) => {
             <Nav className="{py-0 navbar navbar-expand-md navbar-light navbar-scroll fixed-top">
 
                 <div className="navbar-brand">
-                    <Logo className={'logo d-inline-block align-top'}/>
-                    <a className="navbar-brand mr-1 d-none d-md-inline-block" href="/">
+                    <Logo className={'logo d-inline-block align-top mr-2'}/>
+                    <a className="navbar-brand mr-0 d-none d-md-inline-block" href="/">
                         <HeaderLink>Bunchofbrains</HeaderLink>
                     </a>
                 </div>

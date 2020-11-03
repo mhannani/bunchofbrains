@@ -5,10 +5,11 @@ import 'popper.js';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import 'bootstrap/dist/js/bootstrap.bundle.min';
+import * as serviceWorker from './serviceWorker';
 import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import './Sass/App.scss';
-import * as serviceWorker from './serviceWorker';
+
 
 
 ReactDOM.render(

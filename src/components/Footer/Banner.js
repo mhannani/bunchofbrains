@@ -36,7 +36,7 @@ class Banner extends React.Component{
                         </li>
                     </ul>
                     <p className="text-center text-md-left">© 2020 Bunchofbrains, LLC. All Rights Reserved.
-                        <a href="https://depression.com/">
+                        <a href="https://bunchofbrains.com/">
                             <strong>Bunchofbrains.com</strong>
                         </a>
                     </p>

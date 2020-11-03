@@ -2,11 +2,7 @@ language: node_js
 node_js:
   - "7"
 cache: npm
-branches:
-  only:
-    - master
-  except:
-    - develop
+
 jobs:
   include:
     - stage: deploy

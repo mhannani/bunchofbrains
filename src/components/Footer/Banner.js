@@ -86,3 +86,14 @@ class Banner extends React.Component{
 }
 
 export default Banner;
+
+//
+// language: node_js
+// node_js:
+//     - "7"
+// script:
+//     - echo "Deploy!!"
+// install:
+//     - npm install -g firebase-tools
+// after_success:
+//     - firebase deploy --project $projectId --token $FIREBASE_TOKEN

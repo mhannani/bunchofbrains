@@ -8,4 +8,4 @@ jobs:
       script:
         - npm install -g firebase-tools
         - npm run build
-        - firebase deploy --token "$FIREBASE_TOKEN"
+        - firebase deploy --token $FIREBASE_TOKEN

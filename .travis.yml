@@ -5,4 +5,4 @@ node_js:
 deploy:
   provider: firebase
   token: 1//03UF-g7-cvM_LCgYIARAAGAMSNwF-L9IrQ6HBEFOEB9WtUbhGWnvzo3fNPE4LFXbpirRvBCBtrq0z9HosE2Fl41j29aof9pU0jkA
-  edge: true # opt in to dpl v2
+  edge: true

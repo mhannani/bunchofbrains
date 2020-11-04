@@ -10,12 +10,6 @@ nav {
   button{
     border-radius: 0 !important;
   }
-  //.custom-control-label::after{
-  //  background: coral;
-  //  color:red;
-  //}
-
-  /*Simple css to style it like a toggle switch*/
 
   .theme-switch {
     display: inline-block;
@@ -72,5 +66,11 @@ nav {
   .navbar-toggler , .navbar-toggler:focus{
     border:none;
     outline: none;
+  }
+  .navbar-brand{
+    span{
+      font-family: 'Gloria Hallelujah', cursive;
+    }
+
   }
 }

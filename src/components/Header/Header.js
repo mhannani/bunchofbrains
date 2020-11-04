@@ -6,6 +6,7 @@ import Nav from '../chunks/Nav'
 import HeaderLink from "../chunks/HeaderLink";
 import Button from '../chunks/Button';
 import I from '../chunks/I';
+import {Link} from "react-router-dom";
 import PopUpModal from '../PopUp/PopUpModal'
 
 const selected = {
@@ -23,14 +24,12 @@ const Header = (props) => {
             window.location.href = "/log-in";
             // <Redirect to='/login' />
         }
-
         else{
             // The viewport is wider than 670px
             changeIsLogIn(true)
             // changeIsLogIn(isLogIn => true)
             toggleVisibility(!isVisible) // To change it to be initialised with true
         }
-
         // Logic of log in ...
     }
     const signUpHandler = ()=>{
@@ -40,16 +39,12 @@ const Header = (props) => {
             window.location.href = "/sign-up";
             // <Redirect to='/login' />
         }
-
         else{
             // The viewport is wider than 670px
             toggleVisibility(!isVisible);
             changeIsLogIn(false)
             // changeIsLogIn(isLogIn => false)
         }
-
-
-
     }
     const closeModal = ()=>{
         toggleVisibility(!isVisible);
@@ -59,7 +54,9 @@ const Header = (props) => {
             <Nav className="{py-0 navbar navbar-expand-md navbar-light navbar-scroll fixed-top">
 
                 <div className="navbar-brand">
-                    <Logo className={'logo d-inline-block align-top mr-2'}/>
+                    <Link to={'/'}>
+                        <Logo className={'logo d-inline-block align-top mr-2'}/>
+                    </Link>
                     <a className="navbar-brand mr-0 d-none d-md-inline-block" href="/">
                         <HeaderLink>Bunchofbrains</HeaderLink>
                     </a>
@@ -112,7 +109,7 @@ const Header = (props) => {
                         <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
                             <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
                         </button>
-                        <Button type="button" className={"align-center getStarted btn mx-1 "}
+                        <Button type="button" className={"align-center getStarted btn mx-0 "}
                                 onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
                             <HeaderLink className={'excluded'}>Get started</HeaderLink>
                         </Button>

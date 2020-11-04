@@ -4,7 +4,7 @@ class Banner extends React.Component{
     render(){
         return(
             <div className="row align-items-center banner">
-                <div className="col-md-12 col-lg-8">
+                <div className="col-md-12 col-lg-8 ">
                     <ul className="list-unstyled list-inline terms">
                         <li className="list-inline-item">
                             <button

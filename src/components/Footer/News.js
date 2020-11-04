@@ -1,12 +1,17 @@
 import React from 'react';
+import Logo from './brain.png';
 
 class News extends React.Component {
     render() {
         return (
             <div className="row text-md-left mt-3 pb-5 News">
-                <div className="col-md-4  d-lg-inline-block d-none">
-                    <h6 className="text-uppercase mb-4 font-weight-bold h2 ">Bunchofbrains</h6>
-                    <ul className="list-unstyled list-inline row ">
+                <div className="col-md-4 d-lg-inline-block d-none">
+                    <div className={'row ml-0 d-flex align-items-center'}>
+                        <img  src={Logo} width={'70px'}  height={'70px'} className={'d-xl-inline-block d-none'} alt="logo"/>
+                        <h6 className="text-uppercase col-6 font-weight-bold h2 ">Bunchofbrains</h6>
+                    </div>
+
+                    <ul className="list-unstyled list-inline row mt-5 ml-1">
                         <li className="list-inline-item col-lg-3 col-md-4">
                             <button
                                 type="button"

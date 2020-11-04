@@ -17,7 +17,7 @@ const Header = (props) => {
     const [isVisible, toggleVisibility] =  useState(false)
     const [isLogIn, changeIsLogIn] =  useState(true)
     const logInHandler = ()=>{
-        const mql = window.matchMedia('(max-width: 500px)')
+        const mql = window.matchMedia('(max-width: 900px)')
         if(mql.matches){
             // The viewport is less than 670px
             window.location.href = "/log-in";
@@ -34,7 +34,7 @@ const Header = (props) => {
         // Logic of log in ...
     }
     const signUpHandler = ()=>{
-        const mql = window.matchMedia('(max-width: 500px)')
+        const mql = window.matchMedia('(max-width: 900px)')
         if(mql.matches){
             // The viewport is less than 670px
             window.location.href = "/sign-up";

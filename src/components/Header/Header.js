@@ -20,25 +20,36 @@ const Header = (props) => {
         const mql = window.matchMedia('(max-width: 500px)')
         if(mql.matches){
             // The viewport is less than 670px
-            console.log('dont show the modal')
-            window.location.href = "http://localhost:3000/log-in";
+            window.location.href = "/log-in";
             // <Redirect to='/login' />
         }
+
         else{
             // The viewport is wider than 670px
             changeIsLogIn(true)
             // changeIsLogIn(isLogIn => true)
             toggleVisibility(!isVisible) // To change it to be initialised with true
-            console.log('show it please')
         }
-
 
         // Logic of log in ...
     }
     const signUpHandler = ()=>{
-        toggleVisibility(!isVisible);
-        changeIsLogIn(false)
-        // changeIsLogIn(isLogIn => false)
+        const mql = window.matchMedia('(max-width: 500px)')
+        if(mql.matches){
+            // The viewport is less than 670px
+            window.location.href = "/sign-up";
+            // <Redirect to='/login' />
+        }
+
+        else{
+            // The viewport is wider than 670px
+            toggleVisibility(!isVisible);
+            changeIsLogIn(false)
+            // changeIsLogIn(isLogIn => false)
+        }
+
+
+
     }
     const closeModal = ()=>{
         toggleVisibility(!isVisible);

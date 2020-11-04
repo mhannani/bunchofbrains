@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Div from "../chunks/Div";
-class Advice extends React.Component {
-    render() {
+const Advice = (props) => {
+    useEffect(() => {
+        document.title = props.title || "";
+    })
         return (
             <Div className="container-fluid advice">
                 <h1 className={'text-center font-weight-bold'}>
@@ -148,7 +150,6 @@ class Advice extends React.Component {
                 </div>
             </Div>
         )
-    }
 }
 
 export default Advice

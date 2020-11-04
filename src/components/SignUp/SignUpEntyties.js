@@ -45,3 +45,27 @@ export const FormSeparatorWithOr = ()=>{
         </div>
     )
 }
+export const AlreadyMember = (props) =>{
+    const signUpInToggler = ()=>{
+        props.changeIsLogIn(!props.isLogIn)
+    }
+
+    return(
+        <div className="sign-up text-center mt-1">
+            <p>Already a member ?
+                <button className="link text-decoration-none" onClick={()=>signUpInToggler()}>Log In</button>
+            </p>
+            <div className="mx-auto col-xl-10 col-sm-12 form-separator"/>
+        </div>
+    )
+}
+
+export const Confidentiality = ()=>{
+    return(
+        <div className="col-xl-11 col-sm-12 mx-auto text-center confidentiality">
+            By signing up you agree to Bunchofbrains's Terms of Service and Privacy Policy.
+            This page is protected
+            by reCAPTCHA and is subject to Google's Terms of Service and Privacy Policy.
+        </div>
+    )
+}

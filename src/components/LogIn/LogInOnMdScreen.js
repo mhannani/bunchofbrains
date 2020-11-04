@@ -1,7 +1,9 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {LogInMessage, GoogleLogIn, FaceBookLogIn, AppleLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties"
-const LogInOnMdScreen = ()=>{
-
+const LogInOnMdScreen = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
     return(
         <div className={'container LogInOnMdScreen'}>
 

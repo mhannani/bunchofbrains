@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
-import {GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr} from "./SignUpEntyties";
+import {GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
 import Form from './Form'
 const SignUp = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
-    const signUpInToggler = ()=>{
-        props.changeIsLogIn(!props.isLogIn)
-    }
+
     return(
         <div className={'sign-up'}>
             <div className={'container row'}>
@@ -14,7 +12,6 @@ const SignUp = (props)=>{
                         <h5 className={'text-white text-center flex-wrap col-5'}>
                             Join Bunchofbrains for Free
                         </h5>
-
                         <div className={'ml-3 mt-3 borderSeparator'}/>
                         <h6 className={'text-white mt-3 flex-wrap col-5'}>
                             Kick out the depression by talking
@@ -40,22 +37,10 @@ const SignUp = (props)=>{
                                 </div>: <Form/>
                         }
                         <div className="forgot-password mt-2 text-center ">
-                            <div className="sign-up text-center mt-1">
-                                <p>Already a member ?
-                                <button className="link text-decoration-none" onClick={()=>signUpInToggler()}>Log In</button>
-                                </p>
-                                <div className="mx-auto col-9 form-separator"/>
-                            </div>
-                            <div className="col-12 text-center confidentiality">
-                                By signing up you agree to Bunchofbrains's Terms of Service and Privacy Policy.
-                                This page is protected
-                                by reCAPTCHA and is subject to Google's Terms of Service and Privacy Policy.
-                            </div>
-
+                            <AlreadyMember isLogIn={props.isLogIn} changeIsLogIn ={props.changeIsLogIn}/>
+                            <Confidentiality/>
                         </div>
-
                     </div>
-
                 </div>
             </div>
         </div>

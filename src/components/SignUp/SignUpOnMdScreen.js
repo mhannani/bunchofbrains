@@ -1,8 +1,11 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import {SignUpMessage, GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr} from "./SignUpEntyties"
 import Form from "./Form";
-const LogInOnMdScreen = ()=>{
+const LogInOnMdScreen = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
+    useEffect(() => {
+        document.title = props.title || "";
+    })
     return(
         <div className={'container LogInOnMdScreen d-flex align-items-center justify-content-center'}>
 

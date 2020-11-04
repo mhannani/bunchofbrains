@@ -37,14 +37,14 @@ const AppRouter = ()=>{
                 <BrowserRouter>
                     <Header themeToggler={themeToggler} theme={theme}/>
                     <Switch>
-                        <Route path='/' component={Home} exact={true} />
-                        <Route path='/advice' component={Advice} exact={true}/>
-                        <Route path='/faq' component={Faq} exact={true}/>
-                        <Route path='/about' component={About} exact={true}/>
-                        <Route path='/contact' component={Contact} exact={true}/>
-                        <Route path='/log-in' component={LogInOnMdScreen} exact={true}/>
-                        <Route path='/sign-up' component={SignUpOnMdScreen} exact={true}/>
-                        <Route path='/reset-password' component={ResetPassword} exact={true}/>
+                        <Route path='/' render={() => <Home title="Home - bunchofbrains"/>} exact={true}/>
+                        <Route path='/advice' render={() => <Advice title="Advice - bunchofbrains"/>} exact={true}/>
+                        <Route path='/faq'  render={() => <Faq title="Faq - bunchofbrains"/>} exact={true}/>
+                        <Route path='/about' render={() => <About title="About - bunchofbrains"/>} exact={true}/>
+                        <Route path='/contact' render={() => <Contact title="Contact - bunchofbrains"/>} exact={true}/>
+                        <Route path='/log-in' render={() => <LogInOnMdScreen title="Log In - bunchofbrains"/>} exact={true}/>
+                        <Route path='/sign-up' render={() => <SignUpOnMdScreen title="Sign Up - bunchofbrains"/>} exact={true}/>
+                        <Route path='/reset-password' render={() => <ResetPassword title="Forget Password  - bunchofbrains"/>} exact={true}/>
                         <Route component={NoMatch} />
                     </Switch>
                     <Footer/>

@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Div from "../chunks/Div";
 import Button from "../chunks/Button";
-const  ResetPassword = ()=>{
+const  ResetPassword = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
+
     return(
         <Div className="container mb-5 col-xs-12 col-sm-10 col-md-6 col-lg-4 d-flex justify-content-center align-baseline reset-password">
             <div className={'row'}>
@@ -27,4 +31,5 @@ const  ResetPassword = ()=>{
         </Div>
     )
 }
+
 export default ResetPassword

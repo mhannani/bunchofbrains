@@ -50,7 +50,6 @@ const Header = (props) => {
         toggleVisibility(!isVisible);
     }
     return (
-
             <Nav className="{py-0 navbar navbar-expand-md navbar-light navbar-scroll fixed-top">
 
                 <div className="navbar-brand">

@@ -17,13 +17,28 @@ const Header = (props) => {
     const [isVisible, toggleVisibility] =  useState(false)
     const [isLogIn, changeIsLogIn] =  useState(true)
     const logInHandler = ()=>{
-        changeIsLogIn(isLogIn => true)
-        toggleVisibility(!isVisible) // To change it to be initialised with true
+        const mql = window.matchMedia('(max-width: 500px)')
+        if(mql.matches){
+            // The viewport is less than 670px
+            console.log('dont show the modal')
+            window.location.href = "http://localhost:3000/log-in";
+            // <Redirect to='/login' />
+        }
+        else{
+            // The viewport is wider than 670px
+            changeIsLogIn(true)
+            // changeIsLogIn(isLogIn => true)
+            toggleVisibility(!isVisible) // To change it to be initialised with true
+            console.log('show it please')
+        }
+
+
         // Logic of log in ...
     }
     const signUpHandler = ()=>{
         toggleVisibility(!isVisible);
-        changeIsLogIn(isLogIn => false)
+        changeIsLogIn(false)
+        // changeIsLogIn(isLogIn => false)
     }
     const closeModal = ()=>{
         toggleVisibility(!isVisible);

@@ -12,8 +12,10 @@ import Faq from "../components/FAQ/Faq"
 import About from "../components/About/About"
 import Contact from "../components/Contact/contact";
 import Footer from "../components/Footer/Footer";
+import LogInOnMdScreen from "../components/LogIn/LogInOnMdScreen";
 import ResetPassword from "../components/ResetPassword/ResetPassword";
 import NoMatch from "../components/NoMatch";
+import SignUpOnMdScreen from "../components/SignUp/SignUpOnMdScreen"
 
 // Theme
 // =====
@@ -40,6 +42,8 @@ const AppRouter = ()=>{
                         <Route path='/faq' component={Faq} exact={true}/>
                         <Route path='/about' component={About} exact={true}/>
                         <Route path='/contact' component={Contact} exact={true}/>
+                        <Route path='/log-in' component={LogInOnMdScreen} exact={true}/>
+                        <Route path='/sign-up' component={SignUpOnMdScreen} exact={true}/>
                         <Route path='/reset-password' component={ResetPassword} exact={true}/>
                         <Route component={NoMatch} />
                     </Switch>

@@ -1,7 +1,5 @@
 import React, {useState} from 'react';
-import {ReactComponent as GoogleIcon} from "../LogIn/GoogleIcon.svg";
-import {ReactComponent as FacebookIcon} from "../LogIn/FacebookIcon.svg";
-import {ReactComponent as AppleIcon} from "../LogIn/AppleIcon.svg";
+import {GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr} from "./SignUpEntyties";
 import Form from './Form'
 const SignUp = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
@@ -28,29 +26,18 @@ const SignUp = (props)=>{
 
                 <div className="col-7 loginForm d-flex align-items-center justify-content-center">
                     <div className="row mt-3 d-flex justify-content-center">
-                        <button className="col-9 mb-2 btn social">
-                            <GoogleIcon style={{float: "left"}}/>
-                            <span>Continue with Google</span>
-                        </button>
-                        <button className="col-9 mb-2 btn social">
-                            <FacebookIcon style={{float: "left"}}/>
-                            <span>Continue with Facebook</span>
-                        </button>
-                        <button className="col-9 mb-2 btn social">
-                            <AppleIcon style={{float: "left"}}/>
-                            <span>Continue with Apple</span>
-                        </button>
-                        <div className="col-9 form-separator mt-1 mb-3">
-                            <span>or</span>
-                        </div>
+                        <GoogleSignUp/>
+                        <FaceBookSignUp/>
+                        <AppleSignUp/>
+                        <FormSeparatorWithOr/>
                         {
                             !usingEmail ?
-                            <div className="sign-up my-1">
-                                <button onClick={() => changeUsingEmail(!usingEmail)}
-                                        className="link text-decoration-none">
-                                    Sign Up Using Email
-                                </button>
-                            </div>: <Form/>
+                                <div className="sign-up my-1">
+                                    <button onClick={() => changeUsingEmail(!usingEmail)}
+                                            className="link text-decoration-none">
+                                        Sign Up Using Email
+                                    </button>
+                                </div>: <Form/>
                         }
                         <div className="forgot-password  mt-2 text-center ">
                             <div className="sign-up text-center mt-1">

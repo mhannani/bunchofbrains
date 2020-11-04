@@ -2,7 +2,7 @@ import React from "react";
 
 export default ()=>{
     return(
-        <form className="col-10 sign-up-using-email-form form-horizontal" >
+        <form className="col-xl-10 col-sm-12 px-0 sign-up-using-email-form form-horizontal" >
             <div className="form-group">
                 <div className={'row'}>
                     <div className={'col-6'}>
@@ -28,7 +28,7 @@ export default ()=>{
             <div className="form-group requirement">
                 Password must be at least 8 characters long.
             </div>
-            <button type="submit" className="btn col-12">Sign Up</button>
+            <button type="submit" className="btn w-100 col-12">Sign Up</button>
         </form>
     )
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import {GoogleLogIn, FaceBookLogIn, AppleLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties"
-const LogIn = ()=>{
-    // const signInUpToggler = ()=>{
-    //     props.changeIsLogIn(!props.isLogIn)
-    //     console.log(props.isLogIn)
-    // }
+const LogIn = (props)=>{
+    const signInUpToggler = ()=>{
+        props.changeIsLogIn(!props.isLogIn)
+        console.log(props.isLogIn)
+    }
     return(
         <div className={'container'}>
             <div className="welcomeMessage d-flex align-items-center">
@@ -26,15 +26,16 @@ const LogIn = ()=>{
                         <GoogleLogIn/>
                         <FaceBookLogIn/>
                         <AppleLogIn/>
+
                         <FormSeparatorWithOr/>
                         <LogInForm/>
                         <div className="sign-up text-center mt-2">
                             <p>Not a member yet ?
-                                <a className=" link text-decoration-none text-center"
-                                   href={'/sign-up'}
+                                <button className=" link text-decoration-none text-center"
+                                   onClick={()=>signInUpToggler()}
                                 >
                                     Sign Up
-                                </a>
+                                </button>
                             </p>
                         </div>
 

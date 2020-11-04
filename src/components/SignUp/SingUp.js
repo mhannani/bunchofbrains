@@ -39,10 +39,11 @@ const SignUp = (props)=>{
                                     </button>
                                 </div>: <Form/>
                         }
-                        <div className="forgot-password  mt-2 text-center ">
+                        <div className="forgot-password mt-2 text-center ">
                             <div className="sign-up text-center mt-1">
-                                <span>Already a member ?</span>
-                                <button className="link text-decoration-none" onClick={()=>signUpInToggler()}>Sign In</button>
+                                <p>Already a member ?
+                                <button className="link text-decoration-none" onClick={()=>signUpInToggler()}>Log In</button>
+                                </p>
                                 <div className="mx-auto col-9 form-separator"/>
                             </div>
                             <div className="col-12 text-center confidentiality">

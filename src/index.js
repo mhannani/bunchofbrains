@@ -10,14 +10,17 @@ import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import './Sass/App.scss';
 
-
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+setTimeout(
+    () =>
+        // the show/hide functions are passed as props
+        ReactDOM.render(
+            <React.StrictMode>
+                <App />
+            </React.StrictMode>,
+            document.getElementById('root')),
+    2000
 );
+
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

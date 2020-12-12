@@ -16,6 +16,7 @@ import LogInOnMdScreen from "../components/LogIn/LogInOnMdScreen";
 import ResetPassword from "../components/ResetPassword/ResetPassword";
 import NoMatch from "../components/NoMatch";
 import SignUpOnMdScreen from "../components/SignUp/SignUpOnMdScreen"
+import UserProvider from "../providers/UserProvider"
 
 // Theme
 // =====
@@ -35,7 +36,10 @@ const AppRouter = ()=>{
             <ThemeProvider theme={themeMode}>
                 <GlobalStyles/>
                 <BrowserRouter>
-                    <Header themeToggler={themeToggler} theme={theme}/>
+                    <UserProvider>
+                        <Header themeToggler={themeToggler} theme={theme}/>
+                    </UserProvider>
+
                     <Switch>
                         <Route path='/' render={() => <Home title="Home - bunchofbrains"/>} exact={true}/>
                         <Route path='/advice' render={() => <Advice title="Advice - bunchofbrains"/>} exact={true}/>

@@ -1,16 +1,18 @@
 import React from "react";
+
 import { Formik, Field, Form } from "formik";
 import {CreateNewUserUsingEmailAndPassword} from "../../actions/auth";
 
 export const FormSignUpWithEmailAndPassword = ()=>{
-    const signUpWithEmailAndPassword = async (values) => {
+    const signUpWithEmailAndPassword =  (values) => {
         const firstName = values.firstName;
         const lastName = values.lastName;
-        const userName = firstName.concat(' ', lastName);
+        const userName = firstName[0].concat('', lastName);
         const email = values.email;
         const password = values.password;
         CreateNewUserUsingEmailAndPassword(email, password, userName);
-
+        console.log('Creating user ')
+        console.log('done' )
     }
     return(
         <Formik
@@ -49,6 +51,7 @@ export const FormSignUpWithEmailAndPassword = ()=>{
             <div className="form-group requirement">
                 Password must be at least 8 characters long.
             </div>
+
             <button type="submit" className="btn w-100 col-12">Sign Up</button>
         </Form>
         </Formik>

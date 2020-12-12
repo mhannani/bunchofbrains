@@ -64,7 +64,7 @@ class News extends React.Component {
 
                     <p>
                         <i className="fa fa-envelope mr-3"/>
-                        X@gmail.com
+                        brainsbunchof@gmail.com
                     </p>
                     <p>
                         <i className="fa fa-phone mr-3"/>

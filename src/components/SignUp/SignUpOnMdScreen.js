@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {SignUpMessage, GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr} from "./SignUpEntyties"
-import Form from "./Form";
+import {FormSignUpWithEmailAndPassword} from "./Form";
 const LogInOnMdScreen = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
     useEffect(() => {
@@ -24,7 +24,7 @@ const LogInOnMdScreen = (props)=>{
                                         className="link text-decoration-none">
                                     Sign Up Using Email
                                 </button>
-                            </div>: <Form/>
+                            </div>: <FormSignUpWithEmailAndPassword/>
                     }
                     <div className="forgot-password  mt-2 text-center ">
                         <div className="sign-up text-center mt-1">

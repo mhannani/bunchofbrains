@@ -1,34 +1,56 @@
 import React from "react";
+import { Formik, Field, Form } from "formik";
+import {CreateNewUserUsingEmailAndPassword} from "../../actions/auth";
 
-export default ()=>{
+export const FormSignUpWithEmailAndPassword = ()=>{
+    const signUpWithEmailAndPassword = async (values) => {
+        const firstName = values.firstName;
+        const lastName = values.lastName;
+        const userName = firstName.concat(' ', lastName);
+        const email = values.email;
+        const password = values.password;
+        CreateNewUserUsingEmailAndPassword(email, password, userName);
+
+    }
     return(
-        <form className="col-xl-10 col-sm-12 px-0 sign-up-using-email-form form-horizontal" >
+        <Formik
+            initialValues={{ firstName: "", lastName: "", password: "",email: "" }}
+            onSubmit={signUpWithEmailAndPassword}
+        >
+
+        <Form className="col-xl-10 col-sm-12 px-0 sign-up-using-email-form form-horizontal" >
             <div className="form-group">
                 <div className={'row'}>
                     <div className={'col-6'}>
-                        <input type="text" className="form-control margin-bottom"
-                               placeholder="First name"/>
+                        <Field type="text" className="form-control margin-bottom"
+                               placeholder="First name" name="firstName"/>
                     </div>
+
                     <div className={'col-6'}>
-                        <input type="text" className="form-control margin-bottom"
-                               placeholder="last name"/>
+                        <Field type="text" className="form-control margin-bottom"
+                               placeholder="last name" name="lastName"/>
                     </div>
                 </div>
             </div>
+
             <div className="form-group">
-                <input type="email" className="form-control margin-bottom"
+                <Field type="email" className="form-control margin-bottom"
                        id="exampleInputEmail1"
-                       aria-describedby="emailHelp" placeholder="Email address"/>
+                       aria-describedby="emailHelp"
+                       placeholder="Email address" name="email"/>
             </div>
+
             <div className="form-group">
-                <input type="password" className="form-control margin-bottom"
+                <Field type="password" className="form-control margin-bottom"
                        id="exampleInputPassword1"
-                       placeholder="Password"/>
+                       placeholder="Password" name="password"/>
             </div>
+
             <div className="form-group requirement">
                 Password must be at least 8 characters long.
             </div>
             <button type="submit" className="btn w-100 col-12">Sign Up</button>
-        </form>
+        </Form>
+        </Formik>
     )
 }

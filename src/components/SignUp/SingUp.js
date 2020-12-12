@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
-import Form from './Form'
+import {FormSignUpWithEmailAndPassword} from './Form'
 const SignUp = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
 
@@ -34,7 +34,7 @@ const SignUp = (props)=>{
                                             className="link text-decoration-none">
                                         Sign Up Using Email
                                     </button>
-                                </div>: <Form/>
+                                </div>: <FormSignUpWithEmailAndPassword/>
                         }
                         <div className="forgot-password mt-2 text-center ">
                             <AlreadyMember isLogIn={props.isLogIn} changeIsLogIn ={props.changeIsLogIn}/>

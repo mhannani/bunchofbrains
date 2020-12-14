@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
+import {GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
 import {FormSignUpWithEmailAndPassword} from './Form'
 const SignUp = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
@@ -25,7 +25,7 @@ const SignUp = (props)=>{
                     <div className="row mt-3 d-flex justify-content-center">
                         <GoogleSignUp/>
                         <FaceBookSignUp/>
-                        <AppleSignUp/>
+                        <TwitterSignUp/>
                         <FormSeparatorWithOr/>
                         {
                             !usingEmail ?

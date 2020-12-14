@@ -8,10 +8,9 @@ import HeaderLink from "../chunks/HeaderLink";
 import Button from '../chunks/Button';
 import I from '../chunks/I';
 import PopUpModal from '../PopUp/PopUpModal'
-import {firebase} from "../../firebase/firebase";
 import UserAvatar from "react-user-avatar";
 import {signOut} from "../../actions/auth"
-import UserContext from "../../providers/UserProvider"
+import {UserContext} from "../../providers/UserProvider"
 
 const selected = {
     fontWeight: "bold",
@@ -19,13 +18,14 @@ const selected = {
 }
 
 const Header = (props) => {
+    const user = useContext(UserContext);
     const [isVisible, toggleVisibility] = useState(false)
     const [isLogIn, changeIsLogIn] = useState(true)
-    const [isAuthenticated, changeIsAuthenticated] = useState(false)
-    const userName = firebase.auth().currentUser ? firebase.auth().currentUser.displayName  : ' ';
-    const user = useContext(UserContext);
+    // const [isAuthenticated, changeIsAuthenticated] = useState(false)
+    // const userName = firebase.auth().currentUser ? firebase.auth().currentUser.displayName  : ' ';
 
-    alert(user)
+
+
     const logInHandler = () => {
         const mql = window.matchMedia('(max-width: 900px)')
         if (mql.matches) {
@@ -114,7 +114,19 @@ const Header = (props) => {
 
                 <form className="align-bottom d-flex align-baseline align-items-md-end form-inline float-right">
                     {
-                        isAuthenticated ?
+                        user ?
+                            <div className={'row'}>
+                                <UserAvatar className={'col-1'}
+
+                                            size="36" name={"userName"}
+                                            src={"https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"}/>
+
+                                <Button type="button" className={"ml-5 mr-0  bg-danger col-5  btn"}
+                                        onMouseDown={e => e.preventDefault()} onClick={() => signOut()}>
+                                    <HeaderLink className={'excluded'}>Log out</HeaderLink>
+                                </Button>
+                            </div>
+                            :
                             <div>
                                 <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
                                     <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
@@ -123,19 +135,9 @@ const Header = (props) => {
                                         onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
                                     <HeaderLink className={'excluded'}>Get started</HeaderLink>
                                 </Button>
-                            </div> :
-
-                            <div className={'row'}>
-                                <UserAvatar className={'col-1'}
-
-                                            size="36" name={userName}
-                                            src="https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"/>
-
-                                <Button type="button" className={"ml-5 mr-0  bg-danger col-5  btn"}
-                                        onMouseDown={e => e.preventDefault()} onClick={() => signOut()}>
-                                    <HeaderLink className={'excluded'}>Log out</HeaderLink>
-                                </Button>
                             </div>
+
+
 
                     }
                 </form>

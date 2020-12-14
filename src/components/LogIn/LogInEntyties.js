@@ -1,7 +1,8 @@
 import React from "react";
 import {ReactComponent as GoogleIcon} from "./GoogleIcon.svg";
 import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
-import {ReactComponent as AppleIcon} from "./AppleIcon.svg";
+import {ReactComponent as TwitterIcon} from "./TwitterIcon.svg";
+
 import {Link} from "react-router-dom";
 
 export const LogInMessage = ()=>{
@@ -30,11 +31,11 @@ export const FaceBookLogIn = ()=>{
     )
 }
 
-export const AppleLogIn = ()=>{
+export const TwitterLogIn = ()=>{
     return(
         <button className="col-xl-10 col-sm-12  btn social">
-            <AppleIcon style={{float: "left"}}/>
-            <span>Continue with Apple</span>
+            <TwitterIcon style={{float: "left"}}/>
+            <span>Continue with Twitter</span>
         </button>
     )
 }

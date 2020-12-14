@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {SignUpMessage, GoogleSignUp, FaceBookSignUp, AppleSignUp, FormSeparatorWithOr} from "./SignUpEntyties"
+import {SignUpMessage, GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr} from "./SignUpEntyties"
 import {FormSignUpWithEmailAndPassword} from "./Form";
 const LogInOnMdScreen = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
@@ -15,7 +15,7 @@ const LogInOnMdScreen = (props)=>{
                     <SignUpMessage/>
                     <GoogleSignUp/>
                     <FaceBookSignUp/>
-                    <AppleSignUp/>
+                    <TwitterSignUp/>
                     <FormSeparatorWithOr/>
                     {
                         !usingEmail ?

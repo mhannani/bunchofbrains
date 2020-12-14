@@ -1,5 +1,5 @@
 import React from 'react';
-import {GoogleLogIn, FaceBookLogIn, AppleLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties"
+import {GoogleLogIn, FaceBookLogIn, TwitterLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties"
 const LogIn = (props)=>{
     const signInUpToggler = ()=>{
         props.changeIsLogIn(!props.isLogIn)
@@ -25,7 +25,7 @@ const LogIn = (props)=>{
                     <div className="row mt-3 d-flex justify-content-center ">
                         <GoogleLogIn/>
                         <FaceBookLogIn/>
-                        <AppleLogIn/>
+                        <TwitterLogIn/>
 
                         <FormSeparatorWithOr/>
                         <LogInForm/>

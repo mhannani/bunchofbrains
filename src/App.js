@@ -1,9 +1,14 @@
 import React from "react";
 import AppRouter from './routers/AppRouter'
 import {firebase} from "./firebase/firebase";
+import UserProvider from "./providers/UserProvider";
+
 function App() {
   return (
-    <AppRouter/>
+      <UserProvider>
+        <AppRouter/>
+      </UserProvider>
+
   );
 }
 

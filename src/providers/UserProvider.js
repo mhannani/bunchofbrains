@@ -1,21 +1,20 @@
 import React, { Component, createContext } from "react";
-import {auth}  from "../firebase/firebase";
+import { auth, generateUserDocument } from "../firebase/firebase";
 
 
 export const UserContext = createContext({ user: null });
 
 class UserProvider extends Component {
     state = {
-        user: null
+        user: undefined
     };
 
     componentDidMount = async () => {
         auth.onAuthStateChanged(async userAuth => {
-            // const user = await generateUserDocument(userAuth);
-            alert('auth changer')
-            const user = 'hannani'
+            const user = await generateUserDocument(userAuth);
             this.setState({ user });
         });
+
 
     };
 

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {LogInMessage, GoogleLogIn, FaceBookLogIn, AppleLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties"
+import {LogInMessage, GoogleLogIn, FaceBookLogIn, TwitterLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties"
 const LogInOnMdScreen = (props)=>{
     useEffect(() => {
         document.title = props.title || "";
@@ -13,7 +13,7 @@ const LogInOnMdScreen = (props)=>{
                     <LogInMessage/>
                     <GoogleLogIn/>
                     <FaceBookLogIn/>
-                    <AppleLogIn/>
+                    <TwitterLogIn/>
 
                     <FormSeparatorWithOr/>
                     <LogInForm/>

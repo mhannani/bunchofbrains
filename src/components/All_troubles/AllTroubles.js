@@ -1,5 +1,10 @@
 import React from "react";
-import ReactTooltip from 'react-tooltip';
+import ButtonSlideEffect from "./ButtonsEffects/ButtonSlideEffect";
+import ButtonCircleEffect from "./ButtonsEffects/ButtonCircleEffect"
+import ButtonUnderlineEffect from "./ButtonsEffects/ButtonUnderlineEffect";
+import ButtonTranslateEffect from "./ButtonsEffects/ButtonTranslateEffect";
+import ButtonSpinEffect from "./ButtonsEffects/ButtonSpinEffect";
+import ButtonTranslateReversedEffect from "./ButtonsEffects/ButtonTranslateReversedEffect"
 
 const AllTroubles = ()=>{
 
@@ -7,164 +12,48 @@ const AllTroubles = ()=>{
 
         <div className={'container all_troubles'}>
             <div className={'row text-center'}>
-                <div className={'col-3'}>
-                    <div className="button" id="button-2">
-                        <div id="slide"/>
-                        <a href="https://bunchofbrains.com/">Depression</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-2">
-                        <div id="slide"/>
-                        <a href="https://bunchofbrains.com/">Anxiety</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-2">
-                        <div id="slide"/>
-                        <a href="https://bunchofbrains.com/">Panic disorder</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-2">
-                        <div id="slide"/>
-                        <a href="https://bunchofbrains.com/">Self esteem</a>
-                    </div>
-                </div>
+                <ButtonSlideEffect text='Depression' href="https://bunchofbrains.com/"/>
+                <ButtonSlideEffect text='Anxiety' href="https://bunchofbrains.com/"/>
+                <ButtonSlideEffect text='Panic disorder' href="https://bunchofbrains.com/"/>
+                <ButtonSlideEffect text='Self esteem' href="https://bunchofbrains.com/"/>
             </div>
 
-
             <div className={'row text-center'}>
-                <div className={'col-3'}>
-                    <div className="button" id="button-3">
-                        <div id="circle"/>
-                        <a href="https://bunchofbrains.com/">Addiction</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-3">
-                        <div id="circle"/>
-                        <a href="https://bunchofbrains.com/">Parenting</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-3">
-                        <div id="circle"/>
-                        <a href="https://bunchofbrains.com/">Brain health</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-3">
-                        <div id="circle"/>
-                        <a href="https://bunchofbrains.com/">Cognitive development</a>
-                    </div>
-                </div>
+                <ButtonCircleEffect text='Addiction' href="https://bunchofbrains.com/"/>
+                <ButtonCircleEffect text='Parenting' href="https://bunchofbrains.com/"/>
+                <ButtonCircleEffect text='Brain health' href="https://bunchofbrains.com/"/>
+                <ButtonCircleEffect text='Cognitive development' href="https://bunchofbrains.com/"/>
             </div>
 
-
-
             <div className={'row text-center'}>
-                <div className={'col-3'}>
-                    <div className="button" id="button-4">
-                        <div id="underline"/>
-                        <a href="https://bunchofbrains.com/">Emotional abuse</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-4">
-                        <div id="underline"/>
-                        <a href="https://bunchofbrains.com/">Goal setting</a>
-                    </div>
-                </div>
-
+                <ButtonUnderlineEffect text='Emotional abuse' href="https://bunchofbrains.com/"/>
+                <ButtonUnderlineEffect text='Goal setting' href="https://bunchofbrains.com/"/>
             </div>
 
-
             <div className={'row text-center'}>
-                <div className={'col-3'}>
-                    <div className="button" id="button-5">
-                        <div id="translate"/>
-                        <a href="https://bunchofbrains.com/">Lowliness</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-5">
-                        <div id="translate"/>
-                        <a href="https://bunchofbrains.com/">Marital issues</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-5">
-                        <div id="translate"/>
-                        <a href="https://bunchofbrains.com/">Motivation</a>
-                    </div>
-                </div>
-
+                <ButtonTranslateEffect text='Lowliness' href="https://bunchofbrains.com/"/>
+                <ButtonTranslateEffect text='Marital issues' href="https://bunchofbrains.com/"/>
+                <ButtonTranslateEffect text='Motivation' href="https://bunchofbrains.com/"/>
             </div>
 
-
-
             <div className={'row text-center'}>
-                <div className={'col-3'}>
-                    <div  data-tip="Obsessive Compulsive Disorder"  className="button" id="button-6">
-                        <div id="spin"/>
-                        <a href="https://bunchofbrains.com/">OCD</a>
-                        <ReactTooltip className={'tooltip'} textColor={'black'} effect={'solid'} type={'success'} />
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-6">
-                        <div id="spin"/>
-                        <a href="https://bunchofbrains.com/">Phobias</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div data-tip="Post Traumatic Stress Disorder" className="button" id="button-6">
-                        <div id="spin"/>
-                        <a href="https://bunchofbrains.com/">PTSD</a>
-                        <ReactTooltip className={'tooltip'} textColor={'black'} effect={'solid'} type={'success'} />
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-6">
-                        <div id="spin"/>
-                        <a href="https://bunchofbrains.com/">Relationship issues</a>
-                    </div>
-                </div>
-
+                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'OCD'}
+                                  tooltip={true} dataTip={"Obsessive Compulsive Disorder"}/>
+                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'Phobias'}/>
+                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'PTSD'}
+                                  tooltip={true} dataTip={"Post Traumatic Stress Disorder"}/>
+                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'Relationship issues'}/>
             </div>
 
-
-
-
             <div className={'row text-center'}>
-                <div className={'col-3'}>
-                    <div className="button" id="button-7">
-                        <div id="translate_reversed"/>
-                        <a href="https://bunchofbrains.com/">Schizophrenia</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-7">
-                        <div id="translate_reversed"/>
-                        <a href="https://bunchofbrains.com/">sexuality</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-7">
-                        <div id="translate_reversed"/>
-                        <a href="https://bunchofbrains.com/">Bullying</a>
-                    </div>
-                </div>
-                <div className={'col-3'}>
-                    <div className="button" id="button-7">
-                        <div id="translate_reversed"/>
-                        <a href="https://bunchofbrains.com/">spirituality</a>
-                    </div>
-                </div>
-
+                <ButtonTranslateReversedEffect text='Schizophrenia' href="https://bunchofbrains.com/"/>
+                <ButtonTranslateReversedEffect text='sexuality' href="https://bunchofbrains.com/"/>
+                <ButtonTranslateReversedEffect text='Bullying' href="https://bunchofbrains.com/"/>
+                <ButtonTranslateReversedEffect text='spirituality' href="https://bunchofbrains.com/"/>
             </div>
         </div>
     )
 }
+
+
 export default AllTroubles;

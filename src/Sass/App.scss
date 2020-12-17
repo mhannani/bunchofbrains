@@ -21,7 +21,8 @@
 @import "./components/contact";
 @import "./components/faq";
 @import "./components/spinner";
-@import "./components/allTroubles";
+@import "components/allTroubles";
+@import "components/Troubles/all_troubles";
 $fa-font-path: "~font-awesome/fonts";
 $fa-font-path: "../fonts" !default;
 

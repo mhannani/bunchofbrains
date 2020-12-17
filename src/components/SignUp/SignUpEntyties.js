@@ -14,46 +14,52 @@ export const SignUpMessage = ()=>{
 
 export const GoogleSignUp = ()=>{
     return(
-        <button className="col-xl-10 col-sm-12 mb-2 btn social" onClick={() => {
-            try {
-                signInWithGoogle();
-            } catch (error) {
-                console.error("Error signing in with Google", error);
-            }
-        }}>
-            <GoogleIcon style={{float: "left"}}/>
-            <span>Continue with Google</span>
-        </button>
+        <div className={'col-md-10 col-sm-12 text-center'}>
+            <button className="col-6 mb-2 btn social" onClick={() => {
+                try {
+                    signInWithGoogle();
+                } catch (error) {
+                    console.error("Error signing in with Google", error);
+                }
+            }}>
+                <GoogleIcon style={{float: "left"}}/>
+                <span>Google</span>
+            </button>
+        </div>
     )
 }
 
 export const FaceBookSignUp = ()=>{
     return(
-        <button className="col-xl-10 col-sm-12 mb-2 btn social" onClick={() => {
-            try {
-                signInWithFacebook();
-            } catch (error) {
-                console.error("Error signing in with Google", error);
-            }
-        }}>
-            <FacebookIcon style={{float: "left"}}/>
-            <span>Continue with Facebook</span>
-        </button>
+        <div className={'col-md-10 col-sm-12 text-center'}>
+            <button className="col-6 mb-2 btn social" onClick={() => {
+                try {
+                    signInWithFacebook();
+                } catch (error) {
+                    console.error("Error signing in with Google", error);
+                }
+            }}>
+                <FacebookIcon style={{float: "left"}}/>
+                <span>Facebook</span>
+            </button>
+        </div>
     )
 }
 
 export const TwitterSignUp = ()=>{
     return(
-        <button className="col-xl-10 col-sm-12  btn social" onClick={() => {
-            try {
-                signInWithTwitter();
-            } catch (error) {
-                console.error("Error signing in with Google", error);
-            }
-        }}>
-            <TwitterIcon style={{float: "left"}}/>
-            <span>Continue with Apple</span>
-        </button>
+        <div className={'col-md-10 col-sm-12 text-center'}>
+            <button className="col-6 btn social" onClick={() => {
+                try {
+                    signInWithTwitter();
+                } catch (error) {
+                    console.error("Error signing in with Google", error);
+                }
+            }}>
+                <TwitterIcon style={{float: "left"}}/>
+                <span>Twitter</span>
+            </button>
+        </div>
     )
 }
 

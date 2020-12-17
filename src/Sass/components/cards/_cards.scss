@@ -1,11 +1,33 @@
+@import '../../variables';
+
 .card_section {
   button{
     border-radius: 0 !important;
   }
-  .startFeeling{
-    font-weight: bolder;
-    border:0 !important;
-    border-radius: 50%;
+  //.startFeeling{
+  //  font-weight: bolder;
+  //  border:0 !important;
+  //  border-radius: 50%;
+  //}
+  .btn-arrow:after {
+    font-family: 'FontAwesome', 'sans-serif';
+    content: '\f061';
+    padding-left: 15px;
+    position: relative;
+    font-size: 2em;
+    color:$primary;
+  }
+  .btn-arrow {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    color:$primary;
+  }
+  .btn-arrow:hover {
+    color:$primary_dark;
+  }
+  .btn-arrow:hover:after {
+    color: $primary_dark;
   }
 
   .card {

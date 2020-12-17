@@ -24,6 +24,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.1",
     "react-spring": "^8.0.27",
+    "react-tooltip": "^4.2.11",
     "react-transition-group": "^4.4.1",
     "react-user-avatar": "^1.10.0",
     "redux": "^4.0.5",

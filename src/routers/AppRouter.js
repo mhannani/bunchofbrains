@@ -16,6 +16,9 @@ import LogInOnMdScreen from "../components/LogIn/LogInOnMdScreen";
 import ResetPassword from "../components/ResetPassword/ResetPassword";
 import NoMatch from "../components/NoMatch";
 import SignUpOnMdScreen from "../components/SignUp/SignUpOnMdScreen"
+import News from "../components/News/News";
+import Blog from "../components/Blog/Blog"
+import AllTroubles from "../components/All_troubles/AllTroubles";
 
 // Theme
 // =====
@@ -23,6 +26,7 @@ import {UseDarkMode} from "../components/Themer/UseDarkMode";
 import {darkTheme, lightTheme} from "../components/Themer/Themes";
 import {ThemeProvider} from "styled-components";
 import {GlobalStyles} from "../components/Themer/GlobalStyle";
+
 
 const AppRouter = ()=>{
         const [theme, themeToggler,componentMounted] = UseDarkMode();
@@ -42,6 +46,9 @@ const AppRouter = ()=>{
                         <Route path='/faq'  render={() => <Faq title="Faq - bunchofbrains"/>} exact={true}/>
                         <Route path='/about' render={() => <About title="About - bunchofbrains"/>} exact={true}/>
                         <Route path='/contact' render={() => <Contact title="Contact - bunchofbrains"/>} exact={true}/>
+                        <Route path='/blog' render={() => <Blog title="Our Blog - bunchofbrains"/>} exact={true}/>
+                        <Route path='/news' render={() => <News title="News - bunchofbrains"/>} exact={true}/>
+                        <Route path='/all-troubles' render={() => <AllTroubles title="All troubles - bunchofbrains"/>} exact={true}/>
                         <Route path='/log-in' render={() => <LogInOnMdScreen title="Log In - bunchofbrains"/>} exact={true}/>
                         <Route path='/sign-up' render={() => <SignUpOnMdScreen title="Sign Up - bunchofbrains"/>} exact={true}/>
                         <Route path='/reset-password' render={() => <ResetPassword title="Forget Password  - bunchofbrains"/>} exact={true}/>

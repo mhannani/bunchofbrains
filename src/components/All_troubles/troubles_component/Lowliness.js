@@ -1,9 +1,14 @@
 import React from "react";
+import GoBackButton from "../goBackButton";
 
 const Lowliness = ()=>{
+
     return(
-        <div className={'container lowliness'}>
-            lowliness
+        <div className={'mx-4 lowliness'}>
+            <GoBackButton/>
+            <div className={'container'}>
+                GoalSetting
+            </div>
         </div>
     )
 }

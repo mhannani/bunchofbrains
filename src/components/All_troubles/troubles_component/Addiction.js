@@ -1,9 +1,12 @@
 import React from "react";
-
+import GoBackButton from "../goBackButton";
 const Addiction = ()=>{
     return(
-        <div className={'container addiction'}>
-            Addiction
+        <div className={'mx-4 addiction'}>
+            <GoBackButton/>
+            <div className={'container'}>
+                addiction
+            </div>
         </div>
     )
 }

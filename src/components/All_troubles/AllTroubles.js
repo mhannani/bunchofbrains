@@ -12,44 +12,44 @@ const AllTroubles = ()=>{
 
         <div className={'container all_troubles'}>
             <div className={'row text-center'}>
-                <ButtonSlideEffect text='Depression' href="https://bunchofbrains.com/"/>
-                <ButtonSlideEffect text='Anxiety' href="https://bunchofbrains.com/"/>
-                <ButtonSlideEffect text='Panic disorder' href="https://bunchofbrains.com/"/>
-                <ButtonSlideEffect text='Self esteem' href="https://bunchofbrains.com/"/>
+                <ButtonSlideEffect text='Depression' to="/all-troubles/depression"/>
+                <ButtonSlideEffect text='Anxiety' to="/all-troubles/anxiety"/>
+                <ButtonSlideEffect text='Panic disorder' to="/all-troubles/panic-disorder"/>
+                <ButtonSlideEffect text='Self esteem' to="/all-troubles/self-esteem"/>
             </div>
 
             <div className={'row text-center'}>
-                <ButtonCircleEffect text='Addiction' href="https://bunchofbrains.com/"/>
-                <ButtonCircleEffect text='Parenting' href="https://bunchofbrains.com/"/>
-                <ButtonCircleEffect text='Brain health' href="https://bunchofbrains.com/"/>
-                <ButtonCircleEffect text='Cognitive development' href="https://bunchofbrains.com/"/>
+                <ButtonCircleEffect text='Addiction' to="/all-troubles/addiction"/>
+                <ButtonCircleEffect text='Parenting' to="/all-troubles/parenting"/>
+                <ButtonCircleEffect text='Brain health' to="/all-troubles/brain-health"/>
+                <ButtonCircleEffect text='Cognitive development' to="/all-troubles/cognitive-development"/>
             </div>
 
             <div className={'row text-center'}>
-                <ButtonUnderlineEffect text='Emotional abuse' href="https://bunchofbrains.com/"/>
-                <ButtonUnderlineEffect text='Goal setting' href="https://bunchofbrains.com/"/>
+                <ButtonUnderlineEffect text='Emotional abuse' to="/all-troubles/emotional-abuse"/>
+                <ButtonUnderlineEffect text='Goal setting' to="/all-troubles/goal-setting"/>
             </div>
 
             <div className={'row text-center'}>
-                <ButtonTranslateEffect text='Lowliness' href="https://bunchofbrains.com/"/>
-                <ButtonTranslateEffect text='Marital issues' href="https://bunchofbrains.com/"/>
-                <ButtonTranslateEffect text='Motivation' href="https://bunchofbrains.com/"/>
+                <ButtonTranslateEffect text='Lowliness' to="/all-troubles/lowliness"/>
+                <ButtonTranslateEffect text='Marital issues' to="/all-troubles/marital-issues"/>
+                <ButtonTranslateEffect text='Motivation' to="/all-troubles/motivation"/>
             </div>
 
             <div className={'row text-center'}>
-                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'OCD'}
-                                  tooltip={true} dataTip={"Obsessive Compulsive Disorder"}/>
-                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'Phobias'}/>
-                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'PTSD'}
-                                  tooltip={true} dataTip={"Post Traumatic Stress Disorder"}/>
-                <ButtonSpinEffect href={'https://bunchofbrains.com/'} text={'Relationship issues'}/>
+                <ButtonSpinEffect to={'/all-troubles/ocd'} text={'OCD'} tooltip={true}
+                                  dataTip={"Obsessive Compulsive Disorder"}/>
+                <ButtonSpinEffect to={'/all-troubles/phobias'} text={'Phobias'}/>
+                <ButtonSpinEffect to={'/all-troubles/ptsd'} text={'PTSD'} tooltip={true}
+                                  dataTip={"Post Traumatic Stress Disorder"}/>
+                <ButtonSpinEffect to={'/all-troubles/relationship-issues'} text={'Relationship issues'}/>
             </div>
 
             <div className={'row text-center'}>
-                <ButtonTranslateReversedEffect text='Schizophrenia' href="https://bunchofbrains.com/"/>
-                <ButtonTranslateReversedEffect text='sexuality' href="https://bunchofbrains.com/"/>
-                <ButtonTranslateReversedEffect text='Bullying' href="https://bunchofbrains.com/"/>
-                <ButtonTranslateReversedEffect text='spirituality' href="https://bunchofbrains.com/"/>
+                <ButtonTranslateReversedEffect text='Schizophrenia' to="/all-troubles/schizophrenia"/>
+                <ButtonTranslateReversedEffect text='Sexuality' to="/all-troubles/sexuality"/>
+                <ButtonTranslateReversedEffect text='Bullying' to="/all-troubles/bullying"/>
+                <ButtonTranslateReversedEffect text='Spirituality' to="/all-troubles/spirituality"/>
             </div>
         </div>
     )

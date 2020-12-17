@@ -1,9 +1,14 @@
 import React from "react";
+import GoBackButton from "../goBackButton";
 
 const Anxiety = ()=>{
+
     return(
-        <div className={'container anxiety'}>
-            Anxiety
+        <div className={'mx-4 anxiety'}>
+            <GoBackButton/>
+            <div className={'container'}>
+                Anxiety
+            </div>
         </div>
     )
 }

@@ -1,7 +1,9 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
+import $ from 'jquery';
 import {NavLink} from "react-router-dom";
 import {Link} from "react-router-dom";
 import {ReactComponent as Logo} from './brain.svg';
+
 // import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
 import HeaderLink from "../chunks/HeaderLink";
@@ -24,7 +26,16 @@ const Header = () => {
     // const [isAuthenticated, changeIsAuthenticated] = useState(false)
     // const userName = firebase.auth().currentUser ? firebase.auth().currentUser.displayName  : ' ';
 
+    useEffect(() => {
+        $('button.navbar-toggle').focusout(function(){
+            $(".navbar-collapse").collapse('hide');
+        });
 
+        // Close Bootstrap 3 navbar when a nav item is clicked
+        $('.navbar-collapse ul li a:not(.dropdown-toggle)').bind('click touchstart', function () {
+            $('.navbar-toggle:visible').click();
+        });
+    })
 
     const logInHandler = () => {
         const mql = window.matchMedia('(max-width: 900px)')

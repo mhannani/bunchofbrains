@@ -108,7 +108,7 @@
     top: 9px;
   }
   .accordion .card-header .btn:hover {
-    color: #ff8300;
+    color: $primary;
   }
   .accordion .card-body {
     color: #324353;
@@ -121,16 +121,16 @@
   }
   .page-title::after {
     content: "";
-    width: 80px;
+    width: 90px;
     position: absolute;
     height: 3px;
     border-radius: 1px;
-    background: #73bb2b;
+    background: $primary_dark;
     left: 0;
     bottom: -15px;
   }
   .accordion .highlight .btn {
-    color: #74bd30;
+    color: $primary_dark;
   }
   .accordion .highlight i {
     transform: rotate(180deg);

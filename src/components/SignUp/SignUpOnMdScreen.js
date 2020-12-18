@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {SignUpMessage, GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr} from "./SignUpEntyties"
 import {FormSignUpWithEmailAndPassword} from "./Form";
+import {Link} from "react-router-dom";
 const LogInOnMdScreen = (props)=>{
     const [usingEmail, changeUsingEmail] = useState(false);
     useEffect(() => {
@@ -29,7 +30,9 @@ const LogInOnMdScreen = (props)=>{
                     <div className="forgot-password  mt-2 text-center ">
                         <div className="sign-up text-center mt-1">
                             <span>Already a member ?</span>
-                            <a className="link text-decoration-none" href={'/log-in'}>Log In</a>
+                            <Link to={"/log-in"} className={'trouble_button link text-decoration-none'}>
+                                Log In
+                            </Link>
                             <div className="mx-auto col-xl-10 col-sm-12 form-separator"/>
                         </div>
 

@@ -10,10 +10,13 @@ class CardN3 extends React.Component{
                 <h2 className={'text-center text-nowrap text-break'}>Panic disorder</h2>
                 <div className={'row'}>
                     <div className="card-body description">
-                        It is a long established fact that a reader will be distracted
-                        by the readable content of a page when looking at its layout.
-                        The point of using Lorem Ipsum is that it has a more-or-less
-                        normal distribution of letters, as opposed to using 'Content here,
+                        Sometimes feeling anxious is quite normal. However,
+                        a person can have panic disorder if they experience
+                        panic attacks repeatedly and unpredictably.
+                        People experiencing a panic attack experience a sense
+                        of ...
+
+
                     </div>
 
                 </div>
@@ -22,7 +25,7 @@ class CardN3 extends React.Component{
                         <Button cardButton className="btn cardButton px-5 col-12 font-weight-bold"
                                 onMouseDown={e => e.preventDefault()}
                         >
-                            Learn more
+                            Explore more
                         </Button>
                     </Link>
                 </div>

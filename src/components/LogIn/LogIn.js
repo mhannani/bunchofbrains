@@ -16,9 +16,9 @@ const LogIn = (props)=>{
                         Welcome Back To Bunchofbrains
                     </h2>
                     <div className={'ml-3 mt-4 borderSeparator'}/>
-                    {/*<h6 className={'text-white mt-4 flex-wrap col-8'}>*/}
-                    {/*    Sign in to continue to your account.*/}
-                    {/*</h6>*/}
+                    <h6 className={'text-white mt-4 flex-wrap col-8'}>
+                        Master psychology. Master life.
+                    </h6>
                 </div>
             </div>
 

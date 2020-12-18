@@ -85,7 +85,7 @@ const Header = () => {
                     <li className="nav-item mx-sm-1 mx-md-0 mx-lg-2">
                         <NavLink to={'/'} activeStyle={selected} exact
                                  className={'nav-link'}
-                        ><HeaderLink>Home</HeaderLink>
+                        ><HeaderLink >Home</HeaderLink>
                         </NavLink>
                     </li>
 

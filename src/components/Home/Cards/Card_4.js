@@ -10,10 +10,10 @@ class CardN3 extends React.Component {
                 <h2 className={'text-center'}>Self esteem</h2>
                 <div className={'row'}>
                     <div className="card-body description">
-                        It is a long established fact that a reader will be distracted
-                        by the readable content of a page when looking at its layout.
-                        The point of using Lorem Ipsum is that it has a more-or-less
-                        normal distribution of letters, as opposed to using 'Content here,
+                        Self-esteem is a psychological concept that refers
+                        to the overall positive or negative judgment that
+                        a person has of themselves.
+                        Your self-esteem will depend on many parameters ...
                     </div>
 
                 </div>
@@ -22,7 +22,7 @@ class CardN3 extends React.Component {
                         <Button cardButton className="btn cardButton px-5 col-12 font-weight-bold"
                                 onMouseDown={e => e.preventDefault()}
                         >
-                            Learn more
+                            Explore more
                         </Button>
                     </Link>
                 </div>

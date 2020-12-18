@@ -9,10 +9,10 @@ class CardN1 extends React.Component {
                 <h2 className={'text-center'}>Depression</h2>
                 <div className={'row'}>
                     <div className="card-body description">
-                        It is a long established fact that a reader will be distracted
-                        by the readable content of a page when looking at its layout.
-                        The point of using Lorem Ipsum is that it has a more-or-less
-                        normal distribution of letters, as opposed to using 'Content here,
+                        We can all experience emotions like anger, sadness,
+                        or joy. Usually we feel that we are in control of our
+                        emotions and we are able to deal with them on a daily basis.
+                        A person with depression feels ...
                     </div>
 
                 </div>
@@ -21,7 +21,7 @@ class CardN1 extends React.Component {
                         <Button cardButton className="cardButton btn hvr-pulse px-5 col-12 font-weight-bold"
                                 onMouseDown={e => e.preventDefault()}
                         >
-                            Learn more
+                            Explore more
                         </Button>
                     </Link>
                 </div>

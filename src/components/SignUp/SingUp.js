@@ -13,10 +13,8 @@ const SignUp = (props)=>{
                             Join Bunchofbrains for Free
                         </h5>
                         <div className={'ml-3 mt-3 borderSeparator'}/>
-                        <h6 className={'text-white mt-3 flex-wrap col-12'}>
-                            Kick out the depression by talking
-                            to our experts,
-                            discuss with them, get advices, and more.
+                        <h6 className={'text-white mt-3 flex-wrap col-8'}>
+                            Master psychology. Master life.
                         </h6>
                     </div>
                 </div>

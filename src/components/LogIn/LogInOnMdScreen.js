@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react'
 import {LogInMessage, GoogleLogIn, FaceBookLogIn, TwitterLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties"
+import {Link} from "react-router-dom";
 const LogInOnMdScreen = (props)=>{
     useEffect(() => {
         document.title = props.title || "";
@@ -14,16 +15,15 @@ const LogInOnMdScreen = (props)=>{
                     <GoogleLogIn/>
                     <FaceBookLogIn/>
                     <TwitterLogIn/>
-
                     <FormSeparatorWithOr/>
                     <LogInForm/>
                     <div className="sign-up text-center mt-2">
+
+
                         <p>Not a member yet ?
-                            <a className=" link text-decoration-none text-center"
-                               href={'/sign-up'}
-                            >
+                            <Link to={"/sign-up"} className={'trouble_button link text-decoration-none text-center'}>
                                 Sign Up
-                            </a>
+                            </Link>
                         </p>
                     </div>
 

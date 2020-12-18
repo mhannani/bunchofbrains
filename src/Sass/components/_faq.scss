@@ -1,3 +1,77 @@
+@import "../variables";
 .faq{
   margin-top: 100px;
+
+
+  .accordion > input[name="collapse"] {
+    display: none;
+  }
+
+  .accordion .content {
+    background: #fff;
+    overflow: hidden;
+    height: 0;
+    transition: 0.5s;
+  }
+
+  .accordion > input[name="collapse"]:checked ~ .content {
+    height: auto;
+    transition: height 0.5s;
+  }
+
+  .accordion label {
+    display: block;
+
+  }
+
+
+  /* For Desktop */
+  @media only screen and (min-width: 620px){
+
+
+    .accordion > input[name="collapse"]:checked ~ .content {
+      height:inherit + 20px;
+    }
+
+  }
+  .accordion {
+    margin-bottom: 0.1em;
+  }
+
+  .accordion .handle {
+    margin: 0;
+    font-size: 18px;
+
+  }
+
+  .accordion label {
+    color: #fff;
+    cursor: pointer;
+    font-weight: normal;
+    padding: 10px;
+    background: $primary;
+
+  }
+  .accordion label:hover,
+  .accordion label:focus {
+    background: $primary_dark;
+  }
+
+  .accordion .handle label:before {
+    font-family: FontAwesome, sans-serif;
+    content: "\f107";
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1em;
+    line-height: 1.556em;
+    vertical-align: middle;
+    transition: 0.2s;
+
+  }
+
+  .accordion > input[name="collapse"]:checked ~ .handle label:before {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.4s;
+  }
 }

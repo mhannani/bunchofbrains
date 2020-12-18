@@ -1,6 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react'
 import $ from 'jquery';
-import {NavLink} from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 import {Link} from "react-router-dom";
 import {ReactComponent as Logo} from './brain.svg';
 
@@ -23,6 +23,7 @@ const Header = () => {
     const user = useContext(UserContext);
     const [isVisible, toggleVisibility] = useState(false)
     const [isLogIn, changeIsLogIn] = useState(true)
+    const history = useHistory();
     // const [isAuthenticated, changeIsAuthenticated] = useState(false)
     // const userName = firebase.auth().currentUser ? firebase.auth().currentUser.displayName  : ' ';
 
@@ -41,8 +42,7 @@ const Header = () => {
         const mql = window.matchMedia('(max-width: 900px)')
         if (mql.matches) {
             // The viewport is less than 670px
-            window.location.href = "/log-in";
-            // <Redirect to='/login' />
+            history.push("/log-in");
         } else {
             // The viewport is wider than 670px
             changeIsLogIn(true)
@@ -55,7 +55,7 @@ const Header = () => {
         const mql = window.matchMedia('(max-width: 900px)')
         if (mql.matches) {
             // The viewport is less than 670px
-            window.location.href = "/sign-up";
+            history.push("/sign-up");
             // <Redirect to='/login' />
         } else {
             // The viewport is wider than 670px

@@ -11,12 +11,15 @@
   //}
   .btn-arrow:after {
     font-family: 'FontAwesome', 'sans-serif';
-    content: '\f061';
+    content: '\f0a9';
     padding-left: 15px;
     position: relative;
     font-size: 1.3em;
     color:$primary;
 
+  }
+  .seeAll{
+    text-decoration: none;
   }
 
   .btn-arrow {

@@ -49,15 +49,15 @@ export const TwitterLogIn = ()=>{
 }
 
 export const LogInForm = ()=>{
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
 
     const signInWithEmailAndPasswordHandler = (values) => {
         console.log(values.email)
         // event.preventDefault();
-        auth.signInWithEmailAndPassword(email, password).catch(error => {
-            console.log(email)
+        auth.signInWithEmailAndPassword().catch(error => {
+            // console.log(email)
             setError(error.message);
             console.error("Error signing in with password and email", error);
         });

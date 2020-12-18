@@ -9,11 +9,11 @@ const SignUp = (props)=>{
             <div className={'container row'}>
                 <div className="welcomeMessage d-flex align-items-center">
                     <div>
-                        <h5 className={'text-white text-center flex-wrap col-5'}>
+                        <h5 className={'text-white text-center flex-wrap col-12'}>
                             Join Bunchofbrains for Free
                         </h5>
                         <div className={'ml-3 mt-3 borderSeparator'}/>
-                        <h6 className={'text-white mt-3 flex-wrap col-5'}>
+                        <h6 className={'text-white mt-3 flex-wrap col-12'}>
                             Kick out the depression by talking
                             to our experts,
                             discuss with them, get advices, and more.

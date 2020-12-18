@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from "../../chunks/Card";
 import Button from "../../chunks/Button";
+import {Link} from "react-router-dom";
 
 class CardN3 extends React.Component {
     render() {
@@ -17,11 +18,13 @@ class CardN3 extends React.Component {
 
                 </div>
                 <div className="ml-auto mr-auto row">
-                    <Button cardButton className="btn cardButton px-5 col-12 font-weight-bold"
-                            onMouseDown={e => e.preventDefault()}
-                    >
-                        something
-                    </Button>
+                    <Link to={"/all-troubles/self-esteem"} className={'trouble_button'}>
+                        <Button cardButton className="btn cardButton px-5 col-12 font-weight-bold"
+                                onMouseDown={e => e.preventDefault()}
+                        >
+                            Learn more
+                        </Button>
+                    </Link>
                 </div>
             </Card>
         )

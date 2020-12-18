@@ -31,7 +31,7 @@ const Contact = (props) => {
                     </div>
 
                     <div className="form-group col-xl-7 col-lg-8">
-                        <Button type="submit" className="rounded-  resetButton col-xl-12 btn font-weight-bold"
+                        <Button type="submit" className="rounded-0 text-white bg-success col-xl-12 btn font-weight-bold"
                                 placeholder="Message">
                             Sign in
                         </Button>

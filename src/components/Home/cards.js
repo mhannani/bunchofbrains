@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom";
 
 import CardN1 from "./Cards/Card_1";
 import CardN2 from "./Cards/Card_2";
@@ -30,7 +31,10 @@ class Cards extends React.Component{
                         {/*<Button className={'startFeeling btn mx-1 px-5 py-4 btn-block btn-lg'}>*/}
                         {/*    START FEELING GREAT*/}
                         {/*</Button>*/}
-                        <a href="https://bunchofbrains.com" className="btn-arrow">See all</a>
+
+                        <Link to={"/all-troubles"} className={'trouble_button'}>
+                            <span className="btn-arrow">See all</span>
+                        </Link>
                     </div>
                 </div>
             </div>

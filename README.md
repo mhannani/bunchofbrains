@@ -3,7 +3,7 @@
 If not just install them from here https://nodejs.org/en/
 (npm come preinstalled with it)
 ### `2. clone the repository`
-`git clone https://github.com/SIMOHANNANI/Hook_depression.git`
+`git clone https://github.com/mhannani/Hook_depression.git`
 
 Sign in to get the access since its private . 
 

@@ -42,6 +42,19 @@ const Header = () => {
                 $('.navbar-collapse').collapse('hide');
             });
         });
+        $(document).ready(function() {
+            function checkOffset() {
+                $(".navbar-collapse").collapse('hide');
+            }
+            // Run function when scrolling
+            $(window).scroll(function() {
+                checkOffset();
+            });
+            // Run function on Clicking
+            $(window).click(function() {
+                checkOffset();
+            });
+        });
     })
 
     const logInHandler = () => {

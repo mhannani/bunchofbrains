@@ -32,7 +32,7 @@ const Depression = ()=>{
     //
 
     return(
-        <div className={'mx-4 depression'}>
+        <div className={'mx-md-4 article_container'}>
             <GoBackButton/>
             <article className={'container article'}>
                 <div className={'container'}>
@@ -42,7 +42,7 @@ const Depression = ()=>{
                     </header>
                     <div className={'container mx-md-4 img-placeholder'}/>
                     <div className={'container row'}>
-                        <div className={'col-sm-12 mt-3 col-xl-11'}>
+                        <div className={'mt-3 col-12'}>
                             <section>
                                 We can all experience emotions like anger, sadness, or joy.
                                 Usually we feel that we are in control of our emotions and we are

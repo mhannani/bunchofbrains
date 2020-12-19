@@ -1,6 +1,9 @@
-import React from "react";
+import React, {useEffect} from "react";
 
-const Blog = ()=>{
+const Blog = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
     return(
         <div>
             Our blog

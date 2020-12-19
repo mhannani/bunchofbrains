@@ -1,8 +1,12 @@
 // import React, {useEffect} from "react";
 import GoBackButton from "../goBackButton";
+import {useEffect} from "react";
 // import $ from "jquery";
 
-const Depression = ()=>{
+const Depression = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
     //
     // useEffect(()=>{
     //     $.fn.followTo = function ( pos ) {

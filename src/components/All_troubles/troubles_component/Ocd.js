@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import GoBackButton from "../goBackButton";
 
-const Ocd = ()=>{
-
+const Ocd = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
     return(
         <div className={'mx-4 ocd'}>
             <GoBackButton/>

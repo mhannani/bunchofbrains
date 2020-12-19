@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import ButtonSlideEffect from "./ButtonsEffects/ButtonSlideEffect";
 import ButtonCircleEffect from "./ButtonsEffects/ButtonCircleEffect"
 import ButtonUnderlineEffect from "./ButtonsEffects/ButtonUnderlineEffect";
@@ -6,8 +6,10 @@ import ButtonTranslateEffect from "./ButtonsEffects/ButtonTranslateEffect";
 import ButtonSpinEffect from "./ButtonsEffects/ButtonSpinEffect";
 import ButtonTranslateReversedEffect from "./ButtonsEffects/ButtonTranslateReversedEffect"
 
-const AllTroubles = ()=>{
-
+const AllTroubles = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
     return(
 
         <div className={'container all_troubles'}>

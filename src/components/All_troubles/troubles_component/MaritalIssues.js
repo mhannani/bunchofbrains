@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import GoBackButton from "../goBackButton";
 
-const MaritalIssues = ()=>{
-
+const MaritalIssues = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
     return(
         <div className={'mx-4 marital_issues'}>
             <GoBackButton/>

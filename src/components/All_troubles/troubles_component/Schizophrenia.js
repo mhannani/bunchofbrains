@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import GoBackButton from "../goBackButton";
 
-const Schizophrenia = ()=>{
+const Schizophrenia = (props)=>{
+    useEffect(() => {
+        document.title = props.title || "";
+    })
 
     return(
         <div className={'mx-4 schizophrenia'}>

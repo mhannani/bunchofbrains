@@ -1,6 +1,7 @@
 @import "../variables";
 
 .goBackButton {
+  position: fixed;
       &::after {
         content: "\f0a8";
         font-family: FontAwesome ,sans-serif;

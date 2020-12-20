@@ -11,7 +11,7 @@ const Parenting = (props)=>{
             <article className={'container article'}>
                 <div className={'container'}>
                     <header>
-                        <h1>Loneliness</h1>
+                        <h1>Parenting</h1>
                     </header>
                     <div className={'container mx-md-4 img-placeholder'}/>
                     <div className={'container row'}>

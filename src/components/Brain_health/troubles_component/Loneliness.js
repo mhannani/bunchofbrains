@@ -5,6 +5,7 @@ const Loneliness = (props)=>{
     useEffect(() => {
         document.title = props.title || "";
     })
+
     return(
         <div className={'mx-md-4 article_container'}>
             <GoBackButton/>

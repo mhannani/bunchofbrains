@@ -26,9 +26,10 @@
     margin-top: $marginTop - 70;
     h1{
       font-weight: 500;
+      line-height: 0.8em;
     }
     h2{
-      line-height: .1em;
+      line-height: .5em;
       font-weight: 200;
     }
     h3{
@@ -54,7 +55,7 @@
       overflow: hidden;
     }
   }
-  margin-top: $marginTop;
+  margin-top: $marginTop+60;
   margin-bottom: $marginBottom;
 
   #f {

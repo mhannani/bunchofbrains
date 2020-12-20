@@ -14,10 +14,10 @@ import UserAvatar from "react-user-avatar";
 import {signOut} from "../../actions/auth"
 import {UserContext} from "../../providers/UserProvider"
 
-const selected = {
-    fontWeight: "bold",
-    color: "black"
-}
+// const selected = {
+//     fontWeight: "bold",
+//     color: "black"
+// }
 
 const Header = () => {
     const user = useContext(UserContext);
@@ -113,49 +113,49 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul className={'navbar-nav ml-auto mr-auto'}>
                     <li className="nav-item mx-sm-1 mx-md-0 mx-lg-2">
-                        <NavLink to={'/'} activeStyle={selected} exact
+                        <NavLink to={'/'} activeClassName="selected" exact
                                  className={'nav-link'}
                         ><HeaderLink >Home</HeaderLink>
                         </NavLink>
                     </li>
 
                     <li className="nav-item mx-sm-1 mx-md-0 mx-lg-2">
-                        <NavLink to={'/about'} activeStyle={selected}
+                        <NavLink to={'/about'} activeClassName="selected"
                                  className={'nav-link'}
                         ><HeaderLink>About</HeaderLink>
                         </NavLink>
                     </li>
 
                     <li className={'nav-item mx-sm-1 mx-md-0 mx-lg-2'}>
-                        <NavLink to={'/advice'} activeStyle={selected}
+                        <NavLink to={'/advice'} activeClassName="selected"
                                  className={'nav-link'}
                         ><HeaderLink>Advice</HeaderLink>
                         </NavLink>
                     </li>
 
                     <li className={'nav-item mx-sm-1 mx-md-0 mx-lg-2'}>
-                        <NavLink to={'/faq'} activeStyle={selected}
+                        <NavLink to={'/faq'} activeClassName="selected"
                                  className={'nav-link'}
                         ><HeaderLink>FAQ</HeaderLink>
                         </NavLink>
                     </li>
 
                     <li className="nav-item mx-sm-1 mx-md-0 mx-lg-2">
-                        <NavLink to={'/news'} activeStyle={selected}
+                        <NavLink to={'/news'} activeClassName="selected"
                                  className={'nav-link'}
                         ><HeaderLink>News</HeaderLink>
                         </NavLink>
                     </li>
 
                     <li className="nav-item mx-sm-1 mx-md-0 mx-lg-2">
-                        <NavLink to={'/blog'} activeStyle={selected}
+                        <NavLink to={'/blog'} activeClassName="selected"
                                  className={'nav-link'}
                         ><HeaderLink>Blog</HeaderLink>
                         </NavLink>
                     </li>
 
                     <li className="nav-item mx-sm-1 mx-md-0 mx-lg-2">
-                        <NavLink to={'/contact'} activeStyle={selected}
+                        <NavLink to={'/contact'} activeClassName="selected"
                                  className={'nav-link'}
                         ><HeaderLink>Contact</HeaderLink>
                         </NavLink>

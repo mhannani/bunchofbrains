@@ -1,4 +1,9 @@
+@import "../variables";
+
 nav {
+  //.selected{
+  //  border:10px solid red !important;
+  //}
   transition: 0.3s ease-in-out;
   ul {
     li {
@@ -71,5 +76,14 @@ nav {
       font-family: 'Gloria Hallelujah', cursive;
     }
 
+  }
+  .selected{
+    color:black !important;
+    border-radius: 2.5px;
+    border-bottom:3px solid $primary_dark !important;
+  }
+  .nav-link{
+    border-radius: 2.5px;
+    border-bottom: 3px solid transparent;
   }
 }

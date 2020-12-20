@@ -7,7 +7,6 @@ export const lightTheme = {
     card_bg:'#F9F9F9',
     button_bg: '#f9f9f9',
     get_started_bg:'#5cb85c',
-    // Header_link_color: '#050505',
     get_started_text: '#ffffff',
     footer_bg: '#3a6d3a',
     reset_button_bg: '#1660ac',

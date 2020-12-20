@@ -93,9 +93,9 @@ const Header = () => {
                 <Link to={'/'}>
                     <Logo className={'logo d-inline-block align-top mr-2'}/>
                 </Link>
-                <a className="navbar-brand mr-0 d-none d-md-inline-block" href="/">
-                    <HeaderLink>Bunchofbrains</HeaderLink>
-                </a>
+                <Link to={'/'}>
+                    <HeaderLink className="navbar-brand mr-0 d-none d-md-inline-block">Bunchofbrains</HeaderLink>
+                </Link>
             </div>
 
             <div className={'row d-flex'}>

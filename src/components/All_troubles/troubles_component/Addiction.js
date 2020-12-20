@@ -10,8 +10,7 @@ const Addiction = (props)=>{
             <article className={'container article'}>
                 <div className={'container'}>
                     <header>
-                        <h1>An Overview of Addiction</h1>
-                        <h2>What do Addiction do?</h2>
+                        <h1>Addiction</h1>
                     </header>
                     <div className={'container mx-md-4 img-placeholder'}/>
                     <div className={'container row'}>

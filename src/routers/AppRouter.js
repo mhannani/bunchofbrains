@@ -30,7 +30,7 @@ import BrainHealth from "../components/All_troubles/troubles_component/BrainHeal
 import CognitiveDevelopment from "../components/All_troubles/troubles_component/CognitiveDevelopment";
 import EmotionalAbuse from "../components/All_troubles/troubles_component/EmotionalAbuse";
 import GoalSetting from "../components/All_troubles/troubles_component/GoalSetting";
-import Lowliness from "../components/All_troubles/troubles_component/Lowliness";
+import Loneliness from "../components/All_troubles/troubles_component/Loneliness";
 import MaritalIssues from "../components/All_troubles/troubles_component/MaritalIssues";
 import Motivation from "../components/All_troubles/troubles_component/Motivation";
 import Ocd from "../components/All_troubles/troubles_component/Ocd";
@@ -82,7 +82,7 @@ const AppRouter = ()=>{
                         <ScrollToTopRoute path='/all-troubles/cognitive-development' render={() => <CognitiveDevelopment title="Cognitive Development - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/emotional-abuse' render={() => <EmotionalAbuse title="Emotional Abuse - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/goal-setting' render={() => <GoalSetting title="Goal Setting - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/lowliness' render={() => <Lowliness title="Lowliness - bunchofbrains"/>} exact={true}/>
+                        <ScrollToTopRoute path='/all-troubles/loneliness' render={() => <Loneliness title="Lowliness - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/marital-issues' render={() => <MaritalIssues title="Marital Issues - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/motivation' render={() => <Motivation title="Motivation - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/ocd' render={() => <Ocd title="OCD - bunchofbrains"/>} exact={true}/>

@@ -11,8 +11,7 @@ const Ocd = (props)=>{
             <article className={'container article'}>
                 <div className={'container'}>
                     <header>
-                        <h1>An Overview of Obsessive Compulsive Disorder (OCD)</h1>
-                        <h2>What do Obsessive Compulsive Disorder do?</h2>
+                        <h1>Obsessive Compulsive Disorder (OCD)</h1>
                     </header>
                     <div className={'container mx-md-4 img-placeholder'}/>
                     <div className={'container row'}>

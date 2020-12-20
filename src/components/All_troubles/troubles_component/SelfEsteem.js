@@ -11,8 +11,7 @@ const SelfEsteem = (props)=>{
             <article className={'container article'}>
                 <div className={'container'}>
                     <header>
-                        <h1>An Overview of Self-esteem</h1>
-                        <h2>What do Self-esteem do?</h2>
+                        <h1>Self-esteem</h1>
                     </header>
                     <div className={'container mx-md-4 img-placeholder'}/>
                     <div className={'container row'}>

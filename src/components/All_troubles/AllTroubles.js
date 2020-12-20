@@ -33,7 +33,7 @@ const AllTroubles = (props)=>{
             </div>
 
             <div className={'row text-center'}>
-                <ButtonTranslateEffect text='Lowliness' to="/all-troubles/lowliness"/>
+                <ButtonTranslateEffect text='Loneliness' to="/all-troubles/Loneliness"/>
                 <ButtonTranslateEffect text='Marital issues' to="/all-troubles/marital-issues"/>
                 <ButtonTranslateEffect text='Motivation' to="/all-troubles/motivation"/>
             </div>

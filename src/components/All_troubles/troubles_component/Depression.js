@@ -36,14 +36,12 @@ const Depression = (props)=>{
     //
 
     return(
-        <div>
             <div className={'mx-md-4 article_container'}>
                 <GoBackButton/>
                 <article className={'container article'}>
                     <div className={'container'}>
                         <header>
-                            <h1>An Overview of Depression</h1>
-                            <h2>What do Depression do?</h2>
+                            <h1>Depression</h1>
                         </header>
                         <div className={'container mx-md-4 img-placeholder'}/>
                         <div className={'container row'}>
@@ -235,7 +233,6 @@ const Depression = (props)=>{
                 </article>
                 <div className="mx-md-auto"/>
             </div>
-        </div>
     )
 }
 

@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import GoBackButton from "../goBackButton";
 
-const Lowliness = (props)=>{
+const Loneliness = (props)=>{
     useEffect(() => {
         document.title = props.title || "";
     })
@@ -11,8 +11,7 @@ const Lowliness = (props)=>{
             <article className={'container article'}>
                 <div className={'container'}>
                     <header>
-                        <h1>An Overview of Loneliness</h1>
-                        <h2>What do Loneliness do?</h2>
+                        <h1>Loneliness</h1>
                     </header>
                     <div className={'container mx-md-4 img-placeholder'}/>
                     <div className={'container row'}>
@@ -390,4 +389,4 @@ const Lowliness = (props)=>{
     )
 }
 
-export default Lowliness
+export default Loneliness

@@ -11,8 +11,7 @@ const PanicDisorder = (props)=>{
             <article className={'container article'}>
                 <div className={'container'}>
                     <header>
-                        <h1>An Overview of Panic disorder</h1>
-                        <h2>What do Panic disorder do?</h2>
+                        <h1>Panic disorder</h1>
                     </header>
                     <div className={'container mx-md-4 img-placeholder'}/>
                     <div className={'container row'}>

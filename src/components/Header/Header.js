@@ -87,14 +87,14 @@ const Header = () => {
         toggleVisibility(!isVisible);
     }
     return (
-        <Nav className="{py-0 navbar navbar-expand-md navbar-light navbar-scroll fixed-top">
+        <Nav className="{py-0 navbar navbar-expand-lg navbar-light navbar-scroll fixed-top">
 
             <div className="navbar-brand">
                 <Link to={'/'}>
                     <Logo className={'logo d-inline-block align-top mr-2'}/>
                 </Link>
                 <Link to={'/'}>
-                    <HeaderLink className="navbar-brand mr-0 d-none d-md-inline-block">Bunchofbrains</HeaderLink>
+                    <HeaderLink className="navbar-brand mr-0 d-none d-sm-inline-block">Bunchofbrains</HeaderLink>
                 </Link>
             </div>
 

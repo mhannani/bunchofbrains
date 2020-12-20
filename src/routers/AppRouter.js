@@ -71,7 +71,7 @@ const AppRouter = ()=>{
                         <ScrollToTopRoute path='/contact' render={() => <Contact title="Contact - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/blog' render={() => <Blog title="Our Blog - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/news' render={() => <News title="News - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles' render={() => <AllTroubles title="All troubles - bunchofbrains"/>} exact={true}/>
+                        <ScrollToTopRoute path='/all-troubles' render={() => <AllTroubles title="Brain Health - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/depression' render={() => <Depression title="Depression - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/anxiety' render={() => <Anxiety title="Anxiety - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/panic-disorder' render={() => <PanicDisorder title="Panic Disorder - bunchofbrains"/>} exact={true}/>

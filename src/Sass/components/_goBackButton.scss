@@ -19,3 +19,13 @@
       color: $primary_dark;
     }
   }
+
+@media (max-width: 500px) {
+  .goBackButton {
+    left:8px;
+    &::after {
+
+      font-size: 25px;
+    }
+  }
+}

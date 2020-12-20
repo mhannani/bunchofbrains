@@ -41,6 +41,12 @@ import Schizophrenia from "../components/Brain_health/troubles_component/Schizop
 import Sexuality from "../components/Brain_health/troubles_component/Sexuality";
 import Bullying from "../components/Brain_health/troubles_component/Bullying";
 import Spirituality from "../components/Brain_health/troubles_component/Spirituality";
+
+import TermsAndConditions from "../components/Terms_and_conditions/TermsAndConditions";
+import Privacy from "../components/Privacy/Privacy";
+import PolicyAccessibility from "../components/Policy_and_accessibility/PolicyAccessibility";
+import Statement from "../components/Statement/Statement";
+
 import ScrollToTopRoute from "./ScrollToTopRoute";
 
 // Theme
@@ -93,6 +99,14 @@ const AppRouter = ()=>{
                         <ScrollToTopRoute path='/all-troubles/sexuality' render={() => <Sexuality title="Sexuality - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/bullying' render={() => <Bullying title="Bullying - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/all-troubles/spirituality' render={() => <Spirituality title="Spirituality - bunchofbrains"/>} exact={true}/>
+
+
+                        <ScrollToTopRoute path='/terms-and-conditions' render={() => <TermsAndConditions title="Terms And Conditions - bunchofbrains"/>} exact={true}/>
+                        <ScrollToTopRoute path='/privacy' render={() => <Privacy title="Privacy - bunchofbrains"/>} exact={true}/>
+                        <ScrollToTopRoute path='/policy-accessibility' render={() => <PolicyAccessibility title="policy Accessibility - bunchofbrains"/>} exact={true}/>
+                        <ScrollToTopRoute path='/statement' render={() => <Statement title="Statement - bunchofbrains"/>} exact={true}/>
+
+
 
                         <ScrollToTopRoute path='/log-in' render={() => <LogInOnMdScreen title="Log In - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/sign-up' render={() => <SignUpOnMdScreen title="Sign Up - bunchofbrains"/>} exact={true}/>

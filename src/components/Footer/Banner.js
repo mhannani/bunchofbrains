@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 class Banner extends React.Component{
     render(){
@@ -7,32 +8,43 @@ class Banner extends React.Component{
                 <div className="col-md-12 col-lg-8 ">
                     <ul className="list-unstyled list-inline terms">
                         <li className="list-inline-item">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight mx-1"
-                            > Terms & Conditions
-                            </button>
+                            <Link type="button" to={'/terms-and-conditions'} className="link-button btn-floating" >
+                                <button
+                                    type="button"
+                                    className="link-button btn-floating btn-sm rgba-white-slight mx-1"
+                                > Terms & Conditions
+                                </button>
+                            </Link>
                         </li>
+
                         <li className="list-inline-item">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight mx-1"
-                            > Privacy
-                            </button>
+                            <Link type="button" to={'/privacy'} className="link-button btn-floating" >
+                                <button
+                                    type="button"
+                                    className="link-button btn-floating btn-sm rgba-white-slight mx-1"
+                                > Privacy
+                                </button>
+                            </Link>
                         </li>
+
                         <li className="list-inline-item">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight mx-1"
-                            >  PolicyAccessibility
-                            </button>
+                            <Link type="button" to={'/policy-accessibility'} className="link-button btn-floating" >
+                                <button
+                                    type="button"
+                                    className="link-button btn-floating btn-sm rgba-white-slight mx-1"
+                                > PolicyAccessibility
+                                </button>
+                            </Link>
                         </li>
+
                         <li className="list-inline-item">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight mx-1"
-                            > Statement
-                            </button>
+                            <Link type="button" to={'/statement'} className="link-button btn-floating" >
+                                <button
+                                    type="button"
+                                    className="link-button btn-floating btn-sm rgba-white-slight mx-1"
+                                > Statement
+                                </button>
+                            </Link>
                         </li>
                     </ul>
                     <p className="text-center text-md-left">© 2020 Bunchofbrains, LLC. All Rights Reserved.
@@ -86,14 +98,3 @@ class Banner extends React.Component{
 }
 
 export default Banner;
-
-//
-// language: node_js
-// node_js:
-//     - "7"
-// script:
-//     - echo "Deploy!!"
-// install:
-//     - npm install -g firebase-tools
-// after_success:
-//     - firebase deploy --project $projectId --token $FIREBASE_TOKEN

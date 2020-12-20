@@ -9,7 +9,7 @@ export const lightTheme = {
     get_started_bg:'#5cb85c',
     // Header_link_color: '#050505',
     get_started_text: '#ffffff',
-    footer_bg: '#24574a',
+    footer_bg: '#3a6d3a',
     reset_button_bg: '#1660ac',
     resetButton_text:'#ffffff'
 }

@@ -6,7 +6,7 @@ const Privacy = (props)=>{
     })
 
     return(
-        <div>
+        <div className={"privacy"}>
             Privacy page ...
         </div>
     )

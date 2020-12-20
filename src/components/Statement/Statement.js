@@ -6,7 +6,7 @@ const Statement = (props)=>{
     })
 
     return(
-        <div>
+        <div className={"statement"}>
             Statement page...
         </div>
     )

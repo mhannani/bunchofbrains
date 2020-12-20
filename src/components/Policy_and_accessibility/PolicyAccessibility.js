@@ -6,7 +6,7 @@ const PolicyAccessibility = (props)=>{
     })
 
     return(
-        <div>
+        <div className={"policy_and_accessibility"}>
             PolicyAccessibility page...
         </div>
     )

@@ -5,7 +5,7 @@ const TermsAndConditions = (props)=>{
         document.title = props.title || "";
     })
     return(
-        <div>
+        <div className={"terms_and_conditions"}>
             Terms And Conditions page...
         </div>
     )

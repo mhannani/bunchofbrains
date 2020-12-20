@@ -1,5 +1,6 @@
 import React from 'react';
 import Logo from './brain.png';
+import {Link} from "react-router-dom";
 
 class NewsBanner extends React.Component {
     render() {
@@ -13,46 +14,33 @@ class NewsBanner extends React.Component {
 
                     <ul className="list-unstyled list-inline row mt-5 ml-1">
                         <li className="list-inline-item col-lg-3 col-md-4">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight text-white-50 "
-                            > Home
-                            </button>
+
+                            <Link to={'/'} className="link-button btn-floating btn-sm rgba-white-slight text-white" >
+                                Home
+                            </Link>
+                        </li>
+
+                        <li className="list-inline-item col-lg-3 col-md-4">
+                            <Link to={'/advice'} className="link-button btn-floating btn-sm rgba-white-slight text-white" >
+                                Advice
+                            </Link>
+                        </li>
+
+                        <li className="list-inline-item col-lg-3 col-md-4">
+                            <Link to={'/faq'} className="link-button btn-floating btn-sm rgba-white-slight text-white" >
+                                FAQ
+                            </Link>
+                        </li>
+
+                        <li className="list-inline-item col-lg-3 col-md-4">
+                            <Link to={'/about'} className="link-button btn-floating btn-sm rgba-white-slight text-white" >
+                                About
+                            </Link>
                         </li>
                         <li className="list-inline-item col-lg-3 col-md-4">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight text-white-50 "
-                            > Advice
-                            </button>
-                        </li>
-                        <li className="list-inline-item col-lg-3 col-md-4">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight text-white-50 "
-                            > FAQ
-                            </button>
-                        </li>
-                        <li className="list-inline-item col-lg-3 col-md-4">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight text-white-50 "
-                            > About
-                            </button>
-                        </li>
-                        <li className="list-inline-item col-lg-3 col-md-4">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight text-white-50 "
-                            > Contact
-                            </button>
-                        </li>
-                        <li className="list-inline-item col-lg-3 col-md-4">
-                            <button
-                                type="button"
-                                className="link-button btn-floating btn-sm rgba-white-slight text-white-50 "
-                            > Support
-                            </button>
+                            <Link to={'/contact'} className="link-button btn-floating btn-sm rgba-white-slight text-white" >
+                                Contact
+                            </Link>
                         </li>
                     </ul>
                 </div>

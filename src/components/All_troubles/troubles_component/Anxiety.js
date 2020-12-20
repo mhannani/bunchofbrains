@@ -38,11 +38,11 @@ const Anxiety = (props)=>{
                                 <p className={'bold-intro'}>Anxiety becomes a problem, however, when:</p>
                                 <div className={'container'}>
                                     <ul className={'ml-4'}>
-                                        <li>it does not go away when the worrying situation returns to normal;</li>
-                                        <li>it causes a significant level of distress;</li>
-                                        <li>it is not linked to any life event, that is, it appears for no reason;</li>
-                                        <li>it continually preoccupies the person;</li>
-                                        <li>it prevents the person from functioning and acting normally at work,
+                                        <li>It does not go away when the worrying situation returns to normal;</li>
+                                        <li>It causes a significant level of distress;</li>
+                                        <li>It is not linked to any life event, that is, it appears for no reason;</li>
+                                        <li>It continually preoccupies the person;</li>
+                                        <li>It prevents the person from functioning and acting normally at work,
                                             in society or in other areas of daily life.
                                         </li>
                                     </ul>

@@ -9,7 +9,7 @@ const BrainHealth = (props)=>{
         <div className={'mx-4 brain_health'}>
             <GoBackButton/>
             <div className={'container'}>
-                Anxiety
+                Brain Health
             </div>
         </div>
     )

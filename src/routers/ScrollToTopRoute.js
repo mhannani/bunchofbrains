@@ -5,10 +5,8 @@ class ScrollToTopRoute extends Component {
     componentDidUpdate(prevProps) {
         if (this.props.path === this.props.location.pathname && this.props.location.pathname !== prevProps.location.pathname) {
             window.scroll({top: 0, left: 0, behavior: 'smooth' })
-            console.log('scroll to top')
         }
         window.scrollTo(0, 0)
-        console.log('did update')
     }
 
     render() {

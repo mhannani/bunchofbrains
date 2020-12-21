@@ -35,7 +35,6 @@ const LogInOnMdScreen = (props)=>{
                                 </Link>
                             </div>
                         </div>
-
                         <div className="col-xl-10 col-md-10 col-sm-8 form-separator my-4"/>
                         <div className="forgot-password  mt-2 text-center ">
                             <Confidentiality/>
@@ -48,15 +47,7 @@ const LogInOnMdScreen = (props)=>{
                     distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem
                     Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distr
                     ibution de lettres plus ou moins normale, et en tout cas comparable avec celle du français sta
-                    ndard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lor
-                    em Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de
-                    nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont a
-                    pparues avec le temps, parfois par accident, souvent intentionnellement (histoire d'y rajoute
-                    r de petits clins d'oeil, voire des phrases embarassantes).
-                    On sait depuis longtemps que travailler avec du texte lisible et contenant du sens est source de
-                    distractions, et empêche de se concentrer sur la mise en page elle-même. L'avantage du Lorem
-                    Ipsum sur un texte générique comme 'Du texte. Du texte. Du texte.' est qu'il possède une distr
-                    ibution de lettres plus ou moins normale, et en tout cas comparable avec celle du français sta
+                   nçais sta
                     ndard. De nombreuses suites logicielles de mise en page ou éditeurs de sites Web ont fait du Lor
                     em Ipsum leur faux texte par défaut, et une recherche pour 'Lorem Ipsum' vous conduira vers de
                     nombreux sites qui n'en sont encore qu'à leur phase de construction. Plusieurs versions sont a

@@ -8,8 +8,6 @@
   border-radius: $border-radius;
   box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,.15);
   .loginForm{
-    //box-shadow: 10px 2px 40px #0000003a;
-    //background-color: blue !important;
     padding: 20px 0;
     height: 100%;
     border-radius: $border_radius;
@@ -19,15 +17,5 @@
     padding: 20px 10px;
     width:100%;
     height: 100%;
-    background-color: #f3f0f0 !important;
   }
-  // To add on small screen
-  //margin-left: 5px;
-  //margin-right: 5px;
-
-
-
-  //border-radius: 15px;
-  //box-shadow: 0 1.5rem 2.5rem rgba(0,0,0,.15) ;
-  /* Hide horizontal scrollbar */
 }

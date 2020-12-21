@@ -65,7 +65,8 @@ export const TwitterSignUp = ()=>{
 
 export const FormSeparatorWithOr = ()=>{
     return(
-        <div className="col-xl-10 col-sm-12 form-separator my-4">
+        <div className="col-xl-10 col-md-10 col-sm-8 form-separator my-3">
+            {/*col-sm-12 instead of col-sm-8*/}
             <span>or</span>
         </div>
     )
@@ -76,11 +77,10 @@ export const AlreadyMember = (props) =>{
     }
 
     return(
-        <div className="sign-up text-center mt-1">
+        <div className="sign-up text-center">
             <p>Already a member ?
                 <button className="link text-decoration-none" onClick={()=>signUpInToggler()}>Log In</button>
             </p>
-            <div className="mx-auto col-xl-10 col-sm-12 form-separator"/>
         </div>
     )
 }

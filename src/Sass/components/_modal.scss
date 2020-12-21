@@ -12,7 +12,7 @@
 .ReactModalPortal .ReactModal__Overlay--after-open{
   opacity: 1 !important;
   transform: translateY(0px);
-  background-color: transparent !important;
+  background-color: RGBa(4,105,4,.35) !important;
 }
 
 .ReactModalPortal .ReactModal__Overlay--before-close{
@@ -29,7 +29,9 @@
   top:50%;
   transform: translate(-50%, -50%);
   width: 800px;
-  height:600px;
+  min-height:600px;
+  max-height:700px;
+  height:90vh;
   //box-shadow: 5px 5px 10px #0000003a;
 
   .close {

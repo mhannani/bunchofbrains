@@ -69,7 +69,7 @@ export const LogInForm = ()=>{
             initialValues={{ email: "", password: "" ,keepSignedIn:false}}
             onSubmit={signInWithEmailAndPasswordHandler}
         >
-            <Form className="col-xl-10 col-sm-12 px-0 ">
+            <Form className="col-sm-10 px-0 ">
                 {error !== null && <div className = "py-1 bg-danger w-full text-white text-center mb-1">{error}</div>}
                 <div className="form-group">
                     <Field type="email" className="form-control margin-bottom"
@@ -103,7 +103,7 @@ export const LogInForm = ()=>{
 
 export const FormSeparatorWithOr = ()=>{
     return(
-        <div className="col-xl-10 col-sm-12 form-separator my-4">
+        <div className="col-sm-10  form-separator my-4">
             <span>or</span>
         </div>
     )

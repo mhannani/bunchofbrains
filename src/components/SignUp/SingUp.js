@@ -27,14 +27,15 @@ const SignUp = (props)=>{
                         <FormSeparatorWithOr/>
                         {
                             !usingEmail ?
-                                <div className="sign-up my-1">
+                                <div className="sign-up">
                                     <button onClick={() => changeUsingEmail(!usingEmail)}
                                             className="link text-decoration-none">
                                         Sign Up Using Email
                                     </button>
                                 </div>: <FormSignUpWithEmailAndPassword/>
                         }
-                        <div className="forgot-password mt-2 text-center ">
+                        <div className="col-xl-10 col-md-10 col-sm-8 form-separator mt-3"/>
+                        <div className="forgot-password text-center ">
                             <AlreadyMember isLogIn={props.isLogIn} changeIsLogIn ={props.changeIsLogIn}/>
                             <Confidentiality/>
                         </div>

@@ -86,6 +86,7 @@ const Header = () => {
     const closeModal = () => {
         toggleVisibility(!isVisible);
     }
+
     return (
         <Nav className="{py-0 navbar navbar-expand-lg navbar-light navbar-scroll fixed-top">
 

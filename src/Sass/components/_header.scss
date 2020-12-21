@@ -78,6 +78,8 @@ nav {
 
   }
   .selected{
+    max-width: 60px;
+    min-width: 20px;
     color:black !important;
     border-radius: 2.5px;
     border-bottom:3px solid $primary_dark !important;

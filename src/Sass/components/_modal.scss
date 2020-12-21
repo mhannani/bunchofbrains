@@ -24,7 +24,7 @@
 .Modal{
   border-radius: 10px;
   position: absolute;
-  background-color: $primary;
+  //background-color: $primary;
   left:50%;
   top:50%;
   transform: translate(-50%, -50%);
@@ -47,13 +47,15 @@
     }
   }
   .welcomeMessage{
+    background: rgb(69,213,69);
+    background: linear-gradient(155deg, rgba(69,213,69,1) 0%, rgba(75,217,71,1) 13%, rgba(65,179,65,1) 100%);
 
     position: absolute;
     top:0;
     left:50%;
     height:100%;
     //width: 40%;
-    border-radius: $border_radius;
+    border-radius: 0 $border_radius $border_radius 0 ;
     .borderSeparator{
       border: 4px solid #ffffff;
       border-radius: 40px;
@@ -61,7 +63,7 @@
     }
   }
   .loginForm{
-    box-shadow: 10px 2px 40px #0000003a;
+    //box-shadow: 10px 2px 40px #0000003a;
     background-color: snow;
     position: absolute;
     top:0;

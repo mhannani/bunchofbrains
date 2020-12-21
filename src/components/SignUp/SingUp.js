@@ -9,9 +9,9 @@ const SignUp = (props)=>{
             <div className={'container row'}>
                 <div className="welcomeMessage d-flex align-items-center">
                     <div>
-                        <h5 className={'text-white text-center flex-wrap col-12'}>
+                        <h2 className={'text-white flex-wrap col-10'}>
                             Join Bunchofbrains for Free
-                        </h5>
+                        </h2>
                         <div className={'ml-3 mt-3 borderSeparator'}/>
                         <h6 className={'text-white mt-3 flex-wrap col-8'}>
                             Master psychology. Master life.
@@ -19,7 +19,7 @@ const SignUp = (props)=>{
                     </div>
                 </div>
 
-                <div className="col-7 loginForm d-flex align-items-center justify-content-center">
+                <div className="col-6 loginForm d-flex align-items-center justify-content-center">
                     <div className="row mt-3 d-flex justify-content-center">
                         <GoogleSignUp/>
                         <FaceBookSignUp/>

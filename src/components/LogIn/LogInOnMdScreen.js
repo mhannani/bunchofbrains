@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {Animated} from "react-animated-css";
-import {LogInMessage, GoogleLogIn, FaceBookLogIn, TwitterLogIn, LogInForm, FormSeparatorWithOr} from "./LogInEntyties";
+import LogInForm, {LogInMessage, GoogleLogIn, FaceBookLogIn, TwitterLogIn, FormSeparatorWithOr} from "./LogInEntyties";
 import {Link} from "react-router-dom";
 const LogInOnMdScreen = (props)=>{
     useEffect(() => {

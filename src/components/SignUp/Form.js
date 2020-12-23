@@ -1,59 +1,94 @@
-import React from "react";
+import React, {Component} from "react";
+import {withFirebase} from "../../firebase";
+import {withRouter} from 'react-router-dom';
+import {compose} from 'recompose';
 
-import { Formik, Field, Form } from "formik";
-import {CreateNewUserUsingEmailAndPassword} from "../../actions/auth";
+const INITIAL_STATE = {
+    username: '',
+    email: '',
+    password: '',
+    error: null,
+};
 
-export const FormSignUpWithEmailAndPassword = ()=>{
-    const signUpWithEmailAndPassword =  (values) => {
-        const firstName = values.firstName;
-        const lastName = values.lastName;
-        const userName = firstName[0].concat('', lastName);
-        const email = values.email;
-        const password = values.password;
-        CreateNewUserUsingEmailAndPassword(email, password, userName);
-        console.log('Creating user ')
-        console.log('done' )
+class FormSignUpWithEmailAndPassword extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {...INITIAL_STATE};
     }
-    return(
-        <Formik
-            initialValues={{ firstName: "", lastName: "", password: "",email: "" }}
-            onSubmit={signUpWithEmailAndPassword}
-        >
 
-        <Form className="col-xl-10 col-sm-12 px-0 sign-up-using-email-form form-horizontal" >
-            <div className="form-group">
-                <div className={'row'}>
-                    <div className={'col-6'}>
-                        <Field type="text" className="form-control margin-bottom"
-                               placeholder="First name" name="firstName"/>
-                    </div>
+    onSubmit = event => {
+        // eslint-disable-next-line no-unused-vars
+        const {username, email, password} = this.state;
 
-                    <div className={'col-6'}>
-                        <Field type="text" className="form-control margin-bottom"
-                               placeholder="last name" name="lastName"/>
-                    </div>
+        this.props.firebase
+            .doCreateUserWithEmailAndPassword(email, password)
+            .then(authUser => {
+                this.setState({...INITIAL_STATE});
+                this.props.history.push("/");
+                console.log(authUser.uid, username)
+
+            })
+            .catch(error => {
+                this.setState({error});
+            });
+
+        event.preventDefault();
+    };
+
+    onChange = event => {
+        this.setState({[event.target.name]: event.target.value});
+    };
+
+
+    render() {
+        const {
+            username,
+            email,
+            password,
+            error,
+        } = this.state;
+
+        const isInvalid =
+            password === '' ||
+            email === '' ||
+            username === '';
+
+
+        return(
+            <form className="col-xl-10 col-sm-12 px-0 sign-up-using-email-form form-horizontal"  onSubmit={this.onSubmit}>
+                <div className="form-group">
+                    {error && <p>{error.message}</p>}
+                    <input type="text" className="form-control margin-bottom"
+                           aria-describedby="username" value={username} onChange={this.onChange}
+                           placeholder="Username" name="username"/>
                 </div>
-            </div>
 
-            <div className="form-group">
-                <Field type="email" className="form-control margin-bottom"
-                       id="exampleInputEmail1"
-                       aria-describedby="emailHelp"
-                       placeholder="Email address" name="email"/>
-            </div>
+                <div className="form-group">
+                    <input type="email" className="form-control margin-bottom"
+                           id="exampleInputEmail1" value={email} onChange={this.onChange}
+                           aria-describedby="emailHelp"
+                           placeholder="Email address" name="email"/>
+                </div>
 
-            <div className="form-group">
-                <Field type="password" className="form-control margin-bottom"
-                       id="exampleInputPassword1"
-                       placeholder="Password" name="password"/>
-            </div>
+                <div className="form-group">
+                    <input type="password" className="form-control margin-bottom"
+                           id="exampleInputPassword1" value={password} onChange={this.onChange}
+                           placeholder="Password" name="password"/>
+                </div>
 
-            <div className="form-group requirement">
-                Password must be at least 8 characters long.
-            </div>
+                <div className="form-group requirement">
+                    Password must be at least 6 characters long.
+                </div>
 
-            <button type="submit" className="btn w-100 col-12">Sign Up</button>
-        </Form>
-        </Formik>
-    )
+                <button type="submit" disabled={isInvalid} className="btn w-100 col-12">Sign Up</button>
+                {error && <p>{error.message}</p>}
+            </form>
+        );
+    }
 }
+
+export default compose(
+    withFirebase,
+    withRouter
+)(FormSignUpWithEmailAndPassword);

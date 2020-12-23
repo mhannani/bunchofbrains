@@ -1,10 +1,9 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {Animated} from "react-animated-css";
 import {SignUpMessage, GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr,Confidentiality} from "./SignUpEntyties";
-import {FormSignUpWithEmailAndPassword} from "./Form";
+import FormSignUpWithEmailAndPassword from "./Form";
 import {Link} from "react-router-dom";
 const LogInOnMdScreen = (props)=>{
-    const [usingEmail, changeUsingEmail] = useState(false);
     useEffect(() => {
         document.title = props.title || "";
     })
@@ -18,15 +17,7 @@ const LogInOnMdScreen = (props)=>{
                         <FaceBookSignUp/>
                         <TwitterSignUp/>
                         <FormSeparatorWithOr/>
-                        {
-                            !usingEmail ?
-                                <div className="sign-up my-1">
-                                    <button onClick={() => changeUsingEmail(!usingEmail)}
-                                            className="link text-decoration-none">
-                                        Sign Up Using Email
-                                    </button>
-                                </div>: <FormSignUpWithEmailAndPassword/>
-                        }
+                        <FormSignUpWithEmailAndPassword/>
                         <div className="forgot-password  mt-2 text-center ">
                             <div className="sign-up text-center mt-1">
                                 <span>Already a member ?</span>

@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {NavLink, useHistory} from "react-router-dom";
 import {Link} from "react-router-dom";
 import {ReactComponent as Logo} from './brain.svg';
+import SignOut from "./SignOut";
 
 // import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
@@ -11,21 +12,13 @@ import Button from '../chunks/Button';
 import I from '../chunks/I';
 import PopUpModal from '../PopUp/PopUpModal'
 import UserAvatar from "react-user-avatar";
-import {signOut} from "../../actions/auth"
 import {UserContext} from "../../providers/UserProvider"
-
-// const selected = {
-//     fontWeight: "bold",
-//     color: "black"
-// }
 
 const Header = () => {
     const user = useContext(UserContext);
     const [isVisible, toggleVisibility] = useState(false)
     const [isLogIn, changeIsLogIn] = useState(true)
     const history = useHistory();
-    // const [isAuthenticated, changeIsAuthenticated] = useState(false)
-    // const userName = firebase.auth().currentUser ? firebase.auth().currentUser.displayName  : ' ';
 
     useEffect(() => {
         $('button.navbar-toggle').focusout(function(){
@@ -168,14 +161,9 @@ const Header = () => {
                         user ?
                             <div className={'row'}>
                                 <UserAvatar className={'col-1'}
-
                                             size="36" name={"userName"}
                                             src={"https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"}/>
-
-                                <Button type="button" className={"ml-5 mr-0  bg-danger col-5  btn"}
-                                        onMouseDown={e => e.preventDefault()} onClick={() => signOut()}>
-                                    <HeaderLink className={'excluded'}>Log out</HeaderLink>
-                                </Button>
+                            <SignOut/>
                             </div>
                             :
                             <div>

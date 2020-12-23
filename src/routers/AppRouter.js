@@ -14,6 +14,7 @@ import About from "../components/About/About"
 import Contact from "../components/Contact/contact";
 import Footer from "../components/Footer/Footer";
 import LogInOnMdScreen from "../components/LogIn/LogInOnMdScreen";
+import UserProfile from "../components/User_profile/UserProfile";
 import ResetPassword from "../components/ResetPassword/ResetPassword";
 import NoMatch from "../components/NoMatch";
 import SignUpOnMdScreen from "../components/SignUp/SignUpOnMdScreen"
@@ -48,6 +49,7 @@ import PolicyAccessibility from "../components/Policy_and_accessibility/PolicyAc
 import Statement from "../components/Statement/Statement";
 
 import ScrollToTopRoute from "./ScrollToTopRoute";
+import PrivateRoute from "./PrivateRoute";
 
 // Theme
 // =====
@@ -110,6 +112,9 @@ const AppRouter = ()=>{
 
                         <ScrollToTopRoute path='/log-in' render={() => <LogInOnMdScreen title="Log In - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute path='/sign-up' render={() => <SignUpOnMdScreen title="Sign Up - bunchofbrains"/>} exact={true}/>
+                        <PrivateRoute>
+                            <ScrollToTopRoute path='/profile' render={() => <UserProfile title="My account  - bunchofbrains"/>} exact={true}/>
+                        </PrivateRoute>
                         <ScrollToTopRoute path='/reset-password' render={() => <ResetPassword title="Forget Password  - bunchofbrains"/>} exact={true}/>
                         <ScrollToTopRoute component={NoMatch} />
                     </Switch>

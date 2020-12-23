@@ -1,7 +1,7 @@
 import {ReactComponent as GoogleIcon} from "../LogIn/GoogleIcon.svg";
 import {ReactComponent as FacebookIcon} from "../LogIn/FacebookIcon.svg";
 import {ReactComponent as TwitterIcon} from "../LogIn/TwitterIcon.svg";
-import {signInWithGoogle, signInWithFacebook, signInWithTwitter} from "../../firebase/firebase"
+// import {signInWithGoogle, signInWithFacebook, signInWithTwitter} from "../../firebase/firebase"
 import React from "react";
 
 export const SignUpMessage = ()=>{
@@ -17,7 +17,7 @@ export const GoogleSignUp = ()=>{
         <div className={'col-md-10 col-sm-12 text-center'}>
             <button className="col-6 mb-2 btn social" onClick={() => {
                 try {
-                    signInWithGoogle();
+                    // signInWithGoogle();
                 } catch (error) {
                     console.error("Error signing in with Google", error);
                 }
@@ -34,7 +34,7 @@ export const FaceBookSignUp = ()=>{
         <div className={'col-md-10 col-sm-12 text-center'}>
             <button className="col-6 mb-2 btn social" onClick={() => {
                 try {
-                    signInWithFacebook();
+                    // signInWithFacebook();
                 } catch (error) {
                     console.error("Error signing in with Google", error);
                 }
@@ -51,7 +51,7 @@ export const TwitterSignUp = ()=>{
         <div className={'col-md-10 col-sm-12 text-center'}>
             <button className="col-6 btn social" onClick={() => {
                 try {
-                    signInWithTwitter();
+                    // signInWithTwitter();
                 } catch (error) {
                     console.error("Error signing in with Google", error);
                 }

@@ -5,7 +5,7 @@ const News = (props)=>{
         document.title = props.title || "";
     })
     return(
-        <div>
+        <div className={'news-page'}>
             New route
         </div>
     )

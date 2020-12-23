@@ -1,22 +1,32 @@
-import React, {useState} from "react";
-import { Formik, Field, Form } from "formik";
+import React, {Component} from "react";
+import {withRouter} from 'react-router-dom';
+import {withFirebase} from "../../firebase";
+import {compose} from 'recompose';
 import {ReactComponent as GoogleIcon} from "./GoogleIcon.svg";
 import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
 import {ReactComponent as TwitterIcon} from "./TwitterIcon.svg";
 
 import {Link} from "react-router-dom";
-import {auth} from "../../firebase/firebase";
+// import {auth} from "../../firebase/firebase";
 
-export const LogInMessage = ()=>{
-    return(
+
+const INITIAL_STATE = {
+    email: '',
+    password: '',
+    error: null,
+};
+
+
+export const LogInMessage = () => {
+    return (
         <div className="col-xl-10 col-sm-12 mb-5">
             <p className={'text-center h5  font-weight-bold'}>Sign in to your bunchofbrains account</p>
         </div>
     )
 }
 
-export const GoogleLogIn = ()=>{
-    return(
+export const GoogleLogIn = () => {
+    return (
         <div className={'col-md-10 col-sm-12 text-center'}>
             <button className="col-6 mb-2 btn social">
                 <GoogleIcon style={{float: "left"}}/>
@@ -26,8 +36,8 @@ export const GoogleLogIn = ()=>{
     )
 }
 
-export const FaceBookLogIn = ()=>{
-    return(
+export const FaceBookLogIn = () => {
+    return (
         <div className={'col-md-10 col-sm-12 text-center'}>
             <button className="col-6 mb-2 btn social">
                 <FacebookIcon style={{float: "left"}}/>
@@ -37,8 +47,8 @@ export const FaceBookLogIn = ()=>{
     )
 }
 
-export const TwitterLogIn = ()=>{
-    return(
+export const TwitterLogIn = () => {
+    return (
         <div className={'col-md-10 col-sm-12 text-center'}>
             <button className="col-6 btn social">
                 <TwitterIcon style={{float: "left"}}/>
@@ -48,61 +58,78 @@ export const TwitterLogIn = ()=>{
     )
 }
 
-export const LogInForm = ()=>{
-    // const [email, setEmail] = useState('');
-    // const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
+class LogInForm extends Component {
+    constructor(props) {
+        super(props);
 
-    const signInWithEmailAndPasswordHandler = (values) => {
-        console.log(values.email)
-        // event.preventDefault();
-        auth.signInWithEmailAndPassword().catch(error => {
-            // console.log(email)
-            setError(error.message);
-            console.error("Error signing in with password and email", error);
-        });
+        this.state = {...INITIAL_STATE};
+    }
+
+    onSubmit = event => {
+        const {email, password} = this.state;
+
+        this.props.firebase
+            .doSignInWithEmailAndPassword(email, password)
+            .then(() => {
+                this.setState({...INITIAL_STATE});
+                this.props.history.push("/");
+            })
+            .catch(error => {
+                this.setState({error});
+            });
+
+        event.preventDefault();
     };
 
+    onChange = event => {
+        this.setState({[event.target.name]: event.target.value});
+    };
 
-    return(
-        <Formik
-            initialValues={{ email: "", password: "" ,keepSignedIn:false}}
-            onSubmit={signInWithEmailAndPasswordHandler}
-        >
-            <Form className="col-sm-10 px-0 ">
-                {error !== null && <div className = "py-1 bg-danger w-full text-white text-center mb-1">{error}</div>}
+    render() {
+        const {email, password, error} = this.state;
+        const isInvalid = password === '' || email === '';
+        return (
+            <form className="col-sm-10 px-0" onSubmit={this.onSubmit}>
+                {/*{error !== null && <div className="py-1 bg-danger w-full text-white text-center mb-1">{error}</div>}*/}
                 <div className="form-group">
-                    <Field type="email" className="form-control margin-bottom"
-                           aria-describedby="emailHelp" name="email" placeholder="Email address"/>
+                    <input type="email" className="form-control margin-bottom"
+                           value={email} onChange={this.onChange} placeholder="Email address"
+                           aria-describedby="emailHelp" name="email" />
                 </div>
                 <div className="form-group">
-                    <Field type="password" className="form-control margin-bottom"
-                           placeholder="Password" name="password" />
+                    <input type="password" className="form-control margin-bottom" value={password}
+                           placeholder="Password" name="password" onChange={this.onChange}/>
                 </div>
                 <div className="form-group form-check mb-5">
-                    <Field type="checkbox" className="form-check-input" name="keepSignedIn" id="exampleCheck1"/>
+                    <input type="checkbox" className="form-check-input" name="keepSignedIn" id="exampleCheck1"/>
                     <label className="form-check-label pl-4 " htmlFor="exampleCheck1">
                         Keep me signed in until I sign out
                     </label>
                 </div>
 
-                <button type="submit" className="w-100 col-12 btn">Sign In</button>
+                <button type="submit" disabled={isInvalid} className="w-100 col-12 btn">Sign In</button>
+                {error && <p>{error.message}</p>}
                 <div className="forgot-password mt-2">
                     <Link className="forgot-pass-text  font-weight-bold text-decoration-none"
-                       target={"_blank"} to={"reset-password"}>
+                          target={"_blank"} to={"reset-password"}>
                         Forgot password ?
                     </Link>
 
                     <div className="form-separator my-4"/>
-
                 </div>
-            </Form>
-        </Formik>
-    )
+            </form>
+        )
+    }
 }
 
-export const FormSeparatorWithOr = ()=>{
-    return(
+export default LogInForm = compose(
+    withRouter,
+    withFirebase,
+)(LogInForm);
+
+
+export const FormSeparatorWithOr = () => {
+    return (
         <div className="col-sm-10  form-separator my-4">
             <span>or</span>
         </div>

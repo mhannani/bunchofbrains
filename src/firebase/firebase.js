@@ -1,9 +1,11 @@
-import * as firebase from "firebase/app"
-import * as database from "firebase/database"
-import "firebase/auth";
-import "firebase/firestore";
-// import { functions } from "firebase";
+import app  from "firebase/app"
+import 'firebase/auth';
+// import firestore from "firebase/firestore"
 
+// import * as database from "firebase/database"
+// import "firebase/auth";
+// import "firebase/firestore";
+//
 const firebaseConfig = {
     apiKey: "AIzaSyDWJaKnLIibpYmBVDc5xe362bUQbxQyIJk",
     authDomain: "bunchofbrains-22ce9.firebaseapp.com",
@@ -15,63 +17,34 @@ const firebaseConfig = {
     measurementId: "G-WRKNSRBPC0"
 };
 
-
-firebase.initializeApp(firebaseConfig);
-
-export const auth = firebase.auth();
-export const firestore = firebase.firestore();
-
-export { firebase, database};
-
-const GoogleAuthProvider = new firebase.auth.GoogleAuthProvider();
-const FacebookAuthProvider = new firebase.auth.FacebookAuthProvider();
-const TwitterAuthProvider = new firebase.auth.TwitterAuthProvider();
-
-export const signInWithGoogle = () => {
-    auth.signInWithPopup(GoogleAuthProvider).then(()=>window.location.replace("/"));
-};
-
-export const signInWithFacebook = () => {
-    auth.signInWithPopup(FacebookAuthProvider).then(()=>window.location.replace("/"));
-};
-export const signInWithTwitter = () => {
-    auth.signInWithPopup(TwitterAuthProvider).then(()=>window.location.replace("/"));
-};
-
-
-export const generateUserDocument = async (user, additionalData) => {
-    if (!user) return;
-
-    const userRef = firestore.doc(`users/${user.uid}`);
-    const snapshot = await userRef.get();
-
-    if (!snapshot.exists) {
-        const { email, displayName, photoURL } = user;
-        try {
-            await userRef.set({
-                displayName,
-                email,
-                photoURL,
-                ...additionalData
-            });
-        } catch (error) {
-            console.error("Error creating user document", error);
-        }
+//! to be uncommented
+class Firebase {
+    constructor() {
+        app.initializeApp(firebaseConfig);
+        this.auth = app.auth();
     }
-    return getUserDocument(user.uid);
-};
 
+    // *** Auth API ***
+    // Create a new user using email and password
+    doCreateUserWithEmailAndPassword = (email, password) =>
+        this.auth.createUserWithEmailAndPassword(email, password);
 
-const getUserDocument = async uid => {
-    if (!uid) return null;
-    try {
-        const userDocument = await firestore.doc(`users/${uid}`).get();
+    // Log-in using email and password combination
+    doSignInWithEmailAndPassword = (email, password) =>
+        this.auth.signInWithEmailAndPassword(email, password);
 
-        return {
-            uid,
-            ...userDocument.data()
-        };
-    } catch (error) {
-        console.error("Error fetching user", error);
+    // log-out
+    doSignOut = () => {
+        console.log('sign out');
+        this.auth.signOut();
     }
-};
+
+    // To reset the forgotten password
+    doPasswordReset = email => this.auth.sendPasswordResetEmail(email);
+
+    // To change the password
+    doPasswordUpdate = password =>
+        this.auth.currentUser.updatePassword(password);
+}
+
+export default Firebase;

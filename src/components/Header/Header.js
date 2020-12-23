@@ -1,9 +1,9 @@
-import React, {useState, useContext, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
 import $ from 'jquery';
 import {NavLink, useHistory} from "react-router-dom";
 import {Link} from "react-router-dom";
 import {ReactComponent as Logo} from './brain.svg';
-import SignOut from "./SignOut";
+// import SignOut from "./SignOut";
 
 // import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
@@ -11,11 +11,9 @@ import HeaderLink from "../chunks/HeaderLink";
 import Button from '../chunks/Button';
 import I from '../chunks/I';
 import PopUpModal from '../PopUp/PopUpModal'
-import UserAvatar from "react-user-avatar";
-import {UserContext} from "../../providers/UserProvider"
+// import UserAvatar from "react-user-avatar";
 
 const Header = () => {
-    const user = useContext(UserContext);
     const [isVisible, toggleVisibility] = useState(false)
     const [isLogIn, changeIsLogIn] = useState(true)
     const history = useHistory();
@@ -157,28 +155,25 @@ const Header = () => {
                 </ul>
 
                 <form className="align-bottom d-flex align-baseline align-items-md-end form-inline float-right">
-                    {
-                        user ?
-                            <div className={'row'}>
-                                <UserAvatar className={'col-1'}
-                                            size="36" name={"userName"}
-                                            src={"https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"}/>
-                            <SignOut/>
-                            </div>
-                            :
-                            <div>
-                                <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
-                                    <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
-                                </button>
-                                <Button type="button" className={"align-center getStarted btn mx-0 "}
-                                        onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
-                                    <HeaderLink className={'excluded'}>Get started</HeaderLink>
-                                </Button>
-                            </div>
+                    {/*<div className={'row'}>*/}
+                    {/*    <UserAvatar className={'col-1'}*/}
+                    {/*                size="36" name={"userName"}*/}
+                    {/*                src={"https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"}/>*/}
+                    {/*<SignOut/>*/}
+                    {/*</div>*/}
+                    <div>
+                        <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
+                            <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
+                        </button>
+                        <Button type="button" className={"align-center getStarted btn mx-0 "}
+                                onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
+                            <HeaderLink className={'excluded'}>Get started</HeaderLink>
+                        </Button>
+                    </div>
 
 
 
-                    }
+
                 </form>
             </div>
 

@@ -1,15 +1,12 @@
 import React from "react";
 import AppRouter from './routers/AppRouter'
-// import * as firebase from "firebase/app";
-// import UserProvider from "./providers/UserProvider";
+import {withAuthentication} from "./Session"
 
-function App() {
-  return (
-      // <UserProvider>
-        <AppRouter/>
-      // </UserProvider>
-
-  );
+const App = ()=> {
+    return (
+      <AppRouter/>
+    );
 }
 
-export default App;
+
+export default withAuthentication(App);

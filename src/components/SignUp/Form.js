@@ -40,7 +40,6 @@ class FormSignUpWithEmailAndPassword extends Component {
         this.setState({[event.target.name]: event.target.value});
     };
 
-
     render() {
         const {
             username,
@@ -58,7 +57,6 @@ class FormSignUpWithEmailAndPassword extends Component {
         return(
             <form className="col-xl-10 col-sm-12 px-0 sign-up-using-email-form form-horizontal"  onSubmit={this.onSubmit}>
                 <div className="form-group">
-                    {error && <p>{error.message}</p>}
                     <input type="text" className="form-control margin-bottom"
                            aria-describedby="username" value={username} onChange={this.onChange}
                            placeholder="Username" name="username"/>
@@ -82,7 +80,7 @@ class FormSignUpWithEmailAndPassword extends Component {
                 </div>
 
                 <button type="submit" disabled={isInvalid} className="btn w-100 col-12">Sign Up</button>
-                {error && <p>{error.message}</p>}
+                {error && <p className={'mt-1 requirement text-danger'}>{error.message}</p>}
             </form>
         );
     }

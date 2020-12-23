@@ -71,6 +71,7 @@ export const FormSeparatorWithOr = ()=>{
         </div>
     )
 }
+
 export const AlreadyMember = (props) =>{
     const signUpInToggler = ()=>{
         props.changeIsLogIn(!props.isLogIn)

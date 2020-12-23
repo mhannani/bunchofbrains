@@ -100,15 +100,10 @@ class LogInForm extends Component {
                     <input type="password" className="form-control margin-bottom" value={password}
                            placeholder="Password" name="password" onChange={this.onChange}/>
                 </div>
-                <div className="form-group form-check mb-5">
-                    <input type="checkbox" className="form-check-input" name="keepSignedIn" id="exampleCheck1"/>
-                    <label className="form-check-label pl-4 " htmlFor="exampleCheck1">
-                        Keep me signed in until I sign out
-                    </label>
-                </div>
+
 
                 <button type="submit" disabled={isInvalid} className="w-100 col-12 btn">Sign In</button>
-                {error && <p>{error.message}</p>}
+                {error && <p className={'requirement text-danger mt-1'}>{error.message}</p>}
                 <div className="forgot-password mt-2">
                     <Link className="forgot-pass-text  font-weight-bold text-decoration-none"
                           target={"_blank"} to={"reset-password"}>

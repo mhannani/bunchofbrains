@@ -49,7 +49,6 @@ import PolicyAccessibility from "../components/Policy_and_accessibility/PolicyAc
 import Statement from "../components/Statement/Statement";
 
 import ScrollToTopRoute from "./ScrollToTopRoute";
-import PrivateRoute from "./PrivateRoute";
 
 // Theme
 // =====
@@ -72,51 +71,136 @@ const AppRouter = ()=>{
                 <BrowserRouter>
                     <Header themeToggler={themeToggler} theme={theme}/>
                     <Switch>
-                        <ScrollToTopRoute path='/' render={() => <Home title="Home - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/about' render={() => <About title="About - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/advice' render={() => <Advice title="Advice - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/faq'  render={() => <Faq title="Faq - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/contact' render={() => <Contact title="Contact - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/blog' render={() => <Blog title="Our Blog - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/news' render={() => <News title="News - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles' render={() => <AllTroubles title="Brain Health - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/depression' render={() => <Depression title="Depression - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/anxiety' render={() => <Anxiety title="Anxiety - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/panic-disorder' render={() => <PanicDisorder title="Panic Disorder - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/self-esteem' render={() => <SelfEsteem title="Self Esteem - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/addiction' render={() => <Addiction title="Addiction - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/parenting' render={() => <Parenting title="Parenting - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/brain-health' render={() => <BrainHealth title="Brain Health - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/cognitive-development' render={() => <CognitiveDevelopment title="Cognitive Development - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/emotional-abuse' render={() => <EmotionalAbuse title="Emotional Abuse - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/goal-setting' render={() => <GoalSetting title="Goal Setting - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/loneliness' render={() => <Loneliness title="Lowliness - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/marital-issues' render={() => <MaritalIssues title="Marital Issues - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/motivation' render={() => <Motivation title="Motivation - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/ocd' render={() => <Ocd title="OCD - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/phobias' render={() => <Phobias title="Phobias - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/ptsd' render={() => <Ptsd title="PTSD - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/relationship-issues' render={() => <RelationshipIssues title="Relationship Issues - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/schizophrenia' render={() => <Schizophrenia title="Schizophrenia - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/sexuality' render={() => <Sexuality title="Sexuality - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/bullying' render={() => <Bullying title="Bullying - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/all-troubles/spirituality' render={() => <Spirituality title="Spirituality - bunchofbrains"/>} exact={true}/>
+                        <ScrollToTopRoute path='/' exact={true}>
+                            <Home title="Home - bunchofbrains" />
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/about' exact={true}>
+                            <About title="About - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/advice' exact={true}>
+                            <Advice title="Advice - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/faq' exact={true}>
+                            <Faq title="Faq - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/contact' exact={true}>
+                            <Contact title="Contact - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/blog' exact={true}>
+                            <Blog title="Our Blog - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/news' exact={true}>
+                            <News title="News - bunchofbrains"/>
+                        </ScrollToTopRoute>
 
+                        <ScrollToTopRoute path='/all-troubles' exact={true}>
+                            <AllTroubles title="Brain Health - bunchofbrains"/>
+                        </ScrollToTopRoute>
 
-                        <ScrollToTopRoute path='/terms-and-conditions' render={() => <TermsAndConditions title="Terms And Conditions - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/privacy' render={() => <Privacy title="Privacy - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/policy-accessibility' render={() => <PolicyAccessibility title="policy Accessibility - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/statement' render={() => <Statement title="Statement - bunchofbrains"/>} exact={true}/>
+                        <ScrollToTopRoute path='/all-troubles/depression' exact={true}>
+                            <Depression title="Depression - bunchofbrains"/>
+                        </ScrollToTopRoute>
 
+                        <ScrollToTopRoute path='/all-troubles/anxiety' exact={true}>
+                            <Anxiety title="Anxiety - bunchofbrains"/>
+                        </ScrollToTopRoute>
 
+                        <ScrollToTopRoute path='/all-troubles/panic-disorder' exact={true}>
+                            <PanicDisorder title="Panic Disorder - bunchofbrains"/>
+                        </ScrollToTopRoute>
 
-                        <ScrollToTopRoute path='/log-in' render={() => <LogInOnMdScreen title="Log In - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute path='/sign-up' render={() => <SignUpOnMdScreen title="Sign Up - bunchofbrains"/>} exact={true}/>
-                        <PrivateRoute>
-                            <ScrollToTopRoute path='/profile' render={() => <UserProfile title="My account  - bunchofbrains"/>} exact={true}/>
-                        </PrivateRoute>
-                        <ScrollToTopRoute path='/reset-password' render={() => <ResetPassword title="Forget Password  - bunchofbrains"/>} exact={true}/>
-                        <ScrollToTopRoute component={NoMatch} />
+                        <ScrollToTopRoute path='/all-troubles/self-esteem' exact={true}>
+                            <SelfEsteem title="Self Esteem - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/addiction' exact={true}>
+                            <Addiction title="Addiction - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/parenting' exact={true}>
+                            <Parenting title="Parenting - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/brain-health' exact={true}>
+                            <BrainHealth title="Brain Health - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/cognitive-development' exact={true}>
+                            <CognitiveDevelopment title="Cognitive Development - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/emotional-abuse' exact={true}>
+                            <EmotionalAbuse title="Emotional Abuse - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/goal-setting' exact={true}>
+                            <GoalSetting title="Goal Setting - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/loneliness' exact={true}>
+                            <Loneliness title="Lowliness - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/marital-issues' exact={true}>
+                            <MaritalIssues title="Marital Issues - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/motivation' exact={true}>
+                            <Motivation title="Motivation - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/ocd' exact={true}>
+                            <Ocd title="OCD - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/phobias' exact={true}>
+                            <Phobias title="Phobias - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/ptsd' exact={true}>
+                            <Ptsd title="PTSD - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/all-troubles/relationship-issues' exact={true}>
+                            <RelationshipIssues title="Relationship Issues - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/schizophrenia' exact={true}>
+                            <Schizophrenia title="Schizophrenia - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/sexuality' exact={true}>
+                            <Sexuality title="Sexuality - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/bullying' exact={true}>
+                            <Bullying title="Bullying - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/all-troubles/spirituality' exact={true}>
+                            <Spirituality title="Spirituality - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/terms-and-conditions' exact={true}>
+                            <TermsAndConditions title="Terms And Conditions - bunchofbrains"/>
+                        </ScrollToTopRoute>
+
+                        <ScrollToTopRoute path='/privacy' exact={true}>
+                            <Privacy title="Privacy - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/policy-accessibility' exact={true}>
+                            <PolicyAccessibility title="policy Accessibility - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/statement' exact={true}>
+                            <Statement title="Statement - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/log-in' exact={true}>
+                            <LogInOnMdScreen title="Log In - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/sign-up'  exact={true}>
+                            <SignUpOnMdScreen title="Sign Up - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/profile' exact={true}>
+                            <UserProfile title="My account  - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/reset-password' exact={true}>
+                            <ResetPassword title="Forget Password  - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute>
+                            <NoMatch title="404 - bunchofbrains"/>
+                        </ScrollToTopRoute>
                     </Switch>
                     <Footer/>
                 </BrowserRouter>

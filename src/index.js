@@ -9,7 +9,7 @@ import * as serviceWorker from './serviceWorker';
 import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import './Sass/App.scss';
-import Firebase, {FirebaseContext} from "./firebase";
+import Firebase, {FirebaseContext} from "./firebase/index";
 
 setTimeout(
     () =>

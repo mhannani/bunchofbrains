@@ -1,6 +1,8 @@
 import React from 'react';
-import LogInForm, {FaceBookLogIn, TwitterLogIn, FormSeparatorWithOr} from "./LogInEntyties"
+import LogInForm, {FormSeparatorWithOr} from "./LogInEntyties"
 import GoogleLogIn from "./AuthProviders/Google/GoogleLogIn";
+import FacebookLogIn from "./AuthProviders/Facebook/FacebookLogin";
+import TwitterLogIn from "./AuthProviders/Twitter/TwitterLogIn";
 
 
 const LogIn = (props)=>{
@@ -28,7 +30,7 @@ const LogIn = (props)=>{
                 <div className="col-6 loginForm mx-auto d-flex align-items-center justify-content-center">
                     <div className="row mt-3 d-flex justify-content-center ">
                         <GoogleLogIn/>
-                        <FaceBookLogIn/>
+                        <FacebookLogIn/>
                         <TwitterLogIn/>
                         <FormSeparatorWithOr/>
                         <LogInForm/>

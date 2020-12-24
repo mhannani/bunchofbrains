@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import {Animated} from "react-animated-css";
 import {Link} from "react-router-dom";
-import LogInForm, {LogInMessage, FaceBookLogIn, TwitterLogIn, FormSeparatorWithOr} from "./LogInEntyties";
+import LogInForm, {LogInMessage, FormSeparatorWithOr} from "./LogInEntyties";
+import FacebookLogIn from "./AuthProviders/Facebook/FacebookLogin";
+import TwitterLogIn from "./AuthProviders/Twitter/TwitterLogIn";
 
 import GoogleLogIn from "./AuthProviders/Google/GoogleLogIn";
 const LogInOnMdScreen = (props)=>{
@@ -15,7 +17,7 @@ const LogInOnMdScreen = (props)=>{
                     <div className="row mt-3 d-flex justify-content-center">
                         <LogInMessage/>
                         <GoogleLogIn/>
-                        <FaceBookLogIn/>
+                        <FacebookLogIn/>
                         <TwitterLogIn/>
                         <FormSeparatorWithOr/>
                         <LogInForm/>

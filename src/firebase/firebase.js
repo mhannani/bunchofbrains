@@ -25,6 +25,9 @@ class Firebase {
         this.auth = app.auth();
         this.db = app.database();
         this.googleProvider = new app.auth.GoogleAuthProvider();
+        this.facebookProvider = new app.auth.FacebookAuthProvider();
+        this.twitterProvider = new app.auth.TwitterAuthProvider();
+
     }
 
     // *** Auth API ***
@@ -38,7 +41,12 @@ class Firebase {
     // Sign-in using Google Provider
     doSignInWithGoogle = () =>
         this.auth.signInWithPopup(this.googleProvider);
-
+    // Sign-in using Facebook Provider
+    doSignInWithFacebook = () =>
+        this.auth.signInWithPopup(this.facebookProvider);
+    // Sign-in using the Twitter Provider
+    doSignInWithTwitter = () =>
+        this.auth.signInWithPopup(this.twitterProvider);
     // log-out
     doSignOut = () => {
         console.log('sign out');

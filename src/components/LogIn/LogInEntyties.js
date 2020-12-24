@@ -2,8 +2,6 @@ import React, {Component} from "react";
 import {withRouter} from 'react-router-dom';
 import {withFirebase} from "../../firebase";
 import {compose} from 'recompose';
-import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
-import {ReactComponent as TwitterIcon} from "./TwitterIcon.svg";
 
 import {Link} from "react-router-dom";
 // import {auth} from "../../firebase/firebase";
@@ -24,27 +22,9 @@ export const LogInMessage = () => {
     )
 }
 
-export const FaceBookLogIn = () => {
-    return (
-        <div className={'col-md-10 col-sm-12 text-center'}>
-            <button className="col-6 mb-2 btn social">
-                <FacebookIcon style={{float: "left"}}/>
-                <span>Facebook</span>
-            </button>
-        </div>
-    )
-}
 
-export const TwitterLogIn = () => {
-    return (
-        <div className={'col-md-10 col-sm-12 text-center'}>
-            <button className="col-6 btn social">
-                <TwitterIcon style={{float: "left"}}/>
-                <span>Twitter</span>
-            </button>
-        </div>
-    )
-}
+
+
 
 class LogInForm extends Component {
     constructor(props) {

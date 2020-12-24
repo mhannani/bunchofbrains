@@ -1,5 +1,5 @@
 import {ReactComponent as GoogleIcon} from "../LogIn/AuthProviders/Google/GoogleIcon.svg";
-import {ReactComponent as FacebookIcon} from "../LogIn/FacebookIcon.svg";
+import {ReactComponent as FacebookIcon} from "../LogIn/AuthProviders/Facebook/FacebookIcon.svg";
 import {ReactComponent as TwitterIcon} from "../LogIn/TwitterIcon.svg";
 // import {signInWithGoogle, signInWithFacebook, signInWithTwitter} from "../../firebase/firebase"
 import React from "react";

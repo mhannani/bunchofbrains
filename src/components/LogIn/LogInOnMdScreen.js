@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
 import {Animated} from "react-animated-css";
-import LogInForm, {LogInMessage, GoogleLogIn, FaceBookLogIn, TwitterLogIn, FormSeparatorWithOr} from "./LogInEntyties";
 import {Link} from "react-router-dom";
+import LogInForm, {LogInMessage, FaceBookLogIn, TwitterLogIn, FormSeparatorWithOr} from "./LogInEntyties";
+
+import GoogleLogIn from "./AuthProviders/Google/GoogleLogIn";
 const LogInOnMdScreen = (props)=>{
     useEffect(() => {
         document.title = props.title || "";

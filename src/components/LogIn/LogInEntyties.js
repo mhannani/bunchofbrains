@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {withRouter} from 'react-router-dom';
 import {withFirebase} from "../../firebase";
 import {compose} from 'recompose';
-import {ReactComponent as GoogleIcon} from "./GoogleIcon.svg";
 import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
 import {ReactComponent as TwitterIcon} from "./TwitterIcon.svg";
 
@@ -21,17 +20,6 @@ export const LogInMessage = () => {
     return (
         <div className="col-xl-10 col-sm-12 mb-5">
             <p className={'text-center h5  font-weight-bold'}>Sign in to your bunchofbrains account</p>
-        </div>
-    )
-}
-
-export const GoogleLogIn = () => {
-    return (
-        <div className={'col-md-10 col-sm-12 text-center'}>
-            <button className="col-6 mb-2 btn social">
-                <GoogleIcon style={{float: "left"}}/>
-                <span>Google</span>
-            </button>
         </div>
     )
 }

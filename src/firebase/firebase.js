@@ -1,5 +1,6 @@
 import app  from "firebase/app"
 import 'firebase/auth';
+import 'firebase/database'
 // import firestore from "firebase/firestore"
 
 // import * as database from "firebase/database"
@@ -22,6 +23,8 @@ class Firebase {
     constructor() {
         app.initializeApp(firebaseConfig);
         this.auth = app.auth();
+        this.db = app.database();
+        this.googleProvider = new app.auth.GoogleAuthProvider();
     }
 
     // *** Auth API ***
@@ -32,6 +35,9 @@ class Firebase {
     // Log-in using email and password combination
     doSignInWithEmailAndPassword = (email, password) =>
         this.auth.signInWithEmailAndPassword(email, password);
+    // Sign-in using Google Provider
+    doSignInWithGoogle = () =>
+        this.auth.signInWithPopup(this.googleProvider);
 
     // log-out
     doSignOut = () => {

@@ -1,5 +1,6 @@
 import React from 'react';
-import LogInForm, {GoogleLogIn, FaceBookLogIn, TwitterLogIn, FormSeparatorWithOr} from "./LogInEntyties"
+import LogInForm, {FaceBookLogIn, TwitterLogIn, FormSeparatorWithOr} from "./LogInEntyties"
+import GoogleLogIn from "./AuthProviders/Google/GoogleLogIn";
 
 
 const LogIn = (props)=>{

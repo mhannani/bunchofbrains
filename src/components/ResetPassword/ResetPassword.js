@@ -6,6 +6,7 @@ import {withFirebase} from "../../Firebase";
 const INITIAL_STATE = {
     email: '',
     error: null,
+    sent: null
 };
 
 class ResetPassword extends React.Component{
@@ -23,6 +24,7 @@ class ResetPassword extends React.Component{
             .doPasswordReset(email)
             .then(() => {
                 this.setState({ ...INITIAL_STATE });
+                this.setState({sent: true})
             })
             .catch(error => {
                 this.setState({ error });
@@ -36,7 +38,7 @@ class ResetPassword extends React.Component{
 
 
     render(){
-        const { email, error } = this.state;
+        const { email, error, sent } = this.state;
         const isInvalid = email === '';
 
         return(
@@ -60,6 +62,9 @@ class ResetPassword extends React.Component{
                             Reset password
                         </Button>
                         {error && <p className={'requirement mt-2 text-danger'}>{error.message}</p>}
+                        {sent && <p className={'requirement mt-2 text-success'}>
+                            Please, check your e-mail for instructions to reset you password's account
+                        </p>}
                     </form>
                 </div>
             </Div>

@@ -14,15 +14,15 @@ class GoogleLogIn extends React.Component{
     onSubmit = event => {
         this.props.firebase
             .doSignInWithGoogle()
-            // .then(socialAuthUser => {
-            //     return this.props.firebase
-            //         .user(socialAuthUser.user.uid)
-            //         .set({
-            //             username: socialAuthUser.user.displayName,
-            //             email: socialAuthUser.user.email,
-            //             roles: {},
-            //         });
-            // })
+            .then(socialAuthUser => {
+                return this.props.firebase
+                    .user(socialAuthUser.user.uid)
+                    .set({
+                        username: socialAuthUser.user.displayName,
+                        email: socialAuthUser.user.email,
+                        roles: {},
+                    });
+            })
             .then(() => {
                 this.setState({ error: null });
                 this.props.history.push("/");

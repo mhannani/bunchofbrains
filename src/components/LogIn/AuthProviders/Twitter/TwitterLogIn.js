@@ -14,6 +14,15 @@ class TwitterLogIn extends React.Component{
     onSubmit = event => {
         this.props.firebase
             .doSignInWithTwitter()
+            .then(socialAuthUser => {
+                return this.props.firebase
+                    .user(socialAuthUser.user.uid)
+                    .set({
+                        username: socialAuthUser.user.displayName,
+                        email: socialAuthUser.user.email,
+                        roles: {},
+                    });
+            })
             .then(() => {
                 this.setState({ error: null });
                 this.props.history.push("/");

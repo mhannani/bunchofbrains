@@ -11,7 +11,7 @@ const LogInOnMdScreen = (props)=>{
         document.title = props.title || "";
     })
     return(
-        <Animated animationIn="bounceInRight" animationOut="bounceOutLeft" animationInDuration={450} animationOutDuration={450} isVisible={true}>
+        <Animated animationIn="bounceInRight" animationOut="bounceOutLeft" animationInDuration={0} animationOutDuration={0} isVisible={true}>
             <div className={'container LogInOnMdScreen  d-flex  align-items-center justify-content-between'}>
                 <div className="col-10 col-md-7 col-lg-5 col-xl-4 loginForm mx-auto">
                     <div className="row mt-3 d-flex justify-content-center">

@@ -2,7 +2,7 @@ import React from "react";
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
 import {ReactComponent as GoogleIcon} from "./GoogleIcon.svg";
-import {withFirebase} from "../../../../firebase";
+import {withFirebase} from "../../../../Firebase";
 
 
 class GoogleLogIn extends React.Component{

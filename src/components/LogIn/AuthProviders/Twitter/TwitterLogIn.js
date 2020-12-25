@@ -2,7 +2,7 @@ import {ReactComponent as TwitterIcon} from "../../TwitterIcon.svg";
 import React from "react";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
-import {withFirebase} from "../../../../firebase";
+import {withFirebase} from "../../../../Firebase";
 
 class TwitterLogIn extends React.Component{
     constructor(props) {

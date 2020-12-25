@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {withFirebase} from "../../firebase";
+import {withFirebase} from "../../Firebase";
 import HeaderLink from "../chunks/HeaderLink";
 import Button from "../chunks/Button";
 

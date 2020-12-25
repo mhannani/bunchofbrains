@@ -2,7 +2,7 @@ import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
 import React from "react";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
-import {withFirebase} from "../../../../firebase";
+import {withFirebase} from "../../../../Firebase";
 
 class FaceBookLogIn extends React.Component {
     constructor(props) {

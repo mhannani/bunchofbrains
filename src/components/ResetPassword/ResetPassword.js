@@ -1,7 +1,7 @@
 import React from 'react';
 import Div from "../chunks/Div";
 import Button from "../chunks/Button";
-import {withFirebase} from "../../firebase";
+import {withFirebase} from "../../Firebase";
 
 const INITIAL_STATE = {
     email: '',

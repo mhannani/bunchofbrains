@@ -1,0 +1,58 @@
+@import '../../variables';
+
+.card_section {
+  button{
+    border-radius: 0 !important;
+  }
+  //.startFeeling{
+  //  font-weight: bolder;
+  //  border:0 !important;
+  //  border-radius: 50%;
+  //}
+  .btn-arrow:after {
+    font-family: 'FontAwesome', 'sans-serif';
+    content: '\f0a9';
+    padding-left: 15px;
+    position: relative;
+    font-size: 1.3em;
+    color:$primary;
+
+  }
+  .seeAll{
+    text-decoration: none;
+  }
+
+  .btn-arrow {
+    text-decoration: none;
+    font-size: 1em;
+    color:$primary;
+  }
+  .btn-arrow:hover {
+    color:$primary_dark;
+  }
+  .btn-arrow:hover:after {
+    color: $primary_dark;
+  }
+
+  .card {
+    border-radius: 8px;
+    box-shadow: 6px 6px 20px 4px rgba(black, .2);
+    transition: all  0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(2px);
+      box-shadow: 3px 3px 10px 4px rgba(black, .1);
+    }
+    .row{
+      .description {
+        text-align: center;
+      }
+    }
+
+  }
+  .btn {
+    transition: background-color 0.2s ease-in-out;
+    border: 1px solid #000000;
+
+  }
+}

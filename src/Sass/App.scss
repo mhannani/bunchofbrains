@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@200;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import "./variables";
+@import "base";
+@import "./components/logo";
+@import "./components/header";
+@import "./components/slideShow";
+@import "./components/cards/cards";
+@import "./components/footer";
+@import "./components/scrollBar";
+@import "~font-awesome/scss/font-awesome";
+@import "./components/noMatch";
+@import "./components/modal";
+@import "./components/login";
+@import "./components/logInOnMdScreen";
+@import "./components/signUpOnMdScreen";
+@import "./components/signUp";
+@import "./components/about";
+@import "./components/advice";
+@import "./components/resetPassword";
+@import "./components/contact";
+@import "./components/faq";
+@import "./components/spinner";
+@import "components/allTroubles";
+@import "components/Troubles/all_troubles";
+@import "components/goBackButton";
+@import "./components/policyAndAccessibility";
+@import "./components/termsAndConditions";
+@import "./components/privacy";
+@import "./components/statement";
+@import "./components/UserProfile/userProfile";
+@import "./components/news";
+
+$fa-font-path: "~font-awesome/fonts";
+$fa-font-path: "../fonts" !default;
+
+
+.selected{
+  color: #5cb85c;
+}

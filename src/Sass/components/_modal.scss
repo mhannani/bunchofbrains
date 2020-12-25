@@ -1,0 +1,82 @@
+@import "../variables";
+
+.ReactModalPortal > div{
+  z-index:100000;
+  opacity: 0;
+}
+.ReactModal__Overlay {
+  //opacity: 0;
+  transform: translateX(-100px);
+  transition: position 500s ease-in-out;
+}
+.ReactModalPortal .ReactModal__Overlay--after-open{
+  opacity: 1 !important;
+  transform: translateY(0px);
+  background-color: RGBa(4,105,4,.35) !important;
+}
+
+.ReactModalPortal .ReactModal__Overlay--before-close{
+  //opacity: 0;
+  transform: translateY(-100px);
+}
+
+
+.Modal{
+  background: rgb(69,213,69);
+  background: linear-gradient(155deg, rgba(69,213,69,1) 0%, rgba(75,217,71,1) 13%, rgba(65,179,65,1) 100%);
+  border-radius: 10px;
+  position: absolute;
+  //background-color: $primary;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  min-height:600px;
+  max-height:700px;
+  height:90vh;
+  //box-shadow: 5px 5px 10px #0000003a;
+
+  .close {
+    z-index:1;
+    position: absolute;
+    color:$black;
+    right: 1rem;
+    top: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+    outline:none;
+    .closeLogo:hover{
+      fill:$white
+    }
+  }
+  .welcomeMessage{
+
+    position: absolute;
+    top:0;
+    left:50%;
+    height:100%;
+    //width: 40%;
+    border-radius: 0 $border_radius $border_radius 0 ;
+    .borderSeparator{
+      border: 4px solid #ffffff;
+      border-radius: 40px;
+      width: 25%;
+    }
+  }
+  .loginForm{
+    //box-shadow: 10px 2px 40px #0000003a;
+    background-color: snow;
+    position: absolute;
+    top:0;
+    left: 0;
+    height: 100%;
+    border-radius: $border_radius 0  0 $border_radius;
+  }
+  h2{
+    line-height: 2rem;
+  }
+  h6{
+    line-height: 1.1rem;
+  }
+}

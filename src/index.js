@@ -9,16 +9,17 @@ import * as serviceWorker from './serviceWorker';
 import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import './Sass/App.scss';
-import Firebase, {FirebaseContext} from "./Firebase";
+// import Firebase, {FirebaseContext} from "./Firebase/index";
+
 
 setTimeout(
     () =>
         // the show/hide functions are passed as props
         ReactDOM.render(
             <React.StrictMode>
-                <FirebaseContext.Provider value={new Firebase()}>
+                {/*<FirebaseContext.Provider value={new Firebase()}>*/}
                     <App />
-                </FirebaseContext.Provider>
+                {/*</FirebaseContext.Provider>*/}
             </React.StrictMode>,
             document.getElementById('root')),
     2000

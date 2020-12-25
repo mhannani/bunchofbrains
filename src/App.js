@@ -1,5 +1,5 @@
 import React from "react";
-import AppRouter from './routers/AppRouter'
+import AppRouter from './Routers/AppRouter'
 import {withAuthentication} from "./Session"
 
 const App = ()=> {

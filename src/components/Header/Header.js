@@ -3,15 +3,15 @@ import $ from 'jquery';
 import {NavLink, useHistory} from "react-router-dom";
 import {Link} from "react-router-dom";
 import {ReactComponent as Logo} from './brain.svg';
-import SignOut from "./SignOut";
 // import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
 import HeaderLink from "../chunks/HeaderLink";
 import Button from '../chunks/Button';
 import I from '../chunks/I';
 import PopUpModal from '../PopUp/PopUpModal'
-import UserAvatar from "react-user-avatar";
+
 import {AuthUserContext} from "../../Session"
+import UserAction from "./UserActions";
 
 const Header = () => {
     const [isVisible, toggleVisibility] = useState(false)
@@ -157,10 +157,11 @@ const Header = () => {
                 <form className="align-bottom d-flex align-baseline align-items-md-end form-inline float-right">
                     <AuthUserContext.Consumer>
                         { authUser => authUser ? <div className={'row'}>
-                            <UserAvatar className={'col-1'}
-                                        size="36" name={"userName"}
-                                        src={"https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"}/>
-                            <SignOut/>
+                            {/*<UserAvatar className={'col-1'}*/}
+                            {/*            size="36" name={"userName"}*/}
+                            {/*            src={"https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"}/>*/}
+                            <UserAction/>
+                            {/*<SignOut/>*/}
                         </div>
 
                         :<div>

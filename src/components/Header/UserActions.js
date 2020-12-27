@@ -1,9 +1,11 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import { Menu, Dropdown } from 'antd';
+import { withRouter } from "react-router";
 import {UserOutlined, DashboardOutlined, ProfileOutlined, MessageOutlined } from '@ant-design/icons';
 import withAuthorization from "../../Session/withAuthorization";
 import AuthUserContext from "../../Session/context";
+import {Link} from "react-router-dom";
 const UserActions = ({ firebase }) => {
     // function handleMenuClick(e) {
     //     message.info('Click on menu item.');
@@ -12,14 +14,20 @@ const UserActions = ({ firebase }) => {
 
     const menu = (
         <Menu>
-            <Menu.Item key="1" icon={<DashboardOutlined />}>
-                Dashboard
+            <Menu.Item key="1"  icon={<DashboardOutlined />}>
+                <Link to={'/dashboard'}>
+                    Dashboard
+                </Link>
             </Menu.Item>
             <Menu.Item key="2" icon={<ProfileOutlined />}>
-                Profile
+                <Link to={'/profile'}>
+                    Profile
+                </Link>
             </Menu.Item>
             <Menu.Item  key="3" icon={<MessageOutlined />}>
+                <Link to={'/messages'}>
                 Messages
+                </Link>
             </Menu.Item>
             <Menu.Item onClick={firebase.doSignOut} className={'text-danger'} key="4" icon={<UserOutlined />}>
                 Log out
@@ -56,4 +64,4 @@ const UserActions = ({ firebase }) => {
     )
 }
 const condition = authUser => !!authUser;
-export default withAuthorization(condition)(UserActions);
+export default withAuthorization(condition)(withRouter(UserActions));

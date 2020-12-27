@@ -14,7 +14,7 @@ import About from "../components/About/About"
 import Contact from "../components/Contact/contact";
 import Footer from "../components/Footer/Footer";
 import LogInOnMdScreen from "../components/LogIn/LogInOnMdScreen";
-import UserProfile from "../components/Profile/Profile";
+import Profile from "../components/Profile/Profile";
 import ResetPassword from "../components/ResetPassword/ResetPassword";
 import NoMatch from "../components/NoMatch";
 import SignUpOnMdScreen from "../components/SignUp/SignUpOnMdScreen"
@@ -48,6 +48,9 @@ import Privacy from "../components/Privacy/Privacy";
 import PolicyAccessibility from "../components/Policy_and_accessibility/PolicyAccessibility";
 import Statement from "../components/Statement/Statement";
 
+
+import Dashboard from "../components/Dashboard/Dashboard";
+import Messages from "../components/Messages/Messages";
 import ScrollToTopRoute from "./ScrollToTopRoute";
 
 // Theme
@@ -192,11 +195,18 @@ const AppRouter = ()=>{
                         <ScrollToTopRoute path='/sign-up'  exact={true}>
                             <SignUpOnMdScreen title="Sign Up - bunchofbrains"/>
                         </ScrollToTopRoute>
-                        <ScrollToTopRoute path='/profile' exact={true}>
-                            <UserProfile title="My account  - bunchofbrains"/>
-                        </ScrollToTopRoute>
+
                         <ScrollToTopRoute path='/reset-password' exact={true}>
                             <ResetPassword title="Forget Password  - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/profile' exact={true}>
+                            <Profile title="My account  - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/dashboard' exact={true}>
+                            <Dashboard title="Dashboard - bunchofbrains"/>
+                        </ScrollToTopRoute>
+                        <ScrollToTopRoute path='/messages' exact={true}>
+                            <Messages title="Messages - bunchofbrains"/>
                         </ScrollToTopRoute>
                         <ScrollToTopRoute>
                             <NoMatch title="404 - bunchofbrains"/>

@@ -154,16 +154,9 @@ const Header = () => {
                     </li>
                 </ul>
 
-                <form className="align-bottom d-flex align-baseline align-items-md-end form-inline float-right">
+                <form className="align-top d-flex align-baseline align-items-md-end form-inline float-right">
                     <AuthUserContext.Consumer>
-                        { authUser => authUser ? <div className={'row'}>
-                            {/*<UserAvatar className={'col-1'}*/}
-                            {/*            size="36" name={"userName"}*/}
-                            {/*            src={"https://cdn4.iconfinder.com/data/icons/startup-90/64/41-512.png"}/>*/}
-                            <UserAction/>
-                            {/*<SignOut/>*/}
-                        </div>
-
+                        { authUser => authUser ? <UserAction className={'mx-5'}/>
                         :<div>
                             <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
                                 <HeaderLink onClick={logInHandler}>Log in</HeaderLink>

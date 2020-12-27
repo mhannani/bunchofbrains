@@ -39,3 +39,24 @@ $fa-font-path: "../fonts" !default;
 .selected{
   color: #5cb85c;
 }
+.ant-btn{
+  border:none !important;
+  box-shadow: none !important;
+  background-color: transparent !important;
+  font-weight: bold;
+
+}
+
+.dropdown-btn > .ant-dropdown-trigger  {
+  border: none;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  margin-top: -4px;
+}
+
+.dropdown-btn > .ant-dropdown-trigger > span {
+  background-color: transparent !important;
+}
+.dropdown-btn > .ant-dropdown-trigger > span:hover {
+  color: black;
+}

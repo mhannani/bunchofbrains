@@ -14,7 +14,7 @@ import About from "../components/About/About"
 import Contact from "../components/Contact/contact";
 import Footer from "../components/Footer/Footer";
 import LogInOnMdScreen from "../components/LogIn/LogInOnMdScreen";
-import UserProfile from "../components/User_profile/UserProfile";
+import UserProfile from "../components/Profile/Profile";
 import ResetPassword from "../components/ResetPassword/ResetPassword";
 import NoMatch from "../components/NoMatch";
 import SignUpOnMdScreen from "../components/SignUp/SignUpOnMdScreen"

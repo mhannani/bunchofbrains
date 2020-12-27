@@ -1,12 +1,7 @@
 import app  from "firebase/app"
 import 'firebase/auth';
 import 'firebase/database'
-// import firestore from "firebase/firestore"
 
-// import * as database from "firebase/database"
-// import "firebase/auth";
-// import "firebase/firestore";
-//
 const firebaseConfig = {
     apiKey: "AIzaSyDWJaKnLIibpYmBVDc5xe362bUQbxQyIJk",
     authDomain: "bunchofbrains-22ce9.firebaseapp.com",
@@ -18,7 +13,6 @@ const firebaseConfig = {
     measurementId: "G-WRKNSRBPC0"
 };
 
-//! to be uncommented
 class Firebase {
     constructor() {
         app.initializeApp(firebaseConfig);

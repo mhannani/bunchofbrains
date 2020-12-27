@@ -1,6 +1,7 @@
 import React from 'react';
 import {GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
 import FormSignUpWithEmailAndPassword from './Form'
+import Typical from "react-typical";
 
 const SignUp = (props)=>{
 
@@ -14,7 +15,11 @@ const SignUp = (props)=>{
                         </h2>
                         <div className={'ml-3 mt-3 borderSeparator'}/>
                         <h6 className={'text-white mt-3 flex-wrap col-8'}>
-                            Master psychology. Master life.
+                            <Typical
+                                steps={['Master life.', 1500, 'Master psychology.', 500]}
+                                loop={Infinity}
+                                wrapper="p"
+                            />
                         </h6>
                     </div>
                 </div>

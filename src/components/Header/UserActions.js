@@ -7,10 +7,7 @@ import withAuthorization from "../../Session/withAuthorization";
 import AuthUserContext from "../../Session/context";
 import {Link} from "react-router-dom";
 const UserActions = ({ firebase }) => {
-    // function handleMenuClick(e) {
-    //     message.info('Click on menu item.');
-    //     console.log('click', e);
-    // }
+
 
     const menu = (
         <Menu>

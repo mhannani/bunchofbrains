@@ -1,4 +1,5 @@
 import React from 'react';
+import Typical from 'react-typical'
 import LogInForm, {FormSeparatorWithOr} from "./LogInEntyties"
 import GoogleLogIn from "./AuthProviders/Google/GoogleLogIn";
 import FacebookLogIn from "./AuthProviders/Facebook/FacebookLogin";
@@ -20,7 +21,11 @@ const LogIn = (props)=>{
                     </h2>
                     <div className={'ml-3 mt-3 borderSeparator'}/>
                     <h6 className={'text-white mt-3 flex-wrap col-8'}>
-                        Master psychology. Master life.
+                        <Typical
+                            steps={['Master life.', 1500, 'Master psychology.', 500]}
+                            loop={Infinity}
+                            wrapper="p"
+                        />
                     </h6>
                 </div>
             </div>

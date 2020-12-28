@@ -55,31 +55,32 @@ class FormSignUpWithEmailAndPassword extends Component {
 
 
         return(
-            <form className="col-xl-10 col-sm-12 px-0 sign-up-using-email-form form-horizontal"  onSubmit={this.onSubmit}>
-                <div className="form-group">
+            <form className="col-xl-11 bg-danger col-sm-12 sign-up-using-email-form form-horizontal"  onSubmit={this.onSubmit}>
+                <div className="form-group d-flex align-items-center justify-content-center">
                     <input type="text" className="form-control margin-bottom"
                            aria-describedby="username" value={username} onChange={this.onChange}
                            placeholder="Username" name="username"/>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group d-flex align-items-center justify-content-center">
                     <input type="email" className="form-control margin-bottom"
                            id="exampleInputEmail1" value={email} onChange={this.onChange}
                            aria-describedby="emailHelp"
                            placeholder="Email address" name="email"/>
                 </div>
 
-                <div className="form-group">
+                <div className="form-group d-flex align-items-center justify-content-center">
                     <input type="password" className="form-control margin-bottom"
                            id="exampleInputPassword1" value={password} onChange={this.onChange}
                            placeholder="Password" name="password"/>
+                           <br/>
                 </div>
 
-                <div className="form-group requirement">
+                <div className="requirement form-group ">
                     Password must be at least 6 characters long.
                 </div>
 
-                <button type="submit" disabled={isInvalid} className="btn w-100 col-12">Sign Up</button>
+                <button type="submit" disabled={isInvalid} className="d-flex align-items-center justify-content-center btn w-100 mx-auto col-12">Sign Up</button>
                 {error && <p className={'mt-1 requirement text-danger'}>{error.message}</p>}
             </form>
         );

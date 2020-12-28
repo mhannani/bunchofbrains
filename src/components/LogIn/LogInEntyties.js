@@ -2,17 +2,13 @@ import React, {Component} from "react";
 import {withRouter} from 'react-router-dom';
 import {withFirebase} from "../../Firebase";
 import {compose} from 'recompose';
-
 import {Link} from "react-router-dom";
-// import {auth} from "../../firebase/firebase";
-
 
 const INITIAL_STATE = {
     email: '',
     password: '',
     error: null,
 };
-
 
 export const LogInMessage = () => {
     return (
@@ -21,10 +17,6 @@ export const LogInMessage = () => {
         </div>
     )
 }
-
-
-
-
 
 class LogInForm extends Component {
     constructor(props) {
@@ -57,28 +49,26 @@ class LogInForm extends Component {
         const {email, password, error} = this.state;
         const isInvalid = password === '' || email === '';
         return (
-            <form className="col-sm-10 px-0" onSubmit={this.onSubmit}>
-                {/*{error !== null && <div className="py-1 bg-danger w-full text-white text-center mb-1">{error}</div>}*/}
-                <div className="form-group">
+            <form className="col-md-11 col-sm-11 mx-auto" onSubmit={this.onSubmit}>
+                <div className="form-group d-flex align-items-center justify-content-center">
                     <input type="email" className="form-control margin-bottom"
                            value={email} onChange={this.onChange} placeholder="Email address"
                            aria-describedby="emailHelp" name="email" />
                 </div>
-                <div className="form-group">
+                <div className="form-group d-flex align-items-center justify-content-center">
                     <input type="password" className="form-control margin-bottom" value={password}
                            placeholder="Password" name="password" onChange={this.onChange}/>
                 </div>
 
 
-                <button type="submit" disabled={isInvalid} className="w-100 col-12 btn">Sign In</button>
+                <button type="submit" disabled={isInvalid} className="d-flex align-items-center justify-content-center btn w-100 mx-auto col-12 ">Sign In</button>
                 {error && <p className={'requirement text-danger mt-1'}>{error.message}</p>}
-                <div className="forgot-password mt-2">
+                <div className="forgot-password d-flex align-items-center justify-content-center btn w-100 mx-auto col-12 mt-2">
                     <Link className="forgot-pass-text  font-weight-bold text-decoration-none"
                           target={"_blank"} to={"reset-password"}>
                         Forgot password ?
                     </Link>
-
-                    <div className="form-separator my-4"/>
+                    <br/>
                 </div>
             </form>
         )
@@ -90,10 +80,9 @@ export default LogInForm = compose(
     withFirebase,
 )(LogInForm);
 
-
 export const FormSeparatorWithOr = () => {
     return (
-        <div className="col-sm-10  form-separator my-4">
+        <div className="col-sm-10 form-separator my-4">
             <span>or</span>
         </div>
     )

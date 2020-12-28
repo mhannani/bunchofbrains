@@ -5,7 +5,6 @@ import CardN1 from "./Cards/Card_1";
 import CardN2 from "./Cards/Card_2";
 import CardN3 from "./Cards/Card_3";
 import CardN4 from "./Cards/Card_4";
-// import Button from "../chunks/Button";
 
 class Cards extends React.Component{
 

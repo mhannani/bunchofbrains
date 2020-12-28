@@ -22,13 +22,13 @@
       letter-spacing: 1px;
     }
   }
-  #button-2 {
+  #button-1 {
     position: relative;
     overflow: hidden;
     cursor: pointer;
   }
 
-  #button-2 span {
+  #button-1 span {
     position: relative;
     transition: all .35s ease-Out;
   }
@@ -43,192 +43,13 @@
     bottom: 0;
   }
 
-  #button-2:hover #slide {
+  #button-1:hover #slide {
     left: 0;
   }
 
-  #button-2:hover span {
+  #button-1:hover span {
     color: $white;
   }
-
-
-
-
-  /* Third Button */
-
-  #button-3 {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  #button-3 span {
-    position: relative;
-    transition: all .45s ease-Out;
-  }
-
-  #circle {
-    width: 0;
-    height: 0;
-    opacity: 0;
-    line-height: 40px;
-    border-radius: 50%;
-    background: $primary;
-    position: absolute;
-    transition: all .5s ease-Out;
-    top: 20px;
-    left: 70px;
-  }
-
-  #button-3:hover #circle {
-    width: 200%;
-    height: 500%;
-    opacity: 1;
-    top: -70px;
-    left: -70px;
-  }
-
-  #button-3:hover span {
-    color: $white;
-  }
-
-
-
-
-
-
-  /* Fourth Button */
-
-  #button-4 {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  #button-4 span {
-    position: relative;
-    transition: all .45s ease-Out;
-  }
-
-  #underline {
-    width: 100%;
-    height: 3px;
-    margin-top: 15px;
-    align-self: flex-end;
-    left: -220px;
-    background: $primary;
-    position: absolute;
-    transition: all .3s ease-Out;
-    bottom: 0;
-  }
-
-  #button-4:hover #underline {
-    left: 0;
-  }
-
-
-
-
-
-  /* Fifth Button */
-
-  #button-5 {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  }
-
-  #button-5 span {
-    position: relative;
-    transition: all .45s ease-Out;
-  }
-
-  #translate {
-    transform: rotate(50deg);
-    width: 100%;
-    height: 310%;
-    left: -220px;
-    top: -30px;
-    background: $primary;
-    position: absolute;
-    transition: all .3s ease-Out;
-  }
-
-  #button-5:hover #translate {
-    left: 0;
-  }
-
-  #button-5:hover span {
-    color: $white;
-  }
-
-
-
-
-
-
-
-  /* Sixth Button */
-
-  //BUTTON 5
-  #button-6 {
-    border-color: $primary;
-    // border: 0;
-    border-radius: 0;
-    position: relative;
-    overflow: hidden;
-    transition: color 150ms ease-in-out;
-
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 100%;
-      background: $primary;
-      z-index: -1;
-      transition: width 150ms ease-in-out;
-    }
-
-    &:hover {
-      span {
-        color: $white;
-      }
-      &:after {
-        width: 110%;
-      }
-    }
-  }
-
-
-
-
-
-
-  /* Seventh Button */
-  // BUTTON 4
-  #button-7 {
-    // background: $yellow;
-    border-color: $primary;
-    color: #fff;
-    background: {
-      image: linear-gradient(45deg,$primary 50%, transparent 50%);
-      position: 100%;
-      size: 400%;
-    }
-    transition: background 300ms ease-in-out;
-
-    &:hover {
-      background-position: 0;
-      span{
-        color:$white
-      }
-    }
-  }
-
 
   // Tooltip customization
   .tooltip{

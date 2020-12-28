@@ -14,8 +14,6 @@ class CardN3 extends React.Component{
                         a person can have panic disorder if they experience
                         panic attacks repeatedly and unpredictably.
                         People experiencing a panic ...
-
-
                     </div>
 
                 </div>

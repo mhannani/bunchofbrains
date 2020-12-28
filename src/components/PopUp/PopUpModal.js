@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import LogIn from "../LogIn/LogIn";
-import SignUp from "../SignUp/SingUp";
+import SignUp from "../SignUp/SignUp";
 import {ReactComponent as CloseButton} from './logo.svg';
 // Modal.setAppElement('#root');
 const PopUpModal = (props) => {

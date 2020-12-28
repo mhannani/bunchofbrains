@@ -55,7 +55,7 @@ class FormSignUpWithEmailAndPassword extends Component {
 
 
         return(
-            <form className="col-xl-11 bg-danger col-sm-12 sign-up-using-email-form form-horizontal"  onSubmit={this.onSubmit}>
+            <form className="col-xl-11 col-sm-12 sign-up-using-email-form form-horizontal"  onSubmit={this.onSubmit}>
                 <div className="form-group d-flex align-items-center justify-content-center">
                     <input type="text" className="form-control margin-bottom"
                            aria-describedby="username" value={username} onChange={this.onChange}

@@ -8,7 +8,7 @@ import CardN4 from "./Cards/Card_4";
 // import Button from "../chunks/Button";
 
 class Cards extends React.Component{
-
+    // render function
     render(){
         return (
             <div className={'container my-5 card_section'}>

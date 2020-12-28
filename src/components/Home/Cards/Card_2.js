@@ -7,7 +7,7 @@ class CardN2 extends React.Component{
     render() {
         return (
             <Card className="card d-flex justify-content-between mx-sm-12 py-5 px-4">
-                <h2 className={'text-center'}>Anxiety</h2>
+                <h2 className={'text-center text-nowrap text-break'}>Anxiety</h2>
                 <div className={'row'}>
                     <div className="card-body description">
                         Everyone experiences anxiety at one time or

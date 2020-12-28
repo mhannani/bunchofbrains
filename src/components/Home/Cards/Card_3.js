@@ -13,8 +13,7 @@ class CardN3 extends React.Component{
                         Sometimes feeling anxious is quite normal. However,
                         a person can have panic disorder if they experience
                         panic attacks repeatedly and unpredictably.
-                        People experiencing a panic attack experience a sense
-                        of ...
+                        People experiencing a panic ...
 
 
                     </div>

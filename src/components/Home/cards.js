@@ -27,10 +27,6 @@ class Cards extends React.Component{
                 </div>
                 <div className={'container row mt-2'}>
                     <div className={'ml-0 mt-1'}>
-                        {/*<Button className={'startFeeling btn mx-1 px-5 py-4 btn-block btn-lg'}>*/}
-                        {/*    START FEELING GREAT*/}
-                        {/*</Button>*/}
-
                         <Link to={"/all-troubles"} className={'seeAll'}>
                             <span className="btn-arrow">See all</span>
                         </Link>

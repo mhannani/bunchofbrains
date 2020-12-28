@@ -25,7 +25,7 @@ class GoogleLogIn extends React.Component{
             })
             .then(() => {
                 this.setState({ error: null });
-                this.props.history.push("/");
+                this.props.history.push("/profile");
             })
             .catch(error => {
                 this.setState({ error });

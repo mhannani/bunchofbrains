@@ -25,7 +25,7 @@ class FormSignUpWithEmailAndPassword extends Component {
             .doCreateUserWithEmailAndPassword(email, password)
             .then(authUser => {
                 this.setState({...INITIAL_STATE});
-                this.props.history.push("/");
+                this.props.history.push("/profile");
                 console.log(authUser.uid, username)
 
             })

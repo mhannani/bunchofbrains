@@ -5,11 +5,11 @@ const Advice = (props) => {
         document.title = props.title || "";
     })
         return (
-            <Div className="container-fluid advice">
-                <h1 className={'text-center font-weight-bold'}>
+            <Div className="container advice">
+                <h2 className={'font-weight-bold'}>
                     Advice
-                </h1>
-                <div className={'m-5 text-center'}>
+                </h2>
+                <div className={'mt-5'}>
                     <p>
                         The guidance part of bunchofbrains.com is here to furnish you with
                         precise fundamental data about mental health. Our goal is to guide
@@ -18,12 +18,10 @@ const Advice = (props) => {
                         various mental illnesses.
                     </p>
                 </div>
-                <u>
-                    <h3 className={'text-center'}>
-                        What is mental illness?
-                    </h3>
-                </u>
-                <div className={'m-5 text-center'}>
+                <h3 className={'mt-5'}>
+                    What is mental illness?
+                </h3>
+                <div>
                     <p>
                         A mental illness is a set of disturbances in thoughts, emotions
                         and / or behavior that reflect a biological, psychological or
@@ -39,12 +37,12 @@ const Advice = (props) => {
                         factors are present.
                     </p>
                 </div>
-                <u>
-                    <h3 className={'text-center'}>
-                        It's not
-                    </h3>
-                </u>
-                <div className={'m-5 text-center'}>
+
+                <h3 className={'mt-5'}>
+                    It's not
+                </h3>
+
+                <div>
                     <p>
                         A normal reaction to an unfortunate event, such as a romantic
                         break-up, the death of a loved one, or the loss of a job.
@@ -69,15 +67,11 @@ const Advice = (props) => {
                         An excuse to commit an illegal act.
                     </p>
                 </div>
-
-
-                <u>
-                    <h3 className={'text-center'}>
-                        Signs
-                    </h3>
-                </u>
-                <div className={'m-5'}>
-                    <div className={'text-center'}>
+                <h3 className={'mt-5'}>
+                    Signs
+                </h3>
+                <div>
+                    <div>
                         <p>
                             It is highly unlikely to tell if an individual is building up a
                             dysfunctional behavior without a doubt. Notwithstanding, here are
@@ -101,11 +95,11 @@ const Advice = (props) => {
                     </ul>
                 </div>
 
-                <div className="m-5 text-danger text-center font-weight-bolder h4">
+                <div className="m-5 text-danger font-weight-bolder h4">
                     In the event that you are considering hurting yourself,
                     consider 911 or visit the closest trauma center.
                 </div>
-                <div className={'m-5 text-center'}>
+                <div>
                     On the off chance that you are encountering any of these manifestations
                     above, and it's upsetting your capacity to work every day, counsel a
                     psychological doctor immediately. Dysfunctional behavior is exceptionally
@@ -113,12 +107,12 @@ const Advice = (props) => {
                     somebody you love is encountering these indications, you can connect and
                     get them help.
                 </div>
-                <u>
-                    <h3 className={'text-center'}>
-                        Treatments?
-                    </h3>
-                </u>
-                <div className="m-5 text-center">
+
+                <h3 className={'mt-5'}>
+                    Treatments?
+                </h3>
+
+                <div>
                     In general, there are three kinds of treatment for mental illness:
                     lifestyle modifications, psychotherapy, and medication. Some diseases
                     will respond better to one treatment modality than another. For example,
@@ -127,12 +121,12 @@ const Advice = (props) => {
                     be best treated with a combination of lifestyle changes, psychotherapy,
                     and medication.
                 </div>
-                <u>
-                    <h3 className={'text-center'}>
-                        What can I do?
-                    </h3>
-                </u>
-                <div className="m-5">
+
+                <h3 className={'mt-5'}>
+                    What can I do?
+                </h3>
+
+                <div>
                     <p>Certain factors are protective and reduce the risk of developing mental
                         illness and the severity of symptoms:</p>
                     <ul className="ml-5 list-display list-checkmarks">

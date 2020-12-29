@@ -1,6 +1,5 @@
+@import "../variables";
 .advice{
-  margin-top: 100px;
-  h1, h3{
-    font-family: 'Turret Road', cursive;
-  }
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
 }

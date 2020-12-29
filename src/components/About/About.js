@@ -29,7 +29,7 @@ const About = (props) => {
                     originate from varying backgrounds and have differing encounters.
                 </p></div>
             <h3 className={'mt-5'}>How does it work?</h3>
-            <div className={'my-5'}>
+            <div className={'mb-5'}>
                 <p>
                     The process is straight forward, you choose a user to have a conversation
                     with over audio or video in complete anonymity.

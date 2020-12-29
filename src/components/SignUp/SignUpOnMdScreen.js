@@ -1,6 +1,9 @@
 import React, {useEffect} from 'react';
 import {Animated} from "react-animated-css";
-import {SignUpMessage, GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr,Confidentiality} from "./SignUpEntyties";
+import {SignUpMessage, FormSeparatorWithOr,  Confidentiality} from "./SignUpEntyties";
+import FacebookSignUp from "./AuthProviders/Facebook/FacebookSignUp";
+import GoogleSignUp from "./AuthProviders/Google/GoogleSignUp";
+import TwitterSignUp from "./AuthProviders/Twitter/TwitterSignUp";
 import FormSignUpWithEmailAndPassword from "./Form";
 import {Link} from "react-router-dom";
 const LogInOnMdScreen = (props)=>{
@@ -8,13 +11,13 @@ const LogInOnMdScreen = (props)=>{
         document.title = props.title || "";
     })
     return(
-        <Animated animationIn="bounceInRight" animationOut="fadeOut" animationInDuration={450} animationOutDuration={100} isVisible={true}>
+        <Animated animationIn="bounceInRight" animationOut="fadeOut" animationInDuration={450} animationOutDuration={1000} isVisible={true}>
             <div className={'container SignUpOnMdScreen d-flex  align-items-center justify-content-between'}>
                 <div className="col-10 col-md-7 col-lg-5 col-xl-4 loginForm mx-auto">
                     <div className="row mt-3 d-flex justify-content-center ">
                         <SignUpMessage/>
                         <GoogleSignUp/>
-                        <FaceBookSignUp/>
+                        <FacebookSignUp/>
                         <TwitterSignUp/>
                         <FormSeparatorWithOr/>
                         <FormSignUpWithEmailAndPassword/>

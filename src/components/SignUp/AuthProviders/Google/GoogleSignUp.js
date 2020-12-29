@@ -1,11 +1,10 @@
+import {ReactComponent as GoogleIcon} from "../../../LogIn/AuthProviders/Google/GoogleIcon.svg";
 import React from "react";
-import {withRouter} from 'react-router-dom';
-import {compose} from 'recompose';
-import {ReactComponent as GoogleIcon} from "./GoogleIcon.svg";
+import {compose} from "recompose";
+import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
 
-
-class GoogleLogIn extends React.Component{
+class GoogleSignUp extends React.Component{
     constructor(props) {
         super(props);
         this.state = { error: null };
@@ -36,7 +35,7 @@ class GoogleLogIn extends React.Component{
 
     render(){
         const { error } = this.state;
-        return (
+        return(
             <form onSubmit={this.onSubmit} className={'col-md-10 col-sm-12 text-center'}>
                 <button className="col-6 mb-2 btn social">
                     <GoogleIcon style={{float: "left"}}/>
@@ -51,4 +50,4 @@ class GoogleLogIn extends React.Component{
 export default compose(
     withRouter,
     withFirebase,
-)(GoogleLogIn);
+)(GoogleSignUp);

@@ -15,4 +15,13 @@
     width:100%;
     min-height: 110% !important;
   }
+  .social{
+    max-width: 150px !important;
+  }
+  .form-group{
+    .form-control, .btn{
+      max-width: 340px !important;
+    }
+  }
+
 }

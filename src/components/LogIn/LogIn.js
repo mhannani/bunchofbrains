@@ -30,10 +30,9 @@ const LogIn = (props)=>{
                 </div>
             </div>
 
-
             <div className={'LogInOnMdScreen'}>
                 <div className="col-6 loginForm mx-auto d-flex align-items-center justify-content-center">
-                    <div className="row mt-3 d-flex justify-content-center ">
+                    <div className="row mt-3 mx-auto d-flex justify-content-center ">
                         <GoogleLogIn/>
                         <FacebookLogIn/>
                         <TwitterLogIn/>

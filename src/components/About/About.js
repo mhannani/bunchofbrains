@@ -6,9 +6,9 @@ const About = (props) => {
         document.title = props.title || "";
     })
     return (
-        <Div className="container-fluid about">
-            <h2 className={'text-center'}>About</h2>
-            <div className={'text-center mt-5'}>
+        <Div className="container about">
+            <h2>About</h2>
+            <div className={'mt-5'}>
                 <p>Bunchofbrains.com is web app chat service that links people who
                     have triumphed over mental illnesses such as depression,
                     anxiety or PTSD. Or found better ways to cope with it.
@@ -28,8 +28,8 @@ const About = (props) => {
                     through our organization. We have several audience members who
                     originate from varying backgrounds and have differing encounters.
                 </p></div>
-            <h2 className={'text-center mt-5'}>How does it work?</h2>
-            <div className={'text-center my-5'}>
+            <h3 className={'mt-5'}>How does it work?</h3>
+            <div className={'mb-5'}>
                 <p>
                     The process is straight forward, you choose a user to have a conversation
                     with over audio or video in complete anonymity.

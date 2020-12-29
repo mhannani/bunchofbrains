@@ -4,7 +4,7 @@ import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
 
-class FaceBookLogIn extends React.Component {
+class FacebookLogIn extends React.Component {
     constructor(props) {
         super(props);
         this.state = { error: null };
@@ -24,7 +24,7 @@ class FaceBookLogIn extends React.Component {
             })
             .then(() => {
                 this.setState({ error: null });
-                this.props.history.push("/");
+                this.props.history.push("/profile");
             })
             .catch(error => {
                 this.setState({ error });
@@ -50,4 +50,4 @@ class FaceBookLogIn extends React.Component {
 export default compose(
     withRouter,
     withFirebase,
-)(FaceBookLogIn);
+)(FacebookLogIn);

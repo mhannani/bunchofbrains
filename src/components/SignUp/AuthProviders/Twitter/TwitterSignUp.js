@@ -1,19 +1,20 @@
 import React from "react";
-import {withRouter} from 'react-router-dom';
-import {compose} from 'recompose';
-import {ReactComponent as GoogleIcon} from "./GoogleIcon.svg";
+import {ReactComponent as TwitterIcon} from "../../../LogIn/TwitterIcon.svg";
+import {compose} from "recompose";
+import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
 
+class TwitterSignUp extends React.Component{
 
-class GoogleLogIn extends React.Component{
     constructor(props) {
         super(props);
+
         this.state = { error: null };
     }
 
     onSubmit = event => {
         this.props.firebase
-            .doSignInWithGoogle()
+            .doSignInWithTwitter()
             .then(socialAuthUser => {
                 return this.props.firebase
                     .user(socialAuthUser.user.uid)
@@ -34,13 +35,14 @@ class GoogleLogIn extends React.Component{
         event.preventDefault();
     };
 
+
     render(){
         const { error } = this.state;
-        return (
+        return(
             <form onSubmit={this.onSubmit} className={'col-md-10 col-sm-12 text-center'}>
-                <button className="col-6 mb-2 btn social">
-                    <GoogleIcon style={{float: "left"}}/>
-                    <span>Google</span>
+                <button className="col-6 btn social">
+                    <TwitterIcon style={{float: "left"}}/>
+                    <span>Twitter</span>
                 </button>
                 {error && <p className={'requirement text-danger'}>{error.message}</p>}
             </form>
@@ -51,4 +53,4 @@ class GoogleLogIn extends React.Component{
 export default compose(
     withRouter,
     withFirebase,
-)(GoogleLogIn);
+)(TwitterSignUp);

@@ -1,5 +1,8 @@
 import React from 'react';
-import {GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
+import {FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
+import GoogleSignUp from './AuthProviders/Google/GoogleSignUp'
+import FacebookSignUp from './AuthProviders/Facebook/FacebookSignUp'
+import TwitterSignUp from './AuthProviders/Twitter/TwitterSignUp'
 import FormSignUpWithEmailAndPassword from './Form'
 import Typical from "react-typical";
 
@@ -27,7 +30,7 @@ const SignUp = (props)=>{
                 <div className="col-6 loginForm d-flex align-items-center justify-content-center">
                     <div className="row mt-3 d-flex justify-content-center">
                         <GoogleSignUp/>
-                        <FaceBookSignUp/>
+                        <FacebookSignUp/>
                         <TwitterSignUp/>
                         <FormSeparatorWithOr/>
                         <FormSignUpWithEmailAndPassword/>

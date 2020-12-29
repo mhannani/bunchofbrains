@@ -1,18 +1,20 @@
-import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
 import React from "react";
+import {ReactComponent as TwitterIcon} from "../../../LogIn/TwitterIcon.svg";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
 
-class FacebookLogIn extends React.Component {
+class TwitterSignUp extends React.Component{
+
     constructor(props) {
         super(props);
+
         this.state = { error: null };
     }
 
     onSubmit = event => {
         this.props.firebase
-            .doSignInWithFacebook()
+            .doSignInWithTwitter()
             .then(socialAuthUser => {
                 return this.props.firebase
                     .user(socialAuthUser.user.uid)
@@ -33,13 +35,14 @@ class FacebookLogIn extends React.Component {
         event.preventDefault();
     };
 
+
     render(){
         const { error } = this.state;
-        return (
+        return(
             <form onSubmit={this.onSubmit} className={'col-md-10 col-sm-12 text-center'}>
-                <button className="col-6 mb-2 btn social">
-                    <FacebookIcon style={{float: "left"}}/>
-                    <span>Facebook</span>
+                <button className="col-6 btn social">
+                    <TwitterIcon style={{float: "left"}}/>
+                    <span>Twitter</span>
                 </button>
                 {error && <p className={'requirement text-danger'}>{error.message}</p>}
             </form>
@@ -50,4 +53,4 @@ class FacebookLogIn extends React.Component {
 export default compose(
     withRouter,
     withFirebase,
-)(FacebookLogIn);
+)(TwitterSignUp);

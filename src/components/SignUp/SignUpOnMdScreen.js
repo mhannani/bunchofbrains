@@ -1,6 +1,9 @@
 import React, {useEffect} from 'react';
 import {Animated} from "react-animated-css";
-import {SignUpMessage, GoogleSignUp, FaceBookSignUp, TwitterSignUp, FormSeparatorWithOr,Confidentiality} from "./SignUpEntyties";
+import {SignUpMessage, FormSeparatorWithOr,  Confidentiality} from "./SignUpEntyties";
+import FacebookSignUp from "./AuthProviders/Facebook/FacebookSignUp";
+import GoogleSignUp from "./AuthProviders/Google/GoogleSignUp";
+import TwitterSignUp from "./AuthProviders/Twitter/TwitterSignUp";
 import FormSignUpWithEmailAndPassword from "./Form";
 import {Link} from "react-router-dom";
 const LogInOnMdScreen = (props)=>{
@@ -14,7 +17,7 @@ const LogInOnMdScreen = (props)=>{
                     <div className="row mt-3 d-flex justify-content-center ">
                         <SignUpMessage/>
                         <GoogleSignUp/>
-                        <FaceBookSignUp/>
+                        <FacebookSignUp/>
                         <TwitterSignUp/>
                         <FormSeparatorWithOr/>
                         <FormSignUpWithEmailAndPassword/>

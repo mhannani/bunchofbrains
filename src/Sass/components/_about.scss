@@ -1,11 +1,8 @@
-
+@import "../variables";
 .about{
-  margin-top: 100px;
+  margin-top: $marginTop;
+  margin-bottom: $marginBottom;
   h2{
-    font-family: 'Turret Road', cursive;
     font-weight: bold;
-  }
-  p{
-    font-family: 'Roboto' ,cursive;
   }
 }

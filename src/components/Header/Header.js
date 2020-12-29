@@ -11,10 +11,11 @@ import Button from '../chunks/Button';
 import I from '../chunks/I';
 import PopUpModal from '../PopUp/PopUpModal'
 
-// import {AuthUserContext} from "../../Session"
+
+import AuthUserContext from "../../Session/context";
 import UserAction from "./UserActions";
 
-const Header = ({ authUser }) => {
+const Header = () => {
     const [isVisible, toggleVisibility] = useState(false)
     const [isLogIn, changeIsLogIn] = useState(true)
     const history = useHistory();
@@ -156,18 +157,21 @@ const Header = ({ authUser }) => {
                 </ul>
 
                 <form className="align-top d-flex align-baseline align-items-md-end form-inline float-right">
-                    { authUser ? (<UserAction className={'mx-5'}/>)
-                    :
-                    (<div>
-                        <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
-                            <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
-                        </button>
-                        <Button type="button" className={"align-center getStarted btn mx-0 "}
-                                onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
-                            <HeaderLink className={'excluded'}>Get started</HeaderLink>
-                        </Button>
-                    </div>)
-                    }
+                    <AuthUserContext.Consumer>
+
+                        { authUser => authUser ? (<UserAction className={'mx-5'}/>)
+                        :
+                        (<div>
+                            <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
+                                <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
+                            </button>
+                            <Button type="button" className={"align-center getStarted btn mx-0 "}
+                                    onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
+                                <HeaderLink className={'excluded'}>Get started</HeaderLink>
+                            </Button>
+                        </div>)
+                        }
+                    </AuthUserContext.Consumer>
 
                 </form>
             </div>

@@ -5,9 +5,9 @@ import { Menu, Dropdown } from 'antd';
 import { withRouter } from "react-router";
 import {UserOutlined, DashboardOutlined, ProfileOutlined, MessageOutlined } from '@ant-design/icons';
 import withAuthorization from "../../Session/withAuthorization";
-// import AuthUserContext from "../../Session/context";
+import AuthUserContext from "../../Session/context";
 import {Link} from "react-router-dom";
-const UserActions = ({ firebase }, authUser) => {
+const UserActions = ({ firebase }) => {
 
 
     const menu = (
@@ -33,7 +33,7 @@ const UserActions = ({ firebase }, authUser) => {
         </Menu>
     );
     return(
-        // <AuthUserContext.Consumer>
+        <AuthUserContext.Consumer>
         <div>
             {authUser => (
                 <div className={'container'}>
@@ -59,7 +59,7 @@ const UserActions = ({ firebase }, authUser) => {
             )
             }
         </div>
-        // </AuthUserContext.Consumer>
+        </AuthUserContext.Consumer>
 
     )
 }

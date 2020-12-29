@@ -1,10 +1,10 @@
-import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
+import {ReactComponent as FacebookIcon} from "../../../LogIn/AuthProviders/Facebook/FacebookIcon.svg";
 import React from "react";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
 
-class FacebookLogIn extends React.Component {
+class FacebookSignUp extends React.Component{
     constructor(props) {
         super(props);
         this.state = { error: null };
@@ -35,7 +35,7 @@ class FacebookLogIn extends React.Component {
 
     render(){
         const { error } = this.state;
-        return (
+        return(
             <form onSubmit={this.onSubmit} className={'col-md-10 col-sm-12 text-center'}>
                 <button className="col-6 mb-2 btn social">
                     <FacebookIcon style={{float: "left"}}/>
@@ -45,9 +45,10 @@ class FacebookLogIn extends React.Component {
             </form>
         )
     }
+
 }
 
 export default compose(
     withRouter,
     withFirebase,
-)(FacebookLogIn);
+)(FacebookSignUp);

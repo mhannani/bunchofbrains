@@ -1,10 +1,10 @@
-import {ReactComponent as FacebookIcon} from "./FacebookIcon.svg";
+import {ReactComponent as GoogleIcon} from "../../../LogIn/AuthProviders/Google/GoogleIcon.svg";
 import React from "react";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
 
-class FacebookLogIn extends React.Component {
+class GoogleSignUp extends React.Component{
     constructor(props) {
         super(props);
         this.state = { error: null };
@@ -12,7 +12,7 @@ class FacebookLogIn extends React.Component {
 
     onSubmit = event => {
         this.props.firebase
-            .doSignInWithFacebook()
+            .doSignInWithGoogle()
             .then(socialAuthUser => {
                 return this.props.firebase
                     .user(socialAuthUser.user.uid)
@@ -35,11 +35,11 @@ class FacebookLogIn extends React.Component {
 
     render(){
         const { error } = this.state;
-        return (
+        return(
             <form onSubmit={this.onSubmit} className={'col-md-10 col-sm-12 text-center'}>
                 <button className="col-6 mb-2 btn social">
-                    <FacebookIcon style={{float: "left"}}/>
-                    <span>Facebook</span>
+                    <GoogleIcon style={{float: "left"}}/>
+                    <span>Google</span>
                 </button>
                 {error && <p className={'requirement text-danger'}>{error.message}</p>}
             </form>
@@ -50,4 +50,4 @@ class FacebookLogIn extends React.Component {
 export default compose(
     withRouter,
     withFirebase,
-)(FacebookLogIn);
+)(GoogleSignUp);

@@ -1,12 +1,13 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import 'antd/dist/antd.css';
 import { Menu, Dropdown } from 'antd';
 import { withRouter } from "react-router";
 import {UserOutlined, DashboardOutlined, ProfileOutlined, MessageOutlined } from '@ant-design/icons';
 import withAuthorization from "../../Session/withAuthorization";
-import AuthUserContext from "../../Session/context";
+// import AuthUserContext from "../../Session/context";
 import {Link} from "react-router-dom";
-const UserActions = ({ firebase }) => {
+const UserActions = ({ firebase }, authUser) => {
 
 
     const menu = (
@@ -32,7 +33,8 @@ const UserActions = ({ firebase }) => {
         </Menu>
     );
     return(
-        <AuthUserContext.Consumer>
+        // <AuthUserContext.Consumer>
+        <div>
             {authUser => (
                 <div className={'container'}>
                     <Dropdown.Button overlay={menu} placement="bottomRight"
@@ -56,9 +58,17 @@ const UserActions = ({ firebase }) => {
                 </div>
             )
             }
-        </AuthUserContext.Consumer>
+        </div>
+        // </AuthUserContext.Consumer>
 
     )
 }
 const condition = authUser => !!authUser;
-export default withAuthorization(condition)(withRouter(UserActions));
+// export default withAuthorization(condition)(withRouter(UserActions));
+
+
+const mapStateToProps = state => ({
+    authUser: state.sessionState.authUser,
+});
+
+export default connect(mapStateToProps)(withAuthorization(condition)(withRouter(UserActions)));

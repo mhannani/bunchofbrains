@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import $ from 'jquery';
-import {NavLink, useHistory} from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import {Link} from "react-router-dom";
+import { connect } from "react-redux";
 import {ReactComponent as Logo} from './brain.svg';
 // import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
@@ -10,10 +11,10 @@ import Button from '../chunks/Button';
 import I from '../chunks/I';
 import PopUpModal from '../PopUp/PopUpModal'
 
-import {AuthUserContext} from "../../Session"
+// import {AuthUserContext} from "../../Session"
 import UserAction from "./UserActions";
 
-const Header = () => {
+const Header = ({ authUser }) => {
     const [isVisible, toggleVisibility] = useState(false)
     const [isLogIn, changeIsLogIn] = useState(true)
     const history = useHistory();
@@ -155,18 +156,18 @@ const Header = () => {
                 </ul>
 
                 <form className="align-top d-flex align-baseline align-items-md-end form-inline float-right">
-                    <AuthUserContext.Consumer>
-                        { authUser => authUser ? <UserAction className={'mx-5'}/>
-                        :<div>
-                            <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
-                                <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
-                            </button>
-                            <Button type="button" className={"align-center getStarted btn mx-0 "}
-                                    onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
-                                <HeaderLink className={'excluded'}>Get started</HeaderLink>
-                            </Button>
-                        </div>}
-                    </AuthUserContext.Consumer>
+                    { authUser ? (<UserAction className={'mx-5'}/>)
+                    :
+                    (<div>
+                        <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
+                            <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
+                        </button>
+                        <Button type="button" className={"align-center getStarted btn mx-0 "}
+                                onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
+                            <HeaderLink className={'excluded'}>Get started</HeaderLink>
+                        </Button>
+                    </div>)
+                    }
 
                 </form>
             </div>
@@ -181,4 +182,7 @@ const Header = () => {
     );
 }
 
-export default Header;
+const mapStateToProps = state => ({
+    authUser: state.sessionState.authUser,
+});
+export default connect(mapStateToProps)(Header);

@@ -7,6 +7,7 @@ const withAuthentication = Component =>{
     class withAuthentication extends React.Component {
         constructor(props) {
             super(props);
+
             this.props.onSetAuthUser(
                 JSON.parse(localStorage.getItem('authUser')),
             );
@@ -33,10 +34,12 @@ const withAuthentication = Component =>{
         }
 
     }
-    
+
     const mapDispatchToProps = dispatch => ({
         onSetAuthUser: authUser =>
             dispatch({ type: 'AUTH_USER_SET', authUser }),
+        onSetPhotoURL: photoURL =>
+            dispatch({ type: 'PICTURE_URL_SET', photoURL }),
     });
 
     return compose(

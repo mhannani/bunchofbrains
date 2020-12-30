@@ -25,5 +25,4 @@ const Profile = ()=>{
 }
 
 const condition = authUser => !!authUser;
-
 export default withFirebase(withAuthorization(condition)((Profile)));

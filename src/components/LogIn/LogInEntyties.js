@@ -3,7 +3,7 @@ import {withRouter} from 'react-router-dom';
 import {withFirebase} from "../../Firebase";
 import {compose} from 'recompose';
 import {Link} from "react-router-dom";
-// import RippleEffectButton from "../chunks/RippleEffectButton";
+import RippleEffectButton from "../chunks/RippleEffectButton";
 const INITIAL_STATE = {
     email: '',
     password: '',
@@ -59,9 +59,11 @@ class LogInForm extends Component {
                     <input type="password" className="form-control margin-bottom" value={password}
                            placeholder="Password" name="password" onChange={this.onChange}/>
                 </div>
+                <div className="form-group d-flex align-items-center justify-content-center">
+                    <RippleEffectButton type="submit" disabled={isInvalid} className="btn col-12">Sign In</RippleEffectButton>
+                </div>
 
                 {/*<RippleEffectButton>*/}
-                    <button type="submit" disabled={isInvalid} className="d-flex align-items-center justify-content-center btn w-100 mx-auto col-12 ">Sign In</button>
 
                 {/*</RippleEffectButton>*/}
                 {error && <p className={'requirement text-danger mt-1'}>{error.message}</p>}

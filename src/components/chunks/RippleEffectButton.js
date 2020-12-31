@@ -1,6 +1,6 @@
 import React from "react";
 
-const RippleEffectButton = ({ children }) => {
+const RippleEffectButton = ({ children, ...props }) => {
     function createRipple(event) {
         const button = event.currentTarget;
 
@@ -22,7 +22,7 @@ const RippleEffectButton = ({ children }) => {
         button.appendChild(circle);
     }
 
-    return <button className={'ripple_blueprint'} onClick={createRipple}>{children}</button>;
+    return <button {...props} onClick={createRipple}>{children}</button>;
 };
 
 export default RippleEffectButton;

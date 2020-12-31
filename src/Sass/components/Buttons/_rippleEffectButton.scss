@@ -12,13 +12,6 @@ span.ripple {
     animation: ripple 600ms linear;
     background-color: rgba(255, 255, 255, 0.7);
 }
-.ripple_blueprint{
-    background-color: transparent;
-    border: none;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-}
 @keyframes ripple {
     to {
         transform: scale(4);

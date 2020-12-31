@@ -14,7 +14,7 @@ const Profile = ()=>{
                             <UserAvatar size="150" name='user avatar' src={photoURL}/>
                         </div>
 
-                        <div className={'col mt-5'}>
+                         <div className={'col mt-5'}>
                             <h5>Username: {authUser.username}</h5>
                             <h5>Email: {authUser.email}</h5>
                         </div>

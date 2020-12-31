@@ -25,8 +25,17 @@ class FormSignUpWithEmailAndPassword extends Component {
             .doCreateUserWithEmailAndPassword(email, password)
             .then(authUser => {
                 this.setState({...INITIAL_STATE});
+
                 this.props.history.push("/profile");
-                console.log(authUser.uid, username)
+                return this.props.firebase
+                    .user(authUser.user.uid)
+                    .set({
+                        username: username,
+                        email: authUser.user.email,
+                        photoURL: 'https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-6-2-256.png',
+                        roles: {},
+                    });
+
 
             })
             .catch(error => {

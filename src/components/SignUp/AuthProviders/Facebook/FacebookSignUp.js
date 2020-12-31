@@ -19,6 +19,7 @@ class FacebookSignUp extends React.Component{
                     .set({
                         username: socialAuthUser.user.displayName,
                         email: socialAuthUser.user.email,
+                        photoURL: socialAuthUser.user.photoURL,
                         roles: {},
                     });
             })

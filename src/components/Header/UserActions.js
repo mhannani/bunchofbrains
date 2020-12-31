@@ -53,7 +53,7 @@ const UserActions = ({firebase}) => {
                 {authUser.username.toUpperCase()}
             </Dropdown.Button>
         </div>
-    )
+    );
 }
 const condition = authUser => !!authUser;
 export default withAuthorization(condition)(withRouter(UserActions));

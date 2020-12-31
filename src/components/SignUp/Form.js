@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {withFirebase} from "../../Firebase";
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
+import RippleEffectButton from "../chunks/RippleEffectButton";
 
 const INITIAL_STATE = {
     username: '',
@@ -88,7 +89,10 @@ class FormSignUpWithEmailAndPassword extends Component {
                     Password must be at least 6 characters long.
                 </div>
 
-                <button type="submit" disabled={isInvalid} className="d-flex align-items-center justify-content-center btn w-100 mx-auto col-12">Sign Up</button>
+                <div className="form-group d-flex align-items-center justify-content-center">
+                    <RippleEffectButton type="submit" disabled={isInvalid} className="btn w-100 mx-auto col-12">Sign Up</RippleEffectButton>
+                </div>
+
                 {error && <p className={'mt-1 requirement text-danger'}>{error.message}</p>}
             </form>
         );

@@ -76,7 +76,7 @@ const UserActions = ({firebase})=> {
         return (
             <div>
                 <div>
-                    <div className={'d-flex align-items-center row mui-fixed'}>
+                    <div className={'d-flex align-items-center row'}>
                         <div>
                             {authUser.username}
                         </div>
@@ -86,7 +86,9 @@ const UserActions = ({firebase})=> {
                                     variant="contained"
                                     color="transparent"
                                     onClick={handleClick}
-                                    src={photoUrl}/>
+                                    src={photoUrl}
+                            />
+
                         </div>
                     </div>
 

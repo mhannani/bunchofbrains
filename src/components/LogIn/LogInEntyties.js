@@ -3,7 +3,9 @@ import {withRouter} from 'react-router-dom';
 import {withFirebase} from "../../Firebase";
 import {compose} from 'recompose';
 import {Link} from "react-router-dom";
+import { connect } from 'react-redux';
 
+import RippleEffectButton from "../chunks/RippleEffectButton";
 const INITIAL_STATE = {
     email: '',
     password: '',
@@ -32,7 +34,8 @@ class LogInForm extends Component {
             .doSignInWithEmailAndPassword(email, password)
             .then(() => {
                 this.setState({...INITIAL_STATE});
-                this.props.history.push("/");
+                this.props.history.push("/profile");
+                this.props.applyClose();
             })
             .catch(error => {
                 this.setState({error});
@@ -59,9 +62,10 @@ class LogInForm extends Component {
                     <input type="password" className="form-control margin-bottom" value={password}
                            placeholder="Password" name="password" onChange={this.onChange}/>
                 </div>
+                <div className="form-group d-flex align-items-center justify-content-center">
+                    <RippleEffectButton type="submit" disabled={isInvalid} className="btn col-12">Sign In</RippleEffectButton>
+                </div>
 
-
-                <button type="submit" disabled={isInvalid} className="d-flex align-items-center justify-content-center btn w-100 mx-auto col-12 ">Sign In</button>
                 {error && <p className={'requirement text-danger mt-1'}>{error.message}</p>}
                 <div className="forgot-password d-flex align-items-center justify-content-center btn w-100 mx-auto col-12 mt-2">
                     <Link className="forgot-pass-text  font-weight-bold text-decoration-none"
@@ -75,9 +79,15 @@ class LogInForm extends Component {
     }
 }
 
+
+const mapDispatchToProps = dispatch => ({
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
+});
 export default LogInForm = compose(
     withRouter,
     withFirebase,
+    connect(null, mapDispatchToProps),
 )(LogInForm);
 
 export const FormSeparatorWithOr = () => {

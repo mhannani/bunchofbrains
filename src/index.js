@@ -12,7 +12,6 @@ import './Sass/App.scss';
 import Firebase, {FirebaseContext} from "./Firebase/index";
 import store from './store';
 
-
 setTimeout(
     () =>
         ReactDOM.render(

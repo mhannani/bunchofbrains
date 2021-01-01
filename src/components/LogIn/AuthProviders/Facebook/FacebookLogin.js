@@ -3,6 +3,7 @@ import React from "react";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
+import {connect} from "react-redux";
 
 class FacebookLogIn extends React.Component {
     constructor(props) {
@@ -19,10 +20,12 @@ class FacebookLogIn extends React.Component {
                     .set({
                         username: socialAuthUser.user.displayName,
                         email: socialAuthUser.user.email,
+                        photoURL: socialAuthUser.user.photoURL,
                         roles: {},
                     });
             })
             .then(() => {
+                this.props.applyClose();
                 this.setState({ error: null });
                 this.props.history.push("/profile");
             })
@@ -46,8 +49,20 @@ class FacebookLogIn extends React.Component {
         )
     }
 }
+const mapDispatchToProps = dispatch => ({
+    onSetAuthUser: authUser =>
+        dispatch({ type: 'AUTH_USER_SET', authUser }),
+    onSetPhotoURL: photoURL =>
+        dispatch({ type: 'PICTURE_URL_SET', photoURL }),
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
+});
 
 export default compose(
     withRouter,
     withFirebase,
+    connect(
+        null,
+        mapDispatchToProps,
+    ),
 )(FacebookLogIn);

@@ -11,6 +11,9 @@ const withAuthentication = Component =>{
             this.props.onSetAuthUser(
                 JSON.parse(localStorage.getItem('authUser')),
             );
+            this.props.onSetPhotoURL(
+                JSON.parse(localStorage.getItem('photoURL')),
+            );
         }
 
         componentDidMount() {
@@ -18,9 +21,12 @@ const withAuthentication = Component =>{
                 authUser => {
                     localStorage.setItem('authUser', JSON.stringify(authUser));
                     this.props.onSetAuthUser(authUser);
+                    localStorage.setItem('photoURL', JSON.stringify(authUser.photoURL));
+                    this.props.onSetPhotoURL(authUser.photoURL);
                 },
                 () => {
                     localStorage.removeItem('authUser');
+                    localStorage.removeItem('photoURL');
                     this.props.onSetAuthUser(null);
                 },
             );

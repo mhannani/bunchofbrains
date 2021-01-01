@@ -34,7 +34,7 @@ class Firebase {
         this.auth.signInWithEmailAndPassword(email, password);
     // Sign-in using Google Provider
     doSignInWithGoogle = () =>
-        this.auth.signInWithPopup(this.googleProvider);
+        this.auth.signInWithPopup(this.googleProvider)
     // Sign-in using Facebook Provider
     doSignInWithFacebook = () =>
         this.auth.signInWithPopup(this.facebookProvider);

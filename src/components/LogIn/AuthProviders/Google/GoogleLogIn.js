@@ -1,6 +1,7 @@
 import React from "react";
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
+import {connect} from 'react-redux';
 import {ReactComponent as GoogleIcon} from "./GoogleIcon.svg";
 import {withFirebase} from "../../../../Firebase";
 
@@ -15,15 +16,19 @@ class GoogleLogIn extends React.Component{
         this.props.firebase
             .doSignInWithGoogle()
             .then(socialAuthUser => {
+                // store data to the redux store
+                this.props.onSetPhotoURL(socialAuthUser.user.photoURL);
                 return this.props.firebase
                     .user(socialAuthUser.user.uid)
                     .set({
                         username: socialAuthUser.user.displayName,
                         email: socialAuthUser.user.email,
+                        photoURL: socialAuthUser.user.photoURL,
                         roles: {},
                     });
             })
             .then(() => {
+                this.props.applyClose();
                 this.setState({ error: null });
                 this.props.history.push("/profile");
             })
@@ -48,7 +53,20 @@ class GoogleLogIn extends React.Component{
     }
 }
 
+const mapDispatchToProps = dispatch => ({
+    onSetAuthUser: authUser =>
+        dispatch({ type: 'AUTH_USER_SET', authUser }),
+    onSetPhotoURL: photoURL =>
+        dispatch({ type: 'PICTURE_URL_SET', photoURL }),
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
+});
+
 export default compose(
     withRouter,
     withFirebase,
+    connect(
+        null,
+        mapDispatchToProps,
+    ),
 )(GoogleLogIn);

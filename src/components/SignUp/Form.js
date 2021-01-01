@@ -2,6 +2,8 @@ import React, {Component} from "react";
 import {withFirebase} from "../../Firebase";
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
+import RippleEffectButton from "../chunks/RippleEffectButton";
+import {connect} from "react-redux";
 
 const INITIAL_STATE = {
     username: '',
@@ -25,8 +27,17 @@ class FormSignUpWithEmailAndPassword extends Component {
             .doCreateUserWithEmailAndPassword(email, password)
             .then(authUser => {
                 this.setState({...INITIAL_STATE});
+                this.props.applyClose();
                 this.props.history.push("/profile");
-                console.log(authUser.uid, username)
+                return this.props.firebase
+                    .user(authUser.user.uid)
+                    .set({
+                        username: username,
+                        email: authUser.user.email,
+                        photoURL: 'https://cdn3.iconfinder.com/data/icons/user-avatars-1/512/users-6-2-256.png',
+                        roles: {},
+                    });
+
 
             })
             .catch(error => {
@@ -79,14 +90,30 @@ class FormSignUpWithEmailAndPassword extends Component {
                     Password must be at least 6 characters long.
                 </div>
 
-                <button type="submit" disabled={isInvalid} className="d-flex align-items-center justify-content-center btn w-100 mx-auto col-12">Sign Up</button>
+                <div className="form-group d-flex align-items-center justify-content-center">
+                    <RippleEffectButton type="submit" disabled={isInvalid} className="btn w-100 mx-auto col-12">Sign Up</RippleEffectButton>
+                </div>
+
                 {error && <p className={'mt-1 requirement text-danger'}>{error.message}</p>}
             </form>
         );
     }
 }
 
+const mapDispatchToProps = dispatch => ({
+    onSetAuthUser: authUser =>
+        dispatch({ type: 'AUTH_USER_SET', authUser }),
+    onSetPhotoURL: photoURL =>
+        dispatch({ type: 'PICTURE_URL_SET', photoURL }),
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
+});
+
 export default compose(
+    withRouter,
     withFirebase,
-    withRouter
+    connect(
+        null,
+        mapDispatchToProps,
+    ),
 )(FormSignUpWithEmailAndPassword);

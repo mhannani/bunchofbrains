@@ -1,6 +1,10 @@
 const INITIAL_STATE = {
     authUser: null,
-    photoURL:'https://cdn4.iconfinder.com/data/icons/startup-89/64/41-Entrepreneur-256.png' // default avatar picture
+    photoURL:'https://cdn4.iconfinder.com/data/icons/startup-89/64/41-Entrepreneur-256.png', // default avatar picture
+    popUp:{
+        isOpen: false,
+        isLogIn:false
+    }
 };
 
 const applySetAuthUser = (state, action) => ({

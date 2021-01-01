@@ -1,18 +1,18 @@
 import React from 'react';
 import Typical from 'react-typical'
+import {useDispatch} from "react-redux";
 import LogInForm, {FormSeparatorWithOr} from "./LogInEntyties"
 import GoogleLogIn from "./AuthProviders/Google/GoogleLogIn";
 import FacebookLogIn from "./AuthProviders/Facebook/FacebookLogin";
 import TwitterLogIn from "./AuthProviders/Twitter/TwitterLogIn";
 
-
-const LogIn = (props)=>{
-    const signInUpToggler = ()=>{
-        props.changeIsLogIn(!props.isLogIn)
-        console.log(props.isLogIn)
+const LogIn = () => {
+    const dispatch = useDispatch();
+    const signInUpToggler = () => {
+        dispatch({type: "IS_SIGN_UP"})
     }
 
-    return(
+    return (
         <div className={'container'}>
             <div className="welcomeMessage d-flex align-items-center">
                 <div>
@@ -41,7 +41,7 @@ const LogIn = (props)=>{
                         <div className="sign-up text-center mt-2">
                             <p>Not a member yet ?
                                 <button className="link text-decoration-none text-center"
-                                   onClick={()=>signInUpToggler()}
+                                        onClick={() => signInUpToggler()}
                                 >
                                     Sign Up
                                 </button>

@@ -3,6 +3,7 @@ import {ReactComponent as TwitterIcon} from "../../../LogIn/TwitterIcon.svg";
 import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 import {withFirebase} from "../../../../Firebase";
+import {connect} from "react-redux";
 
 class TwitterSignUp extends React.Component{
 
@@ -26,6 +27,7 @@ class TwitterSignUp extends React.Component{
                     });
             })
             .then(() => {
+                this.props.applyClose();
                 this.setState({ error: null });
                 this.props.history.push("/profile");
             })
@@ -51,7 +53,20 @@ class TwitterSignUp extends React.Component{
     }
 }
 
+const mapDispatchToProps = dispatch => ({
+    onSetAuthUser: authUser =>
+        dispatch({ type: 'AUTH_USER_SET', authUser }),
+    onSetPhotoURL: photoURL =>
+        dispatch({ type: 'PICTURE_URL_SET', photoURL }),
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
+});
+
 export default compose(
     withRouter,
     withFirebase,
+    connect(
+        null,
+        mapDispatchToProps,
+    ),
 )(TwitterSignUp);

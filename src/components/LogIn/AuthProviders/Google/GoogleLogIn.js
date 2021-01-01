@@ -28,6 +28,7 @@ class GoogleLogIn extends React.Component{
                     });
             })
             .then(() => {
+                this.props.applyClose();
                 this.setState({ error: null });
                 this.props.history.push("/profile");
             })
@@ -57,6 +58,8 @@ const mapDispatchToProps = dispatch => ({
         dispatch({ type: 'AUTH_USER_SET', authUser }),
     onSetPhotoURL: photoURL =>
         dispatch({ type: 'PICTURE_URL_SET', photoURL }),
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
 });
 
 export default compose(

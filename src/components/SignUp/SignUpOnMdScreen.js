@@ -29,8 +29,7 @@ const LogInOnMdScreen = (props)=>{
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-xl-10 col-md-10 col-sm-8 form-separator my-4"/>
-                        <div className="forgot-password  mt-2 text-center ">
+                        <div className="forgot-password  mt-4 text-center ">
                             <Confidentiality/>
                         </div>
                     </div>

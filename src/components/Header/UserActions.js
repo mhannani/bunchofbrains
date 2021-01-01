@@ -83,7 +83,8 @@ const UserActions = ({firebase})=> {
                         <div className={'mx-3 gradient-avatar'}>
                             <Avatar aria-controls="customized-menu"
                                     aria-haspopup="true"
-                                    variant="contained"
+                                    variant="circular"
+                                    // Failed prop type: Invalid prop `variant` of value `contained` supplied to `ForwardRef(Avatar)`, expected one of ["circle","circular","rounded","square"]
                                     color="transparent"
                                     onClick={handleClick}
                                     src={photoUrl}
@@ -93,7 +94,6 @@ const UserActions = ({firebase})=> {
                     </div>
 
                     <StyledMenu
-                        arrow
                         id="customized-menu"
                         anchorEl={anchorEl}
                         keepMounted
@@ -123,7 +123,7 @@ const UserActions = ({firebase})=> {
                         </StyledMenuItem>
                         <StyledMenuItem onClick={firebase.doSignOut}>
                             <ListItemIcon>
-                                <ExitToAppIcon fontSize="very-small" />
+                                <ExitToAppIcon fontSize="small" />
                             </ListItemIcon>
                             <ListItemText primary="Log out" />
                         </StyledMenuItem>

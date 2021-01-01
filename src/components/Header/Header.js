@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import $ from 'jquery';
-import { NavLink, useHistory } from "react-router-dom";
+import {NavLink, useHistory} from "react-router-dom";
 import {Link} from "react-router-dom";
-import { useSelector } from 'react-redux'
+import {useDispatch, useSelector} from 'react-redux'
 import {ReactComponent as Logo} from './brain.svg';
 // import Toggler from "./Toggler";
 import Nav from '../chunks/Nav'
@@ -15,13 +15,12 @@ import PopUpModal from '../PopUp/PopUpModal'
 import UserAction from "./UserActions";
 
 const Header = () => {
-    const [isVisible, toggleVisibility] = useState(false)
-    const [isLogIn, changeIsLogIn] = useState(true)
     const history = useHistory();
     const authUser = useSelector(state => state.sessionState.authUser)
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        $('button.navbar-toggle').focusout(function(){
+        $('button.navbar-toggle').focusout(function () {
             $(".navbar-collapse").collapse('hide');
         });
 
@@ -30,21 +29,22 @@ const Header = () => {
             $('.navbar-toggle:visible').click();
         });
 
-        $(function() {
+        $(function () {
             $(document).click(function () {
                 $('.navbar-collapse').collapse('hide');
             });
         });
-        $(document).ready(function() {
+        $(document).ready(function () {
             function checkOffset() {
                 $(".navbar-collapse").collapse('hide');
             }
+
             // Run function when scrolling
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 checkOffset();
             });
             // Run function on Clicking
-            $(window).click(function() {
+            $(window).click(function () {
                 checkOffset();
             });
         });
@@ -57,27 +57,21 @@ const Header = () => {
             history.push("/log-in");
         } else {
             // The viewport is wider than 670px
-            changeIsLogIn(true)
-            // changeIsLogIn(isLogIn => true)
-            toggleVisibility(!isVisible) // To change it to be initialised with true
+            dispatch({type: "IS_LOG_IN"})
+            dispatch({type: "IS_OPEN"})
         }
-        // Logic of log in ...
     }
+
     const signUpHandler = () => {
         const mql = window.matchMedia('(max-width: 900px)')
         if (mql.matches) {
             // The viewport is less than 670px
             history.push("/sign-up");
-            // <Redirect to='/login' />
         } else {
             // The viewport is wider than 670px
-            toggleVisibility(!isVisible);
-            changeIsLogIn(false)
-            // changeIsLogIn(isLogIn => false)
+            dispatch({type: "IS_SIGN_UP"})
+            dispatch({type: "IS_OPEN"})
         }
-    }
-    const closeModal = () => {
-        toggleVisibility(!isVisible);
     }
 
     return (
@@ -101,7 +95,6 @@ const Header = () => {
                         <I className="fa fa-reorder"/>
                     </span>
                 </button>
-
             </div>
 
             <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -109,7 +102,7 @@ const Header = () => {
                     <li className="nav-item mx-sm-1 mx-md-0 mx-lg-2">
                         <NavLink to={'/'} activeClassName="selected" exact
                                  className={'nav-link'}
-                        ><HeaderLink >Home</HeaderLink>
+                        ><HeaderLink>Home</HeaderLink>
                         </NavLink>
                     </li>
 
@@ -157,28 +150,21 @@ const Header = () => {
                 </ul>
 
                 <form className="align-top d-flex align-baseline align-items-md-end form-inline float-right">
-                    {authUser ?<UserAction className={'mx-5'}/>
-                            :
-                            <div>
-                                <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
-                                    <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
-                                </button>
-                                <Button type="button" className={"align-center getStarted btn mx-0 "}
-                                        onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
-                                    <HeaderLink className={'excluded'}>Get started</HeaderLink>
-                                </Button>
-                            </div>
+                    {authUser ? <UserAction className={'mx-5'}/>
+                        :
+                        <div>
+                            <button type="button" className={'align-center btn btn-transparent mx-md-1 '}>
+                                <HeaderLink onClick={logInHandler}>Log in</HeaderLink>
+                            </button>
+                            <Button type="button" className={"align-center getStarted btn mx-0 "}
+                                    onMouseDown={e => e.preventDefault()} onClick={signUpHandler}>
+                                <HeaderLink className={'excluded'}>Get started</HeaderLink>
+                            </Button>
+                        </div>
                     }
-
                 </form>
             </div>
-
-            <PopUpModal closeModal={closeModal}
-                        changeIsLogIn={changeIsLogIn}
-                        isLogIn={isLogIn}
-                        isVisible={isVisible}
-            />
-
+            <PopUpModal/>
         </Nav>
     );
 }

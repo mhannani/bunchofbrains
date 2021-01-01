@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom';
 import {withFirebase} from "../../Firebase";
 import {compose} from 'recompose';
 import {Link} from "react-router-dom";
+
 import RippleEffectButton from "../chunks/RippleEffectButton";
 const INITIAL_STATE = {
     email: '',
@@ -32,7 +33,7 @@ class LogInForm extends Component {
             .doSignInWithEmailAndPassword(email, password)
             .then(() => {
                 this.setState({...INITIAL_STATE});
-                this.props.history.push("/");
+                this.props.history.push("/profile");
             })
             .catch(error => {
                 this.setState({error});
@@ -63,9 +64,6 @@ class LogInForm extends Component {
                     <RippleEffectButton type="submit" disabled={isInvalid} className="btn col-12">Sign In</RippleEffectButton>
                 </div>
 
-                {/*<RippleEffectButton>*/}
-
-                {/*</RippleEffectButton>*/}
                 {error && <p className={'requirement text-danger mt-1'}>{error.message}</p>}
                 <div className="forgot-password d-flex align-items-center justify-content-center btn w-100 mx-auto col-12 mt-2">
                     <Link className="forgot-pass-text  font-weight-bold text-decoration-none"

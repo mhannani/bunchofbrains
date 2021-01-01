@@ -1,7 +1,7 @@
-import {applyOpen, applyIsLogIn, applyClose, applyIsSignUp } from '../actions/popUp';
+import {applyOpen, applyIsLogIn, applyClose, applyIsSignUp} from '../actions/popUp';
 const INITIAL_STATE = {
     isOpen: false,
-    isLogIn: false
+    isLogIn: true
 }
 
 function popUpReducer(state = INITIAL_STATE, action) {
@@ -20,6 +20,7 @@ function popUpReducer(state = INITIAL_STATE, action) {
         case 'IS_SIGN_UP': {
             return applyIsSignUp(state);
         }
+
 
         default:
             return state;

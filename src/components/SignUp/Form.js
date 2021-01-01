@@ -3,6 +3,7 @@ import {withFirebase} from "../../Firebase";
 import {withRouter} from 'react-router-dom';
 import {compose} from 'recompose';
 import RippleEffectButton from "../chunks/RippleEffectButton";
+import {connect} from "react-redux";
 
 const INITIAL_STATE = {
     username: '',
@@ -26,7 +27,7 @@ class FormSignUpWithEmailAndPassword extends Component {
             .doCreateUserWithEmailAndPassword(email, password)
             .then(authUser => {
                 this.setState({...INITIAL_STATE});
-
+                this.props.applyClose();
                 this.props.history.push("/profile");
                 return this.props.firebase
                     .user(authUser.user.uid)
@@ -99,7 +100,20 @@ class FormSignUpWithEmailAndPassword extends Component {
     }
 }
 
+const mapDispatchToProps = dispatch => ({
+    onSetAuthUser: authUser =>
+        dispatch({ type: 'AUTH_USER_SET', authUser }),
+    onSetPhotoURL: photoURL =>
+        dispatch({ type: 'PICTURE_URL_SET', photoURL }),
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
+});
+
 export default compose(
+    withRouter,
     withFirebase,
-    withRouter
+    connect(
+        null,
+        mapDispatchToProps,
+    ),
 )(FormSignUpWithEmailAndPassword);

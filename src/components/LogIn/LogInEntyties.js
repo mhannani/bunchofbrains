@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom';
 import {withFirebase} from "../../Firebase";
 import {compose} from 'recompose';
 import {Link} from "react-router-dom";
+import { connect } from 'react-redux';
 
 import RippleEffectButton from "../chunks/RippleEffectButton";
 const INITIAL_STATE = {
@@ -34,6 +35,7 @@ class LogInForm extends Component {
             .then(() => {
                 this.setState({...INITIAL_STATE});
                 this.props.history.push("/profile");
+                this.props.applyClose();
             })
             .catch(error => {
                 this.setState({error});
@@ -77,9 +79,15 @@ class LogInForm extends Component {
     }
 }
 
+
+const mapDispatchToProps = dispatch => ({
+    applyClose: ()  =>
+        dispatch({ type: 'IS_CLOSE'}),
+});
 export default LogInForm = compose(
     withRouter,
     withFirebase,
+    connect(null, mapDispatchToProps),
 )(LogInForm);
 
 export const FormSeparatorWithOr = () => {

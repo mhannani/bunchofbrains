@@ -1,12 +1,17 @@
 import React from 'react';
-import {FormSeparatorWithOr, AlreadyMember, Confidentiality} from "./SignUpEntyties";
+import {FormSeparatorWithOr, Confidentiality} from "./SignUpEntyties";
 import GoogleSignUp from './AuthProviders/Google/GoogleSignUp'
 import FacebookSignUp from './AuthProviders/Facebook/FacebookSignUp'
 import TwitterSignUp from './AuthProviders/Twitter/TwitterSignUp'
 import FormSignUpWithEmailAndPassword from './Form'
 import Typical from "react-typical";
+import {useDispatch} from "react-redux";
 
-const SignUp = (props)=>{
+const SignUp = ()=>{
+    const dispatch = useDispatch();
+    const signUpInToggler = ()=>{
+        dispatch({ type: "IS_LOG_IN"})
+    }
 
     return(
         <div className={'sign-up'}>
@@ -34,9 +39,16 @@ const SignUp = (props)=>{
                         <TwitterSignUp/>
                         <FormSeparatorWithOr/>
                         <FormSignUpWithEmailAndPassword/>
-                        <div className="col-xl-10 col-md-10 col-sm-8 form-separator mt-3"/>
                         <div className="forgot-password text-center ">
-                            <AlreadyMember isLogIn={props.isLogIn} changeIsLogIn ={props.changeIsLogIn}/>
+                            <div className="sign-up text-center">
+                                <p>Already a member ?
+                                    <button className="link text-decoration-none"
+                                            onClick={()=>signUpInToggler()}
+                                    >
+                                        Log In
+                                    </button>
+                                </p>
+                            </div>
                             <Confidentiality/>
                         </div>
                     </div>

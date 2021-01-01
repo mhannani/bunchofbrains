@@ -16,20 +16,6 @@ export const FormSeparatorWithOr = ()=>{
     )
 }
 
-export const AlreadyMember = (props) =>{
-    const signUpInToggler = ()=>{
-        props.changeIsLogIn(!props.isLogIn)
-    }
-
-    return(
-        <div className="sign-up text-center">
-            <p>Already a member ?
-                <button className="link text-decoration-none" onClick={()=>signUpInToggler()}>Log In</button>
-            </p>
-        </div>
-    )
-}
-
 export const Confidentiality = ()=>{
     return(
         <div className="col-xl-11 col-sm-12 mx-auto text-center confidentiality">
